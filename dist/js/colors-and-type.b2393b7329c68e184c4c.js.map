@@ -1,1 +1,0 @@
-{"version":3,"file":"js/colors-and-type.b2393b7329c68e184c4c.js","mappings":"mBAEAA,QAAQC,IAAI,iB","sources":["webpack://my-webpack-project/./src/pages/colors-and-type/index.js"],"sourcesContent":["import './colors-and-type.scss';\n\nconsole.log('Hello World!');\n"],"names":["console","log"],"sourceRoot":""}

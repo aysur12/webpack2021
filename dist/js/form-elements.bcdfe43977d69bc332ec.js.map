@@ -1,1 +1,0 @@
-{"version":3,"file":"js/form-elements.bcdfe43977d69bc332ec.js","mappings":"mBACAA,QAAQC,IAAI,iB","sources":["webpack://my-webpack-project/./src/pages/form-elements/index.js"],"sourcesContent":["import './form-elements.scss';\nconsole.log('Hello Forms!');\n"],"names":["console","log"],"sourceRoot":""}
