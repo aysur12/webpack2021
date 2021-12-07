@@ -1,0 +1,1 @@
+{"version":3,"file":"form-elements.css","mappings":"AAAA,GACC,c","sources":["webpack://my-webpack-project/./src/pages/form-elements/form-elements.scss"],"sourcesContent":["h1 {\r\n\tcolor: blueviolet;\r\n}"],"names":[],"sourceRoot":""}
