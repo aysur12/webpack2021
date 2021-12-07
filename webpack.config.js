@@ -1,6 +1,5 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const fs = require('fs');
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -9,31 +8,20 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV == "production";
 
-const PAGES_DIR = path.resolve(__dirname, 'src/pages');
-const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .map((item) => item.replace(/\.[^/.]+$/, ''));
-const PATHS = {
-  src: path.join(__dirname, './src'),
-  dist: path.join(__dirname, './dist'),
-}
-const devMode = process.env.NODE_ENV === 'development';
-const filename = (ext) => (devMode ? `${ext}/[name].${ext}` : `${ext}/[name].[contenthash].${ext}`);
-const entryPoints = PAGES.map(page => ({ [page]: `${PAGES_DIR}/${page}/index.js`, }));
-const entryPointsCorrect = Object.assign({}, ...entryPoints);
-
 const stylesHandler = isProduction
 	? MiniCssExtractPlugin.loader
 	: "style-loader";
 
 const config = {
-	entry: entryPointsCorrect,
-	output: {
-		filename: filename('js'),
-		path: PATHS.dist,
-		clean: true,
+	entry: {
+		main: './src/index.js',
 	},
 	devtool: 'source-map',
+	output: {
+	  path: path.resolve(__dirname, "dist"),
+		assetModuleFilename: "assets/[hash][ext][query]",
+		clean: true,
+	},
 	optimization: {
 		splitChunks: {
 			chunks: 'all',
@@ -44,14 +32,24 @@ const config = {
 		host: "localhost",
 	},
 	plugins: [
-		...PAGES.map(
-			(page) =>
-				new HtmlWebpackPlugin({
-					filename: `${page}.html`,
-					template: `${PAGES_DIR}/${page}/${page}.pug`,
-					chunks: [page],
-				})
-		),
+		new HtmlWebpackPlugin({
+			template: './src/main.pug',
+			filename: './index.html',
+			chunks: ['main'],
+			inject: 'body',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/pages/colors-and-type/colors-and-type.pug',
+			filename: './pages/colors-and-type/colors-and-type.html',
+			chunks: ['colorAndType'],
+			inject: 'body',
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/pages/form-elements/form-elements.pug',
+			filename: './pages/form-elements/form-elements.html',
+			chunks: ['formElements'],
+			inject: 'body',
+		}),
 		new CopyPlugin({
       patterns: [
         { from: "./src/assets/images", to: "./assets/images" },
