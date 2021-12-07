@@ -7,7 +7,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-const isProduction = process.env.NODE_ENV == "production";
+const isProduction = process.env.NODE_ENV === "production";
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 const PAGES_DIR = path.resolve(__dirname, 'src/pages');
 const PAGES = fs
@@ -17,14 +18,12 @@ const PATHS = {
   src: path.join(__dirname, './src'),
   dist: path.join(__dirname, './dist'),
 }
-const devMode = process.env.NODE_ENV === 'development';
-const filename = (ext) => (devMode ? `${ext}/[name].${ext}` : `${ext}/[name].[contenthash].${ext}`);
+
+const filename = (ext) => (isDevelopment ? `${ext}/[name].${ext}` : `${ext}/[name].${ext}`);
 const entryPoints = PAGES.map(page => ({ [page]: `${PAGES_DIR}/${page}/index.js`, }));
 const entryPointsCorrect = Object.assign({}, ...entryPoints);
 
-const stylesHandler = isProduction
-	? MiniCssExtractPlugin.loader
-	: "style-loader";
+const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : "style-loader";
 
 const config = {
 	entry: entryPointsCorrect,
@@ -40,8 +39,10 @@ const config = {
 		},
 	},
 	devServer: {
-		open: true,
-		host: "localhost",
+		static: './dist',
+		port: 8080,
+		open: '/start-page.html',
+		hot: false,
 	},
 	plugins: [
 		...PAGES.map(
@@ -107,8 +108,7 @@ const config = {
 module.exports = () => {
 	if (isProduction) {
 		config.mode = "production";
-
-		config.plugins.push(new MiniCssExtractPlugin());
+		config.plugins.push(new MiniCssExtractPlugin({filename: filename('css'),}));
 	} else {
 		config.mode = "development";
 	}
