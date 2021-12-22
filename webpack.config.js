@@ -63,7 +63,6 @@ const config = {
 		new FaviconsWebpackPlugin({
 			logo: './src/assets/favicons/favicon-toxin.png',
 			prefix: './assets/favicons/',
-			inject: true,
 		}),
 	],
 	module: {
