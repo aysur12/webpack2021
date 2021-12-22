@@ -41,7 +41,7 @@ const config = {
 	devServer: {
 		static: './dist',
 		port: 8080,
-		open: '/start-page.html',
+		open: '/colors-and-type.html',
 		hot: false,
 	},
 	plugins: [
@@ -51,6 +51,7 @@ const config = {
 					filename: `${page}.html`,
 					template: `${PAGES_DIR}/${page}/${page}.pug`,
 					chunks: [page],
+					minify: false,
 				})
 		),
 		new CopyPlugin({
@@ -61,10 +62,9 @@ const config = {
     }),
 		new FaviconsWebpackPlugin({
 			logo: './src/assets/favicons/favicon-toxin.png',
-			prefix: './assets/favicons',
+			prefix: './assets/favicons/',
+			inject: true,
 		}),
-		// Add your plugins here
-		// Learn more about plugins from https://webpack.js.org/configuration/plugins/
 	],
 	module: {
 		rules: [
@@ -75,6 +75,9 @@ const config = {
 			{
 				test: /\.pug$/,
 				loader: 'pug-loader',
+				options: {
+          pretty: true,
+        },
 				exclude: /(node_modules|bower_components)/,
 			},
 			{
