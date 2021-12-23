@@ -1,14 +1,17 @@
-extends ../../templates/head.pug
+extends ../../layout/ui-kit-layout
 
-block title 
-	title Colors and type
+include ../../components/header-ui-kit/header-ui-kit
 
-block content
+block variables 
+	- var title = 'Colors and type';
 
-block scripts
+block header
+	+header-ui-kit
 	//.container 
-		p Hello
+	//p Hello
 	//img(src="./assets/images/adidas.png", alt="")
 	//p Hello people
 	//p Hi hi hi
 	//h1 Head title
+	
+

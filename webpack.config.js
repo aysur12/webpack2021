@@ -51,6 +51,7 @@ const config = {
 					filename: `${page}.html`,
 					template: `${PAGES_DIR}/${page}/${page}.pug`,
 					chunks: [page],
+					inject: 'body',
 					minify: false,
 				})
 		),
