@@ -1,12 +1,14 @@
 extends ../../layout/ui-kit-layout
 
-include ../../components/header-ui-kit/header-ui-kit
+include ../../components/logo/logo
 
 block variables 
 	- var title = 'Colors and type';
 
-block header
-	+header-ui-kit
+block content
+	section.colors-and-type
+		.colors-and-type__logo
+			+logo
 	//.container 
 	//p Hello
 	//img(src="./assets/images/adidas.png", alt="")
