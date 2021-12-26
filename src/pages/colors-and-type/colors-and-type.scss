@@ -1,7 +1,25 @@
 .colors-and-type {
+	display: grid;
+  grid-template-columns: 30px 48px 72px 281px 415px 436px 158px;
+  grid-template-rows: 30px 48px 67px 321px 289px 145px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    ". . . . . . ."
+    ". logo . . . . ."
+    ". . . . . . ."
+    ". . . colors . type ."
+    ". . . colors . . ."
+    ". . . . . . .";
 	max-width: 100%;
 
-	&__logo {
-		padding: 30px 0 0 30px;
+	&__logo-link {
+		grid-area: logo;
 	}
 }
+
+
+/*
+.colors { grid-area: colors; }
+
+.types { grid-area: types; }
+*/
