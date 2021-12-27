@@ -1,16 +1,15 @@
 .colors-and-type {
 	display: grid;
-  grid-template-columns: 30px 48px 72px 281px 415px 436px 158px;
-  grid-template-rows: 30px 48px 67px 321px 289px 145px;
+  grid-template-columns: 48px 72px 281px 415px 436px 128px;
+  grid-template-rows: 48px 67px 321px 289px;
   grid-auto-flow: column;
   grid-template-areas:
-    ". . . . . . ."
-    ". logo . . . . ."
-    ". . . . . . ."
-    ". . . colors . type ."
-    ". . . colors . . ."
-    ". . . . . . .";
+    "logo . . . . ."
+    ". . . . . ."
+    ". . colors . type ."
+    ". . colors . . .";
 	max-width: 100%;
+	margin-bottom: 115px;
 
 	&__logo-link {
 		grid-area: logo;
@@ -19,7 +18,9 @@
 
 
 /*
-.colors { grid-area: colors; }
+.colors { 
+	grid-area: colors;
+}
 
 .types { grid-area: types; }
 */
