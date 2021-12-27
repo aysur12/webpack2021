@@ -1,19 +1,20 @@
 extends ../../layouts/ui-kit-layout/ui-kit-layout
 
 include ../../components/logo/logo
+include ../../components/pallete/pallete
 
 block variables 
-	- var title = 'Colors and type';
+	- const title = 'Colors and type';
 
 block content
 	section.colors-and-type
 		.colors-and-type__logo-link
 			+logo({typeLogo: "logoColorless"})
-	//.container 
-	//p Hello
-	//img(src="./assets/images/adidas.png", alt="")
-	//p Hello people
-	//p Hi hi hi
-	//h1 Head title
+
+		.colors-and-type__pallete
+			.pallete
+				ul.pallete__list
+					each colorCard in colorCards
+						+card(colorCard.colorName, colorCard.colorDesc)
 	
 
