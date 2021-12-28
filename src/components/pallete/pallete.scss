@@ -4,15 +4,26 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
+		row-gap: 20px;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__preview {
+		background-color: $dark-blue;
+		min-width: 25%;
 	}
 
 	&__item {
 		display: flex;
-		justify-content: space-between;
+		column-gap: 40px;
 	}
 
-	&__preview {
-		min-width: 20%;
-		background-color: $dark-blue;
+	&__color-name {
+		margin: 0;
+	}
+
+	&__color-description {
+		margin: 0;
 	}
 }
