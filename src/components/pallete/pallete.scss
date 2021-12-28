@@ -1,0 +1,16 @@
+.pallete {
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__preview {
+		min-width: 20%;
+		background-color: blueviolet;
+	}
+}

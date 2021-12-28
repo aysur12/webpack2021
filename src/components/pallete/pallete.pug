@@ -1,8 +1,11 @@
-mixin pallete(colorName, colorDesc)
+mixin pallete(colorItems = [])
 	.pallete
 		ul.pallete__list
-			li.pallete__item
-				.pallete__block
-					p.pallete__color-name= colorName
-					p.pallete__color-description= colorDesc
-				.pallete__preview
+			each colorItem in colorItems
+				li.pallete__item
+					.pallete__preview
+					.pallete__block
+						p.pallete__color-name= colorItem.colorName
+						p.pallete__color-description= colorItem.colorDesc
+					
+

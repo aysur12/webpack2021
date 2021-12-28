@@ -6,21 +6,21 @@
   grid-template-areas:
     "logo . . . . ."
     ". . . . . ."
-    ". . colors . type ."
-    ". . colors . . .";
+    ". . pallete . type ."
+    ". . pallete . . .";
 	max-width: 100%;
 	margin-bottom: 115px;
 
 	&__logo-link {
 		grid-area: logo;
 	}
+	
+	&__pallete { 
+		grid-area: pallete;
+	}
 }
 
 
 /*
-.colors { 
-	grid-area: colors;
-}
-
 .types { grid-area: types; }
 */
