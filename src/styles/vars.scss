@@ -1,0 +1,17 @@
+$dark-blue: #1f2041;
+$purple: #bc9cff;
+$green: #6fcf97;
+
+
+@function tint($dark-blue, $percentage) {
+  @return mix(white, $dark-blue, $percentage);
+}
+$dark-blue-a75: tint($dark-blue, 25%);
+$dark-blue-a50: tint($dark-blue, 50%);
+$dark-blue-a25: tint($dark-blue, 75%);
+$dark-blue-a5: tint($dark-blue, 95%);
+
+$color-header: $dark-blue;
+$color-body: $dark-blue-a75;
+$color-primary: $purple;
+$color-secondary: $green;

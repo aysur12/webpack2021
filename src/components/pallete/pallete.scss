@@ -1,3 +1,5 @@
+@import '../../styles/vars.scss';
+
 .pallete {
 	&__list {
 		display: flex;
@@ -11,6 +13,6 @@
 
 	&__preview {
 		min-width: 20%;
-		background-color: blueviolet;
+		background-color: $dark-blue;
 	}
 }
