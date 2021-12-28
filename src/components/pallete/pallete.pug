@@ -1,8 +1,11 @@
-- const colorCards = [{ name: 'Dark Shade 100%', colorDesc: '#1f2041' }, { name: 'Dark Shade 75%', colorDesc: '#1f2041' }, { name: 'Dark Shade 50%', colorDesc: '#1f2041' }, { name: 'Dark Shade 25%', colorDesc: '#1f2041' }, { name: 'Dark Shade 5%', colorDesc: '#1f2041' }, { name: 'Purple', colorDesc: '#bc9cff' }, { name: 'Green', colorDesc: '#6fcf97' }]
-
-mixin pallete(name, colorDesc)
+mixin pallete(colorName, colorDesc)
 	li.pallete__item
 		.pallete__block
-			p.pallete__color-name = name
-			p.pallete__color-description = colorDesc
-		.pallete__color-preview	
+			p.pallete__color-name #{colorName}
+			p.pallete__color-description #{colorDesc}
+		.pallete__preview
+			block	
+
+
+
+
