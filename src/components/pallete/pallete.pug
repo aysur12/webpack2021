@@ -1,11 +1,21 @@
-mixin pallete(colorItems = [])
+mixin pallete(colorItems)
+	- 
+		colorItems = [
+			{ colorTitle: 'Dark Shade 100%', colorDesc: '#1f2041' },
+			{ colorTitle: 'Dark Shade 75%', colorDesc: '#1f2041' }, 
+			{ colorTitle: 'Dark Shade 50%', colorDesc: '#1f2041' }, 
+			{ colorTitle: 'Dark Shade 25%', colorDesc: '#1f2041' }, 
+			{ colorTitle: 'Dark Shade 5%', colorDesc: '#1f2041' }, 
+			{ colorTitle: 'Purple', colorDesc: '#bc9cff' }, 
+			{ colorTitle: 'Green', colorDesc: '#6fcf97' }
+		]
 	.pallete
 		ul.pallete__list
 			each colorItem in colorItems
 				li.pallete__item
 					.pallete__preview
 					.pallete__block
-						p.pallete__color-name= colorItem.colorName
+						p.pallete__color-name= colorItem.colorTitle
 						p.pallete__color-description= colorItem.colorDesc
 					
 
