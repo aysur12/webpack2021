@@ -1,34 +1,56 @@
-@use '../../styles/vars.scss' as v;
-@use '../../styles/fonts.scss';
+@use '../../styles/main.scss' as *;
+
+@mixin bg-color($color) {
+	background-color: $color;
+}
 
 .pallete {
 	&__list {
 		display: flex;
 		flex-direction: column;
-		row-gap: 20px;
+		row-gap: 1.43em;
 		margin: 0;
 		padding: 0;
 	}
 
-	&__preview {
-		background-color:	v.$dark-blue;
-		min-width: 25%;
-	}
-
 	&__item {
 		display: flex;
-		column-gap: 40px;
+		column-gap: 2.8em;
+		max-height: 5em;
+	}
+
+	&__preview {
+		min-width: 5em;
+		min-height: 5em;
+		background-color:	$dark-blue;
+		border-radius: 0.42em;
+		&__:nth-child(2) {
+			@include bg-color($dark-blue-a75);
+		}
+		&__:nth-child(3) {
+			@include bg-color($green);
+		}
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		margin: 0.2em 0;
+		font-family: $mainFont;
+		font-size: 1.357rem;
+		line-height: 2;
 	}
 
 	&__color-name {
 		margin: 0;
-		font-family: v.$mainFont;
-		font-size: 1.1875em;
+		max-height: 1.47em;
 		font-weight: bold;
+	
 	}
 
 	&__color-description {
 		margin: 0;
-		font-size: 1.1875em;
+		max-height: 1.47em;
+		text-transform: uppercase;
 	}
 }
