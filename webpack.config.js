@@ -57,7 +57,7 @@ const config = {
 		),
 		new CopyPlugin({
       patterns: [
-        { from: "./src/assets/images", to: "./assets/images" },
+        { from: "./src/components/logo/images", to: "./assets/images" },
 				{ from: "./src/assets/fonts", to: "./assets/fonts" },
       ],
     }),
