@@ -1,29 +1,45 @@
-@use '../../styles/vars.scss' as *;
+@use '../../styles/main.scss' as *;
 
 .pallete {
 	&__list {
 		display: flex;
 		flex-direction: column;
-		row-gap: 20px;
+		row-gap: 1.43em;
 		margin: 0;
 		padding: 0;
 	}
 
-	&__preview {
-		background-color:	$dark-blue;
-		min-width: 25%;
-	}
-
 	&__item {
 		display: flex;
-		column-gap: 40px;
+		column-gap: 2.8em;
+		max-height: 5em;
+	}
+
+	&__preview {
+		min-width: 5em;
+		min-height: 5em;
+		background-color:	$dark-blue;
+		border-radius: 0.42em;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		margin: 0.2em 0;
+		font-family: $mainFont;
+		font-size: 1.357rem;
+		line-height: 2;
 	}
 
 	&__color-name {
 		margin: 0;
+		font-weight: bold;
+		max-height: 1.47em;
 	}
 
 	&__color-description {
 		margin: 0;
+		text-transform: uppercase;
+		max-height: 1.47em;
 	}
 }

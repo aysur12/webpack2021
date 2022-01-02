@@ -82,7 +82,7 @@ const config = {
 			},
 			{
 				test: /\.s[ac]ss$/i,
-				use: [stylesHandler, "css-loader", "postcss-loader", "sass-loader"],
+				use: [stylesHandler, "css-loader", "resolve-url-loader", "postcss-loader", "sass-loader"],
 			},
 			{
 				test: /\.css$/i,
