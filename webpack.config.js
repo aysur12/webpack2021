@@ -58,7 +58,7 @@ const config = {
 		new CopyPlugin({
       patterns: [
         { from: "./src/components/logo/images", to: "./assets/images" },
-				{ from: "./src/assets/fonts", to: "./assets/fonts" },
+				//{ from: "./src/assets/fonts", to: "./assets/fonts" },
       ],
     }),
 		new FaviconsWebpackPlugin({
