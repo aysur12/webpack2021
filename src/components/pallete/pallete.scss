@@ -16,7 +16,6 @@
 	&__item {
 		display: flex;
 		column-gap: 2.8em;
-		max-height: 5em;
 		&:nth-child(1) {
 			.pallete__preview {
 				@include bg-color($dark-blue);
@@ -56,33 +55,26 @@
 
 	&__preview {
 		min-width: 5em;
-		min-height: 5em;
 		border-radius: 0.42em;
-
-		&:nth-child(3) {
-			@include bg-color($green);
-		}
 	}
 
 	&__block {
 		display: flex;
 		flex-direction: column;
-		margin: 0.2em 0;
+		margin: 0.368em 0;
+		min-width: 9em;
 		font-family: $mainFont;
 		font-size: 1.357rem;
-		line-height: 2;
+		line-height: 1.474;
 	}
 
 	&__color-name {
 		margin: 0;
-		max-height: 1.47em;
 		font-weight: bold;
-	
 	}
 
 	&__color-description {
 		margin: 0;
-		max-height: 1.47em;
 		text-transform: uppercase;
 	}
 }
