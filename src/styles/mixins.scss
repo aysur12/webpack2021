@@ -1,9 +1,11 @@
+@use './vars' as *;
+
 @mixin font-h1 {
 	color: $color-header;
 	font: {
 		family: $mainFont;
 		weight: bold;
-		font-size: 1.714em;
+		size: 1.714em;
 	}	
 	line-height: 1.208em;
 }
@@ -13,7 +15,7 @@
 	font: {
 		family: $mainFont;
 		weight: bold;
-		font-size: 1.357em;
+		size: 1.357em;
 	}	
 	line-height: 1.211em;
 }
@@ -23,7 +25,7 @@
 	font: {
 		family: $mainFont;
 		weight: bold;
-		font-size: 0.857em;
+		size: 0.857em;
 	}	
 	line-height: 1.25em;
 }
@@ -32,7 +34,7 @@
 	color: $dark-blue-a75;
 	font: {
 		family: $mainFont;
-		font-size: 1em;
+		size: 1em;
 	}	
 	line-height: 1.714em;
 }
