@@ -12,8 +12,6 @@ $color-list: ($dark-blue, $dark-blue-a75, $dark-blue-a50, $dark-blue-a25, $dark-
 	}
 }
 
-
-
 .pallete {
 	&__list {
 		display: flex;
@@ -40,8 +38,10 @@ $color-list: ($dark-blue, $dark-blue-a75, $dark-blue-a50, $dark-blue-a25, $dark-
 		flex-direction: column;
 		margin: 0.368em 0;
 		min-width: 9em;
-		font-family: $mainFont;
-		font-size: 1.357rem;
+		font: {
+			family: $mainFont;
+			size: 1.357rem;
+		}
 		line-height: 1.474;
 	}
 

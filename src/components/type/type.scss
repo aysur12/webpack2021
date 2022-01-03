@@ -16,10 +16,18 @@
 
 	&__tag {
 		min-width: 2.643em;
+		font: {
+			family: $mainFont;
+			size: 1.357rem;
+		}
 		text-align: right;
+		color: $dark-blue-a25;
 	}
 
 	&__text {
-
+		font: {
+			family: $mainFont;
+			weight: 700;
+		}
 	}
 }	
