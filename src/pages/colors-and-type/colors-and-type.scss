@@ -18,9 +18,12 @@
 	&__pallete { 
 		grid-area: pallete;
 	}
+
+	&__type { 
+		grid-area: type; 
+	}
 }
 
 
-/*
-.types { grid-area: types; }
-*/
+
+
