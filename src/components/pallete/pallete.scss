@@ -1,8 +1,18 @@
 @use '../../styles/main.scss' as *;
 
-@mixin bg-color($color) {
-	background-color: $color;
+$color-list: ($dark-blue, $dark-blue-a75, $dark-blue-a50, $dark-blue-a25, $dark-blue-a5, $purple, $green);
+
+@mixin bg-color {
+	@for $i from 1 through 7 {
+		&:nth-child(#{$i}) {
+			.pallete__preview {
+				background-color: nth($color-list, $i);
+			}
+		}
+	}
 }
+
+
 
 .pallete {
 	&__list {
@@ -17,41 +27,7 @@
 	&__item {
 		display: flex;
 		column-gap: 2.8em;
-		&:nth-child(1) {
-			.pallete__preview {
-				@include bg-color($dark-blue);
-			}
-		}
-		&:nth-child(2) {
-			.pallete__preview {
-				@include bg-color($dark-blue-a75);
-			}
-		}		
-		&:nth-child(3) {
-			.pallete__preview {
-				@include bg-color($dark-blue-a50);
-			}
-		}	
-		&:nth-child(4) {
-			.pallete__preview {
-				@include bg-color($dark-blue-a25);
-			}
-		}	
-		&:nth-child(5) {
-			.pallete__preview {
-				@include bg-color($dark-blue-a5);
-			}
-		}	
-		&:nth-child(6) {
-			.pallete__preview {
-				@include bg-color($purple);
-			}
-		}	
-		&:nth-child(7) {
-			.pallete__preview {
-				@include bg-color($green);
-			}
-		}	
+		@include bg-color;
 	}
 
 	&__preview {

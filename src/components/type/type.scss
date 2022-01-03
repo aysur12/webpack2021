@@ -17,9 +17,6 @@
 	&__tag {
 		min-width: 2.643em;
 		text-align: right;
-		[class~=&]::not(:last-child) {
-			text-transform: uppercase;
-		}
 	}
 
 	&__text {
