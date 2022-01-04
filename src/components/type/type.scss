@@ -9,6 +9,13 @@
 	}	
 }
 
+@mixin style-sizes($min-width, $f-size, $l-height) {
+	min-width: $min-width;
+	@extend %color-font;
+	font-size: $f-size;
+	line-height: $l-height;
+} 
+
 .type {
 	&__list {
 		display: flex;
@@ -29,29 +36,16 @@
 		margin: 0;
 		padding: 0;
 		&_large {
-			min-width: 1.542em;
-			@extend %color-font;
-			font-size: 1.714em;
-			line-height: 1.208em;
+			@include style-sizes($min-width: 1.542em, $f-size: 1.714em, $l-height: 1.208em);
 		}
 		&_medium {
-			min-width: 1.947em;
-			@extend %color-font;
-			font-size: 1.357em;
-			line-height: 1.211em;
+			@include style-sizes($min-width: 1.947em, $f-size: 1.357em, $l-height: 1.211em);
 		}
 		&_small {
-			min-width: 3.083em;
-			@extend %color-font;
-			font-size: .857em;
-			line-height: 1.25em;
+			@include style-sizes($min-width: 3.083em, $f-size: .857em, $l-height: 1.25em);
 		}
 		&_tiny {
-			min-width: 2.643em;
-			@extend %color-font;
-			text-align: left;
-			font-size: 1em;
-			line-height: 1.714em;
+			@include style-sizes($min-width: 2.643em, $f-size: 1em, $l-height: 1.714em);
 		}
 	}
 

@@ -8,8 +8,8 @@ mixin typography(textItems)
 		]
 
 	.type 
-	ul.type__list
-		each textItem in textItems
-			li.type__item 
-				p.type__tag(class="type__tag_" + textItem.class)= textItem.tag
-				p.type__text(class="type__text_" + textItem.class)= textItem.text
+		ul.type__list
+			each textItem in textItems
+				li.type__item 
+					p.type__tag(class="type__tag_" + textItem.class)= textItem.tag
+					p.type__text(class="type__text_" + textItem.class)= textItem.text
