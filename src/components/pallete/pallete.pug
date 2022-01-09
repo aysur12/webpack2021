@@ -1,6 +1,6 @@
 mixin pallete(colorItems)
 	- 
-		colorItems = [
+		const colorItems = [
 			{ colorTitle: "Dark Shade 100%", colorDesc: "#1f2041" },
 			{ colorTitle: "Dark Shade 75%", colorDesc: "#1f2041" }, 
 			{ colorTitle: "Dark Shade 50%", colorDesc: "#1f2041" }, 
@@ -8,7 +8,7 @@ mixin pallete(colorItems)
 			{ colorTitle: "Dark Shade 5%", colorDesc: "#1f2041" }, 
 			{ colorTitle: "Purple", colorDesc: "#bc9cff" }, 
 			{ colorTitle: "Green", colorDesc: "#6fcf97" }
-		]
+		];
 	.pallete
 		ul.pallete__list
 			each colorItem in colorItems
@@ -17,5 +17,5 @@ mixin pallete(colorItems)
 					.pallete__block
 						p.pallete__color-name= colorItem.colorTitle
 						p.pallete__color-description= colorItem.colorDesc
-					
+
 
