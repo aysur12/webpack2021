@@ -1,13 +1,13 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const fs = require('fs');
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === 'production';
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 const PAGES_DIR = path.resolve(__dirname, 'src/pages');
@@ -17,13 +17,13 @@ const PAGES = fs
 const PATHS = {
   src: path.join(__dirname, './src'),
   dist: path.join(__dirname, './dist'),
-}
+};
 
 const filename = (ext) => (isDevelopment ? `${ext}/[name].${ext}` : `${ext}/[name].${ext}`);
-const entryPoints = PAGES.map(page => ({ [page]: `${PAGES_DIR}/${page}/index.js`, }));
+const entryPoints = PAGES.map((page) => ({ [page]: `${PAGES_DIR}/${page}/index.js` }));
 const entryPointsCorrect = Object.assign({}, ...entryPoints);
 
-const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : "style-loader";
+const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
 const config = {
   entry: entryPointsCorrect,
@@ -46,19 +46,18 @@ const config = {
   },
   plugins: [
     ...PAGES.map(
-      (page) =>
-        new HtmlWebpackPlugin({
-          filename: `${page}.html`,
-          template: `${PAGES_DIR}/${page}/${page}.pug`,
-          chunks: [page],
-          inject: 'body',
-          minify: false,
-        })
+      (page) => new HtmlWebpackPlugin({
+        filename: `${page}.html`,
+        template: `${PAGES_DIR}/${page}/${page}.pug`,
+        chunks: [page],
+        inject: 'body',
+        minify: false,
+      }),
     ),
     new CopyPlugin({
       patterns: [
-        { from: "./src/components/logo/images", to: "./assets/images" },
-        //{ from: "./src/assets/fonts", to: "./assets/fonts" },
+        { from: './src/components/logo/images', to: './assets/images' },
+        // { from: "./src/assets/fonts", to: "./assets/fonts" },
       ],
     }),
     new FaviconsWebpackPlugin({
@@ -70,7 +69,7 @@ const config = {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.pug$/,
@@ -82,11 +81,11 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, "css-loader", "resolve-url-loader", "postcss-loader", "sass-loader"],
+        use: [stylesHandler, 'css-loader', 'resolve-url-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader", "postcss-loader"],
+        use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -100,8 +99,8 @@ const config = {
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[name][ext]',
-          },
-      },		
+        },
+      },
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
@@ -110,10 +109,10 @@ const config = {
 
 module.exports = () => {
   if (isProduction) {
-    config.mode = "production";
-    config.plugins.push(new MiniCssExtractPlugin({filename: filename('css'),}));
+    config.mode = 'production';
+    config.plugins.push(new MiniCssExtractPlugin({ filename: filename('css') }));
   } else {
-    config.mode = "development";
+    config.mode = 'development';
   }
   return config;
 };
