@@ -6,7 +6,7 @@
   font: {
     family: $mainFont;
     weight: normal;
-  }	
+  }
 }
 
 @mixin style-sizes($min-width, $f-size, $l-height) {
@@ -22,8 +22,7 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
-    max-width: 31.143em;
-    max-height: 100%;
+    min-width: 31.143em;
     row-gap: 3.643em;
     list-style: none;
   }
