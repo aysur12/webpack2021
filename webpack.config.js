@@ -26,94 +26,94 @@ const entryPointsCorrect = Object.assign({}, ...entryPoints);
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : "style-loader";
 
 const config = {
-	entry: entryPointsCorrect,
-	output: {
-		filename: filename('js'),
-		path: PATHS.dist,
-		clean: true,
-	},
-	devtool: 'source-map',
-	optimization: {
-		splitChunks: {
-			chunks: 'all',
-		},
-	},
-	devServer: {
-		static: './dist',
-		port: 8080,
-		open: '/colors-and-type.html',
-		hot: false,
-	},
-	plugins: [
-		...PAGES.map(
-			(page) =>
-				new HtmlWebpackPlugin({
-					filename: `${page}.html`,
-					template: `${PAGES_DIR}/${page}/${page}.pug`,
-					chunks: [page],
-					inject: 'body',
-					minify: false,
-				})
-		),
-		new CopyPlugin({
+  entry: entryPointsCorrect,
+  output: {
+    filename: filename('js'),
+    path: PATHS.dist,
+    clean: true,
+  },
+  devtool: 'source-map',
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  devServer: {
+    static: './dist',
+    port: 8080,
+    open: '/colors-and-type.html',
+    hot: false,
+  },
+  plugins: [
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          filename: `${page}.html`,
+          template: `${PAGES_DIR}/${page}/${page}.pug`,
+          chunks: [page],
+          inject: 'body',
+          minify: false,
+        })
+    ),
+    new CopyPlugin({
       patterns: [
         { from: "./src/components/logo/images", to: "./assets/images" },
-				//{ from: "./src/assets/fonts", to: "./assets/fonts" },
+        //{ from: "./src/assets/fonts", to: "./assets/fonts" },
       ],
     }),
-		new FaviconsWebpackPlugin({
-			logo: './src/assets/favicons/favicon-toxin.png',
-			prefix: './assets/favicons/',
-		}),
-	],
-	module: {
-		rules: [
-			{
-				test: /\.(js|jsx)$/i,
-				loader: "babel-loader",
-			},
-			{
-				test: /\.pug$/,
-				loader: 'pug-loader',
-				options: {
+    new FaviconsWebpackPlugin({
+      logo: './src/assets/favicons/favicon-toxin.png',
+      prefix: './assets/favicons/',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/i,
+        loader: "babel-loader",
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
           pretty: true,
         },
-				exclude: /(node_modules|bower_components)/,
-			},
-			{
-				test: /\.s[ac]ss$/i,
-				use: [stylesHandler, "css-loader", "resolve-url-loader", "postcss-loader", "sass-loader"],
-			},
-			{
-				test: /\.css$/i,
-				use: [stylesHandler, "css-loader", "postcss-loader"],
-			},
-			{
-				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        exclude: /(node_modules|bower_components)/,
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [stylesHandler, "css-loader", "resolve-url-loader", "postcss-loader", "sass-loader"],
+      },
+      {
+        test: /\.css$/i,
+        use: [stylesHandler, "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/images/[name][ext]',
-				},
-			},
-			{
-				test: /fonts.*\.(ttf|svg|woff)$/i,
-				type: 'asset/resource',
-				generator: {
-					filename: 'assets/fonts/[name][ext]',
-					},
-			},		
-			// Add your rules for custom modules here
-			// Learn more about loaders from https://webpack.js.org/loaders/
-		],
-	},
+        },
+      },
+      {
+        test: /fonts.*\.(ttf|svg|woff)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+          },
+      },		
+      // Add your rules for custom modules here
+      // Learn more about loaders from https://webpack.js.org/loaders/
+    ],
+  },
 };
 
 module.exports = () => {
-	if (isProduction) {
-		config.mode = "production";
-		config.plugins.push(new MiniCssExtractPlugin({filename: filename('css'),}));
-	} else {
-		config.mode = "development";
-	}
-	return config;
+  if (isProduction) {
+    config.mode = "production";
+    config.plugins.push(new MiniCssExtractPlugin({filename: filename('css'),}));
+  } else {
+    config.mode = "development";
+  }
+  return config;
 };

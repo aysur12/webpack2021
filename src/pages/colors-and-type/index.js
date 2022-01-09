@@ -3,7 +3,7 @@ import '../../layouts/ui-kit-layout';
 
 import '../../components/logo';
 import '../../components/pallete';
-import '../../components/type';
+import '../../components/typography';
 
 import './colors-and-type.scss';
 

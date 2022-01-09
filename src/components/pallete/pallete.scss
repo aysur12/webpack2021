@@ -3,55 +3,56 @@
 $color-list: ($dark-blue, $dark-blue-a75, $dark-blue-a50, $dark-blue-a25, $dark-blue-a5, $purple, $green);
 
 @mixin bg-color {
-	@for $i from 1 through 7 {
-		&:nth-child(#{$i}) {
-			.pallete__preview {
-				background-color: nth($color-list, $i);
-			}
-		}
-	}
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) {
+      .pallete__preview {
+        background-color: nth($color-list, $i);
+      }
+    }
+  }
 }
 
 .pallete {
-	&__list {
-		display: flex;
-		flex-direction: column;
-		row-gap: 1.429em;
-		margin: 0;
-		padding: 0;
-		min-width: 20.071em;
-	}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.429em;
+    margin: 0;
+    padding: 0;
+    min-width: 20.071em;
+    list-style: none;
+  }
 
-	&__item {
-		display: flex;
-		column-gap: 2.8em;
-		@include bg-color;
-	}
+  &__item {
+    display: flex;
+    column-gap: 2.8em;
+    @include bg-color;
+  }
 
-	&__preview {
-		min-width: 5em;
-		border-radius: 0.42em;
-	}
+  &__preview {
+    min-width: 5em;
+    border-radius: 0.42em;
+  }
 
-	&__block {
-		display: flex;
-		flex-direction: column;
-		margin: 0.368em 0;
-		min-width: 9em;
-		font: {
-			family: $mainFont;
-			size: 1.357rem;
-		}
-		line-height: 1.474;
-	}
+  &__block {
+    display: flex;
+    flex-direction: column;
+    margin: 0.368em 0;
+    min-width: 9em;
+    font: {
+      family: $mainFont;
+      size: 1.357rem;
+    }
+    line-height: 1.474;
+  }
 
-	&__color-name {
-		margin: 0;
-		font-weight: bold;
-	}
+  &__color-name {
+    margin: 0;
+    font-weight: bold;
+  }
 
-	&__color-description {
-		margin: 0;
-		text-transform: uppercase;
-	}
+  &__color-description {
+    margin: 0;
+    text-transform: uppercase;
+  }
 }

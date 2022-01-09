@@ -8,7 +8,9 @@
 		"build": "webpack --mode=production --node-env=production",
 		"dev": "webpack --mode=development",
 		"watch": "webpack --watch",
-		"start": "webpack serve"
+		"start": "webpack serve",
+		"eslint": "eslint .",
+		"lint:fix": "eslint --fix --ext .js,.jsx ."
 	},
 	"keywords": [
 		"pug",

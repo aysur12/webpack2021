@@ -2,19 +2,16 @@ extends ../../layouts/ui-kit-layout/ui-kit-layout
 
 include ../../components/logo/logo
 include ../../components/pallete/pallete
-include ../../components/type/type
+include ../../components/typography/typography
 
-
-block variables 
-	- var title = "Colors and type";
+block variables
+  - var title = "Colors and type";
 
 block content
-	section.colors-and-type
-		.colors-and-type__logo-link
-			+logo({typeLogo: "logoColorless"})
-		.colors-and-type__pallete
-			+pallete(colorItems)
-		.colors-and-type__type
-			+typography(textItems)
-
-
+  section.colors-and-type
+    .colors-and-type__logo-link
+      +logo({typeLogo: 'logoColorless'})
+    .colors-and-type__pallete
+      +pallete(colorItems)
+    .colors-and-type__type
+      +typography(textItems)

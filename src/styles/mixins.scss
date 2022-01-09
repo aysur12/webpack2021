@@ -1,40 +1,40 @@
 @use './vars' as *;
 
 @mixin font-h1 {
-	color: $color-header;
-	font: {
-		family: $mainFont;
-		weight: bold;
-		size: 1.714em;
-	}	
-	line-height: 1.208em;
+  color: $color-header;
+  font: {
+    family: $mainFont;
+    weight: bold;
+    size: 1.714em;
+  }
+  line-height: 1.208em;
 }
 
 @mixin font-h2 {
-	color: $color-header;
-	font: {
-		family: $mainFont;
-		weight: bold;
-		size: 1.357em;
-	}	
-	line-height: 1.211em;
+  color: $color-header;
+  font: {
+    family: $mainFont;
+    weight: bold;
+    size: 1.357em;
+  }
+  line-height: 1.211em;
 }
 
 @mixin font-h3 {
-	color: $color-header;
-	font: {
-		family: $mainFont;
-		weight: bold;
-		size: 0.857em;
-	}	
-	line-height: 1.25em;
+  color: $color-header;
+  font: {
+    family: $mainFont;
+    weight: bold;
+    size: 0.857em;
+  }
+  line-height: 1.25em;
 }
 
 @mixin font-body {
-	color: $dark-blue-a75;
-	font: {
-		family: $mainFont;
-		size: 1em;
-	}	
-	line-height: 1.714em;
+  color: $dark-blue-a75;
+  font: {
+    family: $mainFont;
+    size: 1em;
+  }
+  line-height: 1.714em;
 }

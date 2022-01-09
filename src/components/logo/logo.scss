@@ -1,8 +1,12 @@
 .logo {
-	&__img-logo-ui-kit {
-		min-width: 48px;
-	}
-	&__img-logo-toxin {
-		min-width: 106px;
-	}
+  &__img-logo-ui-kit {
+    max-width: 100%;
+    min-width: 48px;
+    height: auto;
+  }
+  &__img-logo-toxin {  
+    max-width: 100%;
+    min-width: 106px;
+    height: auto;
+  }
 }

@@ -1,9 +1,19 @@
-mixin logo({typeLogo = "logoColorless"})
-	.logo
-		case typeLogo
-			when "logoColorless"
-				a(class = "logo__link" href= "./start-page.html") 
-					img(class = "logo__img-logo-ui-kit" src = "./assets/images/logo-ui-kit.svg", alt = "Логотип Toxin", width="48", height="48")
-			when "logoWithText" 
-				a(class = "logo__link" href= "./start-page.html") 
-					img(class = "logo__img-logo-toxin" src = "./assets/images/logo-toxin.svg", alt = "Логотип Toxin", width="106", height="40")
+mixin logo({typeLogo = 'logoColorless'})
+  .logo
+    case typeLogo
+      when 'logoColorless'
+        a.logo__link(href="./start-page.html") 
+          img.logo__img-logo-ui-kit(
+            src="./assets/images/logo-ui-kit.svg",
+            alt="Логотип Toxin",
+            width="48",
+            height="48"
+          )
+      when "logoWithText" 
+        a.logo__link(href="./start-page.html") 
+          img.logo__img-logo-toxin(
+            src="./assets/images/logo-toxin.svg",
+            alt="Логотип Toxin",
+            width="106",
+            height="40"
+          )

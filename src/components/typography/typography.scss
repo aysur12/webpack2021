@@ -1,0 +1,71 @@
+@use '../../styles/main' as *;
+
+%color-font {
+  color: $dark-blue-a25;
+  text-align: right;
+  font: {
+    family: $mainFont;
+    weight: normal;
+  }	
+}
+
+@mixin style-sizes($min-width, $f-size, $l-height) {
+  min-width: $min-width;
+  @extend %color-font;
+  font-size: $f-size;
+  line-height: $l-height;
+} 
+
+.type {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    max-width: 31.143em;
+    max-height: 100%;
+    row-gap: 3.643em;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 2.143em;
+  }
+
+  &__tag {
+    margin: 0;
+    padding: 0;
+    &_large {
+      @include style-sizes($min-width: 1.542em, $f-size: 1.714em, $l-height: 1.208em);
+    }
+    &_medium {
+      @include style-sizes($min-width: 1.947em, $f-size: 1.357em, $l-height: 1.211em);
+    }
+    &_small {
+      @include style-sizes($min-width: 3.083em, $f-size: .857em, $l-height: 1.25em);
+    }
+    &_tiny {
+      @include style-sizes($min-width: 2.643em, $f-size: 1em, $l-height: 1.714em);
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    &_large {
+      @include font-h1;
+    }
+    &_medium {
+      @include font-h2;
+    }
+    &_small {
+      @include font-h3;
+      text-transform: uppercase;
+    }
+    &_tiny {
+      max-width: 21.5em;
+      @include font-body;
+    }
+  }
+}	
