@@ -1,5 +1,3 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -57,7 +55,6 @@ const config = {
     new CopyPlugin({
       patterns: [
         { from: './src/components/logo/images', to: './assets/images' },
-        // { from: "./src/assets/fonts", to: "./assets/fonts" },
       ],
     }),
     new FaviconsWebpackPlugin({
@@ -101,8 +98,6 @@ const config = {
           filename: 'assets/fonts/[name][ext]',
         },
       },
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
 };
