@@ -1,29 +1,29 @@
 .colors-and-type {
-	display: grid;
-  grid-template-columns: 48px 72px 281px 415px 436px 128px;
-  grid-template-rows: 48px 67px 321px 289px;
+  display: grid;
+  grid-template-columns: 3.33% 5% 19.51% 28.81% 30.27% 8.88%;
+  grid-template-rows: 3.33% 4.65% 22.29% 20.06%;
   grid-auto-flow: column;
   grid-template-areas:
     "logo . . . . ."
     ". . . . . ."
-    ". . pallete . type ."
+    ". . pallete . typography ."
     ". . pallete . . .";
-	max-width: 1380px;
-	margin: 0 auto 115px;
-  padding: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2.08%;
 
+  &__logo-link {
+    grid-area: logo;
+  }
+  
+  &__pallete { 
+    grid-area: pallete;
+    padding-bottom: 7.98%;
+  }
 
-	&__logo-link {
-		grid-area: logo;
-	}
-	
-	&__pallete { 
-		grid-area: pallete;
-	}
-
-	&__type { 
-		grid-area: type; 
-	}
+  &__typography { 
+    grid-area: typography; 
+  }
 }
 
 

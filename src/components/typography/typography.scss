@@ -1,17 +1,19 @@
 @use '../../styles/main' as *;
 
-%color-font {
+%block-style {
+  margin: 0;
+	padding: 0;
   color: $dark-blue-a25;
   text-align: right;
   font: {
-    family: $mainFont;
+    family: $main-font-family;
     weight: normal;
   }
 }
 
 @mixin style-sizes($min-width, $f-size, $l-height) {
   min-width: $min-width;
-  @extend %color-font;
+  @extend %block-style;
   font-size: $f-size;
   line-height: $l-height;
 } 
@@ -33,8 +35,6 @@
   }
 
   &__tag {
-    margin: 0;
-    padding: 0;
     &_large {
       @include style-sizes($min-width: 1.542em, $f-size: 1.714em, $l-height: 1.208em);
     }
