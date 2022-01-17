@@ -1,13 +1,14 @@
 @use '../../styles/main' as *;
 
 $color-list: (
-  $dark-blue, 
-  $dark-blue-a75, 
-  $dark-blue-a50, 
-  $dark-blue-a25,
-  $dark-blue-a5, 
-  $purple, 
-  $green);
+  $color-font-a100, 
+  $color-font-a75, 
+  $color-font-a50, 
+  $color-font-a25,
+  $color-font-a5, 
+  $color-primary-bg , 
+  $color-secondary-bg
+  );
 
 @mixin bg-color {
   @for $i from 1 through 7 {

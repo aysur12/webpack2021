@@ -1,25 +1,25 @@
 @use './vars' as *;
 
 @mixin font-h1 {
-  color: $color-header;
+  color: $color-font-a100;
   font: bold 1.714em $main-font-family;
   line-height: 1.208em;
 }
 
 @mixin font-h2 {
-  color: $color-header;
+  color: $color-font-a100;
   font: bold 1.357em $main-font-family;
   line-height: 1.211em;
 }
 
 @mixin font-h3 {
-  color: $color-header;
+  color: $color-font-a100;
   font: bold 0.857em $main-font-family;
   line-height: 1.25em;
 }
 
 @mixin font-body {
-  color: $dark-blue-a75;
+  color: $color-font-a75;
   font: 1em $main-font-family;
   line-height: 1.714em;
 }

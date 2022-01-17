@@ -1,19 +1,14 @@
-$dark-blue: #1f2041;
-$purple: #bc9cff;
-$green: #6fcf97;
-
+$color-font-a100: #1f2041;
 
 @function tint($dark-blue, $percentage) {
   @return mix(white, $dark-blue, $percentage);
 }
-$dark-blue-a75: tint($dark-blue, 25%);
-$dark-blue-a50: tint($dark-blue, 50%);
-$dark-blue-a25: tint($dark-blue, 75%);
-$dark-blue-a5: tint($dark-blue, 95%);
+$color-font-a75: tint($color-font-a100, 25%);
+$color-font-a50: tint($color-font-a100, 50%);
+$color-font-a25: tint($color-font-a100, 75%);
+$color-font-a5: tint($color-font-a100, 95%);
 
-$color-header: $dark-blue;
-$color-body: $dark-blue-a75;
-$color-primary-bg: $purple;
-$color-secondary-bg: $green;
+$color-primary-bg: #bc9cff;
+$color-secondary-bg: #6fcf97;
 
 $main-font-family: Montserrat, Arial, sans-serif;
