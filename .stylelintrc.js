@@ -5,6 +5,9 @@ module.exports = {
   plugins: ["stylelint-order", "stylelint-scss"],
   rules: {
     "string-quotes": "single",
-		"color-function-notation": "legacy",
+    "color-function-notation": "legacy",
+    "at-rule-no-unknown" : null,
+    "scss/at-rule-no-unknown" : true,
+    "selector-class-pattern": null,
   }
 };
