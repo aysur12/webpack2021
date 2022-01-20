@@ -3,7 +3,7 @@
   grid-template-columns: 48px 72px 281px 415px 436px 128px;
   grid-template-rows: 48px 67px 321px 289px;
   grid-auto-flow: column;
-  grid-template:
+  grid-template-areas:
     'logo . . . . .'
     '. . . . . .'
     '. . pallete . typography .'
