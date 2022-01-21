@@ -92,7 +92,7 @@ const config = {
         },
       },
       {
-        test: /fonts.*\.(ttf|svg|woff)$/i,
+        test: /fonts.*\.(ttf|svg|woff|woff2)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[name][ext]',
