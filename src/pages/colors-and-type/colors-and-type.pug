@@ -5,13 +5,13 @@ include ../../components/pallete/pallete
 include ../../components/typography/typography
 
 block variables
-  - var title = "Colors and type";
+  title Colors and type
 
 block content
   main.colors-and-type
     .colors-and-type__logo-link
-      +logo({typeLogo: 'logoColorless'})
+      +logo({typeLogo: "logoColorless"})
     .colors-and-type__pallete
       +pallete(colorItems)
     .colors-and-type__typography
-      +typography(textItems)
+      +typography(typographyItems)

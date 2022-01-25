@@ -1,15 +1,27 @@
-mixin typography(textItems)
+mixin typography(typographyItems)
   -
-    textItems = [
-      { tag: "H1", text: "This one is the sub-section or widget title", class: "large" },
-      { tag: "H2", text: "Next one is the item title inside widgets", class: "medium" }, 
-      { tag: "H3", text: "This is a label or CTA text", class: "small" }, 
-      { tag: "Body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc.", class: "tiny" } 
+    typographyItems = [
+      { tag: "H1", 
+        text: "This one is the sub-section or widget title", 
+        modSize: "large" 
+      },
+      { tag: "H2",
+        text: "Next one is the item title inside widgets", 
+        modSize: "medium" 
+      }, 
+      { tag: "H3", 
+        text: "This is a label or CTA text", 
+        modSize: "small"
+      }, 
+      { tag: "Body", 
+        text: "This is the body text which is used for most of the design, like paragraphs, lists, etc.", 
+        modSize: "tiny" 
+      } 
     ];
 
-  .type 
-    ul.type__list
-      each textItem in textItems
-        li.type__item 
-          p.type__tag(class=`type__tag_${textItem.class}`)= textItem.tag
-          p.type__text(class=`type__text_${textItem.class}`)= textItem.text
+  .typography 
+    ul.typography__list
+      each typographyItem in typographyItems
+        li.typography__item 
+          p.typography__tag(class=`typography__tag_${typographyItem.modSize}`)= typographyItem.tag
+          p.typography__text(class=`typography__text_${typographyItem.modSize}`)= typographyItem.text

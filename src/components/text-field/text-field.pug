@@ -1,0 +1,29 @@
+mixin text-field(params = {})
+  -
+    const {
+      type= "",
+      name= "",
+      placeholder= "",
+      autofocus= false,
+      required= false,  
+      disabled= false,
+      focused= false,
+      hasArrowButton= false
+    } = params;
+
+    const focusedInput = focused ? "focused" : "";
+    const inputAttributes = {
+      type: type,
+      name: name,
+      placeholder: placeholder,
+      autofocus: autofocus,
+      required: required,
+      disabled: disabled,
+      withArrow: false
+    }
+
+  label.text-field
+    input.text-field__input(
+      class= `text-field__input_${focusedInput}`)&attributes(inputAttributes)
+    if withArrow
+      .text-field__button

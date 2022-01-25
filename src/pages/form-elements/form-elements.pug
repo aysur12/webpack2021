@@ -1,11 +1,19 @@
 extends ../../layouts/ui-kit-layout/ui-kit-layout
 
 include ../../components/logo/logo
+include ../../components/text-field/text-field
 
 block variables
-  - var title = "Form elements";
+  title Form elements
 
 block content
-  section.form-elements
+  main.form-elements
     .form-elements__logo-link
-      +logo({typeLogo: 'logoColorless'})
+      +logo({typeLogo: "logoColorless"})
+    .form-elements__text-field 
+      +text-field({
+        type: "text",
+        name: "email",
+        placeholder: "Email",
+        focused: true
+      })
