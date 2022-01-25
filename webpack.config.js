@@ -39,7 +39,7 @@ const config = {
   devServer: {
     static: './dist',
     port: 8080,
-    open: '/colors-and-type.html',
+    open: '/form-elements.html',
     hot: false,
   },
   plugins: [

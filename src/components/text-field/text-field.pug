@@ -1,6 +1,9 @@
+include ../../components/title-form/title-form
+
 mixin text-field(params = {})
   -
     const {
+      titleText= "",
       type= "",
       name= "",
       placeholder= "",
@@ -11,7 +14,7 @@ mixin text-field(params = {})
       hasArrowButton= false
     } = params;
 
-    const focusedInput = focused ? "focused" : "";
+    const focusedInput = focused ? "text-field__input_focused" : "";
     const inputAttributes = {
       type: type,
       name: name,
@@ -22,8 +25,10 @@ mixin text-field(params = {})
       withArrow: false
     }
 
-  label.text-field
+  .text-field
+    .text-field__title-form
+      +title-form(titleText)
     input.text-field__input(
-      class= `text-field__input_${focusedInput}`)&attributes(inputAttributes)
+      class= `${focusedInput}`)&attributes(inputAttributes)
     if withArrow
       .text-field__button

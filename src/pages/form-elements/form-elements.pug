@@ -9,11 +9,11 @@ block variables
 block content
   main.form-elements
     .form-elements__logo-link
-      +logo({typeLogo: "logoColorless"})
+      +logo({typeLogo: "logoColorless"}) 
     .form-elements__text-field 
       +text-field({
+        titleText: "text field",
         type: "text",
         name: "email",
         placeholder: "Email",
-        focused: true
       })
