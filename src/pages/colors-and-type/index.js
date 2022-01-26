@@ -1,5 +1,4 @@
 import '../../index';
-import '../../layouts/ui-kit-layout';
 
 import '../../components/logo';
 import '../../components/pallete';

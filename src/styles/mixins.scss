@@ -23,3 +23,9 @@
   font: 1em $main-font-family;
   line-height: 1.714em;
 }
+
+@mixin font-desc-state-input {
+  color: $color-font-a50;
+  font: 0.857em $main-font-family;
+  line-height: 1.071em;
+}

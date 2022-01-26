@@ -5,10 +5,7 @@
   padding: 0;
   color: $color-font-a25;
   text-align: right;
-  font: {
-    family: $main-font-family;
-    weight: normal;
-  }
+  font: $main-font-family;
 }
 
 @mixin style-sizes($min-width, $f-size, $l-height) {

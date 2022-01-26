@@ -4,16 +4,17 @@ include ../../components/desc-state-input/desc-state-input
 mixin text-field(params = {})
   -
     const {
-      titleText= "",
-      descStateText= "",
       type= "",
       name= "",
       placeholder= "",
+      withTitle= false,
+      titleText= "",
+      descStateText= "", 
+      withDescState= false,
       autofocus= false,
-      required= false,  
+      required= true,  
       disabled= false,
       focused= false,
-      withDescState= false,
       withArrowButton= false,
     } = params;
 
@@ -29,11 +30,12 @@ mixin text-field(params = {})
     }
 
   .text-field
-    .text-field__title-form
-      +title-form(titleText)
+    if withTitle
+      .text-field__title-form
+        +title-form(titleText)
     if withDescState
       +desc-state-input(descStateText)
-    input.text-field__input(
-      class= `${focusedInput}`)&attributes(inputAttributes)
+    label.text-field__label
+      input.text-field__input(class= `${focusedInput}`)&attributes(inputAttributes)
     if withArrowButton
       .text-field__button

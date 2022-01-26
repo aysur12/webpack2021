@@ -4,7 +4,7 @@ mixin logo({typeLogo = "logoColorless"})
       when "logoColorless"
         a.logo__link(href="./start-page.html") 
           img.logo__img-logo-ui-kit(
-            src="./assets/images/logo-ui-kit.svg",
+            src=require("../../components/logo/images/logo-ui-kit.svg"),
             alt="Логотип Toxin",
             width="48",
             height="48"
@@ -12,7 +12,7 @@ mixin logo({typeLogo = "logoColorless"})
       when "logoWithText" 
         a.logo__link(href="./start-page.html") 
           img.logo__img-logo-toxin(
-            src="./assets/images/logo-toxin.svg",
+            src=require("../../components/logo/images/logo-toxin.svg"),
             alt="Логотип Toxin",
             width="106",
             height="40"

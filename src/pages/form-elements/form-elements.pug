@@ -12,8 +12,21 @@ block content
       +logo({typeLogo: "logoColorless"}) 
     .form-elements__text-field 
       +text-field({
-        titleText: "text field",
         type: "text",
         name: "email",
         placeholder: "Email",
+        withTitle: true,
+        titleText: "text field",
+        descStateText: "default",
+        withDescState: true
       })
+      +text-field({
+        type: "text",
+        name: "email",
+        placeholder: "This is pretty awesome",
+        withTitle: true,
+        titleText: "text field",
+        descStateText: "hover / focus",
+        withDescState: true,
+      })
+

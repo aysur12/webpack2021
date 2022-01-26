@@ -52,11 +52,6 @@ const config = {
         minify: false,
       }),
     ),
-    new CopyPlugin({
-      patterns: [
-        { from: './src/components/logo/images', to: './assets/images' },
-      ],
-    }),
     new FaviconsWebpackPlugin({
       logo: './src/assets/favicons/favicon-toxin.png',
       prefix: './assets/favicons/',
