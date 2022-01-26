@@ -1,6 +1,8 @@
 extends ../../layouts/ui-kit-layout/ui-kit-layout
 
 include ../../components/logo/logo
+include ../../components/title-form/title-form
+include ../../components/desc-state-input/desc-state-input
 include ../../components/text-field/text-field
 
 block variables
@@ -9,24 +11,29 @@ block variables
 block content
   main.form-elements
     .form-elements__logo-link
-      +logo({typeLogo: "logoColorless"}) 
-    .form-elements__text-field 
-      +text-field({
-        type: "text",
-        name: "email",
-        placeholder: "Email",
-        withTitle: true,
-        titleText: "text field",
-        descStateText: "default",
-        withDescState: true
-      })
-      +text-field({
-        type: "text",
-        name: "email",
-        placeholder: "This is pretty awesome",
-        withTitle: true,
-        titleText: "text field",
-        descStateText: "hover / focus",
-        withDescState: true,
-      })
+      +logo({typeLogo: "logoColorless"})
+    .form-elements__text-field-container
+      .form-elements__heading
+        .form-elements__title-form
+          +title-form("text field")
+        .form-elements__desc-state-input 
+          +desc-state-input("default")
+      .form-elements__text-field 
+        +text-field({
+          type: "text",
+          name: "email",
+          placeholder: "Email",
+        })
+    .form-elements__text-field-container 
+      .form-elements__heading  
+        .form-elements__title-form
+          +title-form("text field")
+        .form-elements__desc-state-input 
+          +desc-state-input("hover / focus")
+      .form-elements__text-field 
+        +text-field({
+          type: "text",
+          name: "email",
+          placeholder: "This is pretty awesome",
+        })
 
