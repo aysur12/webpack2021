@@ -1,6 +1,7 @@
 @use '../../styles/main' as *;
 
 .title-form {
+  margin: 0;
   @include font-h3;
   text-transform: uppercase;
 }

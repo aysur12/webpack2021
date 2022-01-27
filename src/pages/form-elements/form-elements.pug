@@ -12,28 +12,31 @@ block content
   main.form-elements
     .form-elements__logo-link
       +logo({typeLogo: "logoColorless"})
-    .form-elements__text-field-container
-      .form-elements__heading
-        .form-elements__title-form
-          +title-form("text field")
-        .form-elements__desc-state-input 
-          +desc-state-input("default")
-      .form-elements__text-field 
-        +text-field({
-          type: "text",
-          name: "email",
-          placeholder: "Email",
-        })
-    .form-elements__text-field-container 
-      .form-elements__heading  
-        .form-elements__title-form
-          +title-form("text field")
-        .form-elements__desc-state-input 
-          +desc-state-input("hover / focus")
-      .form-elements__text-field 
-        +text-field({
-          type: "text",
-          name: "email",
-          placeholder: "This is pretty awesome",
-        })
+    .form-elements__grid
+      .form-elements__grid-wrap-left
+        .form-elements__text-field-heading
+          .form-elements__title-form
+            +title-form("text field")
+          .form-elements__desc-state-input 
+            +desc-state-input("default")
+        .form-elements__text-field 
+          +text-field({
+            type: "text",
+            name: "email",
+            placeholder: "Email",
+          })
+        .form-elements__text-field-heading 
+          .form-elements__title-form
+            +title-form("text field")
+          .form-elements__desc-state-input 
+            +desc-state-input("hover / focus")
+        .form-elements__text-field 
+          +text-field({
+            type: "text",
+            name: "email",
+            placeholder: "This is pretty awesome",
+            focused: true
+          })
+      .form-elements__grid-wrap-center
+      .form-elements__grid-wrap-right
 

@@ -2,30 +2,25 @@
 
 @mixin font-h1 {
   color: $color-font-a100;
-  font: bold 1.714em $main-font-family;
-  line-height: 1.208em;
+  font: bold 1.714rem $main-font-family;
+  line-height: 1.208;
 }
 
 @mixin font-h2 {
   color: $color-font-a100;
-  font: bold 1.357em $main-font-family;
-  line-height: 1.211em;
+  font: bold 1.357rem $main-font-family;
+  line-height: 1.21;
 }
 
 @mixin font-h3 {
   color: $color-font-a100;
-  font: bold 0.857em $main-font-family;
-  line-height: 1.25em;
+  font: bold 0.857rem $main-font-family;
+  line-height: 1.25;
 }
 
 @mixin font-body {
   color: $color-font-a75;
   font: 1em $main-font-family;
-  line-height: 1.714em;
+  line-height: 1.71;
 }
 
-@mixin font-desc-state-input {
-  color: $color-font-a50;
-  font: 0.857em $main-font-family;
-  line-height: 1.071em;
-}

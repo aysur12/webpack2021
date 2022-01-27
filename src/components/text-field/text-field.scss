@@ -1,5 +1,25 @@
 @use '../../styles/main' as *;
 
 .text-field {
-  
+  &__input {
+    width: 100%;
+    max-width: 22.857em;
+    padding: 0.929em 1.071em;
+    color: $color-font-a75;
+    font: 1rem $main-font-family;
+    border: 1px solid $color-font-a25;
+    border-radius: 0.286em;
+    outline: none;
+    &_focused {
+      
+    }
+    &::placeholder {
+      color: $color-font-a25;
+      font: 1rem $main-font-family;
+    }
+    &:focus,
+    &:hover {
+      border: 1px solid $color-font-a50;
+    }
+  }
 }

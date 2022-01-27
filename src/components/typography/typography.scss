@@ -8,12 +8,12 @@
   font: $main-font-family;
 }
 
-@mixin style-sizes($min-width, $f-size, $l-height) {
+@mixin style-sizes($min-width, $font-size, $line-height) {
   min-width: $min-width;
   @extend %block-style;
 
-  font-size: $f-size;
-  line-height: $l-height;
+  font-size: $font-size;
+  line-height: $line-height;
 }
 
 .typography {
@@ -36,32 +36,32 @@
     &_large {
       @include style-sizes(
         $min-width: 1.542em,
-        $f-size: 1.714em,
-        $l-height: 1.208em
+        $font-size: 1.714em,
+        $line-height: 1.208em
       );
     }
 
     &_medium {
       @include style-sizes(
         $min-width: 1.947em,
-        $f-size: 1.357em,
-        $l-height: 1.211em
+        $font-size: 1.357em,
+        $line-height: 1.211em
       );
     }
 
     &_small {
       @include style-sizes(
         $min-width: 3.083em,
-        $f-size: 0.857em,
-        $l-height: 1.25em
+        $font-size: 0.857em,
+        $line-height: 1.25em
       );
     }
 
     &_tiny {
       @include style-sizes(
         $min-width: 2.643em,
-        $f-size: 1em,
-        $l-height: 1.714em
+        $font-size: 1em,
+        $line-height: 1.714em
       );
     }
   }

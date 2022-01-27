@@ -1,3 +1,32 @@
-h1 {
-  color: blueviolet;
+@use '../../styles/main' as *;
+
+.form-elements {
+  margin: 0 auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 1440px;
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 22% 8,75% 22% 5%;
+    margin: 62px 111px 101px;
+  }
+
+
+  &__text-field-heading {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
+
+  &__title-form {
+    padding-top: 3px;
+  }
+
+  &__desc-state-input {
+    padding-bottom: 3px;
+  }
 }
+
+
