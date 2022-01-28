@@ -14,17 +14,14 @@ block content
       +logo({typeLogo: "logoColorless"})
     .form-elements__grid
       .form-elements__grid-wrap-left
-        .form-elements__text-field-heading(
-          class= "form-elements__text-field-heading_margin_bottom")
+        .form-elements__text-field-heading
           .form-elements__title-input(
-            class= "form-elements__title-input_padding_top"
-          )
+            class= "form-elements__title-input_padding_top")
             +title-input("text field")
-          .form-elements__desc-state-input 
-            +desc-state-input({
-              text: "default",
-              withPadding: true
-            })
+          .form-elements__desc-state-input(
+            class= "form-elements__desc-state-input_padding_bottom"
+          ) 
+            +desc-state-input("default")
         .form-elements__text-field 
           +text-field({
             type: "email",
@@ -35,10 +32,7 @@ block content
           .form-elements__title-input
             +title-input("text field")
           .form-elements__desc-state-input 
-            +desc-state-input({
-              text: "hover / focus",
-              withPadding: true
-            })
+            +desc-state-input("hover / focus")
         .form-elements__text-field 
           +text-field({
             type: "text",

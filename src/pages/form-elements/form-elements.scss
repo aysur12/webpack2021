@@ -2,7 +2,7 @@
 
 .form-elements {
   margin: 0 auto;
-  padding: 30px;
+  padding: 2.08%;
   width: 100%;
   max-width: 1440px;
 
@@ -22,15 +22,18 @@
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    margin-bottom: 0.143em;
-    &_margin_bottom {
-      margin-bottom: 0.357em;
-    }
+    margin-bottom: 0.357em;
   }
 
   &__title-input {
     &_padding_top {
       padding-top: 0.214em;
+    }
+  }
+
+  &__desc-state-input {
+    &__padding_bottom {
+      padding-bottom: 0.214em;
     }
   }
 
