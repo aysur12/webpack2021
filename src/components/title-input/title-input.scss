@@ -1,7 +1,11 @@
 @use '../../styles/main' as *;
 
-.title-form {
+.title-input {
   margin: 0;
   @include font-h3;
   text-transform: uppercase;
+
+  &_padding_top {
+    padding-top: 3px;
+  }
 }

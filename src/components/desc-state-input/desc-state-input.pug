@@ -1,2 +1,10 @@
-mixin desc-state-input(text)
-  p.desc-state-input= text
+mixin desc-state-input(params = {})
+  -
+    const {
+      text= "", 
+      withPadding= false,
+    } = params;
+    
+    const withPaddingDesc = withPadding ? "desc-state-input_padding_bottom" : "";
+
+  p.desc-state-input(class= `${withPaddingDesc}`)= text

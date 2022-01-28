@@ -1,6 +1,6 @@
 import '../../index';
 
-import '../../components/title-form';
+import '../../components/title-input';
 import '../../components/desc-state-input';
 import '../../components/text-field';
 
