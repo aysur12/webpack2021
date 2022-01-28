@@ -24,7 +24,13 @@
     max-width: 100%;
     margin-bottom: 0.143em;
     &_margin_bottom {
-      margin-bottom: 5px;
+      margin-bottom: 0.357em;
+    }
+  }
+
+  &__title-input {
+    &_padding_top {
+      padding-top: 0.214em;
     }
   }
 

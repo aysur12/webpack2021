@@ -1,11 +1,3 @@
-mixin title-input(params = {})
-  -
-    const {
-      text= "", 
-      withPadding= false,
-    } = params;
-
-    const withPaddingTitle = withPadding ? "title-input_padding_top" : "";
-  
-  h3.title-input(class= `${withPaddingTitle}`)= text
+mixin title-input(text)
+  h3.title-input= text
     

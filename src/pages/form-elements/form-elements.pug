@@ -16,11 +16,10 @@ block content
       .form-elements__grid-wrap-left
         .form-elements__text-field-heading(
           class= "form-elements__text-field-heading_margin_bottom")
-          .form-elements__title-input
-            +title-input({
-              text: "text field",
-              withPadding: true
-            })
+          .form-elements__title-input(
+            class= "form-elements__title-input_padding_top"
+          )
+            +title-input("text field")
           .form-elements__desc-state-input 
             +desc-state-input({
               text: "default",
@@ -34,9 +33,7 @@ block content
           })
         .form-elements__text-field-heading 
           .form-elements__title-input
-            +title-input({
-              text: "text field",
-            })
+            +title-input("text field")
           .form-elements__desc-state-input 
             +desc-state-input({
               text: "hover / focus",
