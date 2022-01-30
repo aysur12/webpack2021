@@ -9,11 +9,14 @@ mixin text-field(params = {})
       autofocus= false, 
       disabled= false,
       focused= false,
+      masked= false,
       withArrowButton= false,
     } = params;
 
     const focusedInput = focused ? "text-field__input_focused" : "";
     const valueInput = focused ? "This is pretty awesome" : "";
+    const maskedInput = masked ? "text-field__input_masked" : "";
+
     const inputAttributes = {
       type: type,
       name: name,
@@ -21,11 +24,10 @@ mixin text-field(params = {})
       autofocus: autofocus,
       required: required,
       disabled: disabled,
-      value: valueInput
+      value: valueInput,
     }
 
-
   label.text-field
-    input.text-field__input(class= `${focusedInput}`)&attributes(inputAttributes)
+    input.text-field__input(class= `${focusedInput} ${maskedInput}`)&attributes(inputAttributes)
     if withArrowButton
       .text-field__button

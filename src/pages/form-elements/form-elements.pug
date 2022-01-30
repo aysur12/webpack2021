@@ -4,6 +4,7 @@ include ../../components/logo/logo
 include ../../components/title-input/title-input
 include ../../components/desc-state-input/desc-state-input
 include ../../components/text-field/text-field
+include ../../components/masked-text-field/masked-text-field
 
 block variables
   title Form elements
@@ -39,6 +40,16 @@ block content
             name: "text",
             placeholder: "This is pretty awesome",
             focused: true
+          })
+        .form-elements__text-field-heading   
+          .form-elements__title-input
+            +title-input("masked text field") 
+        .form-elements__masked-text-field 
+          +text-field({
+            type: "text",
+            name: "dateOfBirth",
+            placeholder: "ДД.ММ.ГГГГ",
+            masked: true
           })
       .form-elements__grid-wrap-center
       .form-elements__grid-wrap-right

@@ -15,26 +15,38 @@
         <div class="logo"><a class="logo__link" href="./start-page.html"> <img class="logo__img-logo-ui-kit" src="assets/images/logo-ui-kit.svg" alt="Логотип Toxin" width="48" height="48"></a>
         </div>
       </div>
-      <div class="form-elements__text-field"> 
-        <div class="text-field">
-          <div class="text-field__title-form">
-            <h3 class="title-form">text field</h3>
+      <div class="form-elements__grid">
+        <div class="form-elements__grid-wrap-left">
+          <div class="form-elements__text-field-heading">
+            <div class="form-elements__title-input form-elements__title-input_padding_top">
+              <h3 class="title-input">text field</h3>
+            </div>
+            <div class="form-elements__desc-state-input form-elements__desc-state-input_padding_bottom"> 
+              <p class="desc-state-input">default</p>
+            </div>
           </div>
-          <p class="desc-state-input">default</p>
-          <label class="text-field__label">
-            <input class="text-field__input" type="text" name="email" placeholder="Email">
-          </label>
-        </div>
-        <div class="text-field">
-          <div class="text-field__title-form">
-            <h3 class="title-form">text field</h3>
+          <div class="form-elements__text-field"> 
+            <label class="text-field">
+              <input class="text-field__input" type="email" name="email" placeholder="Email" required value="">
+            </label>
           </div>
-          <p class="desc-state-input">hover / focus</p>
-          <label class="text-field__label">
-            <input class="text-field__input" type="text" name="email" placeholder="This is pretty awesome">
-          </label>
+          <div class="form-elements__text-field-heading"> 
+            <div class="form-elements__title-input">
+              <h3 class="title-input">text field</h3>
+            </div>
+            <div class="form-elements__desc-state-input"> 
+              <p class="desc-state-input">hover / focus</p>
+            </div>
+          </div>
+          <div class="form-elements__text-field"> 
+            <label class="text-field">
+              <input class="text-field__input text-field__input_focused" type="text" name="text" placeholder="This is pretty awesome" required value="This is pretty awesome">
+            </label>
+          </div>
         </div>
+        <div class="form-elements__grid-wrap-center"></div>
+        <div class="form-elements__grid-wrap-right"></div>
       </div>
     </main>
-  <script defer src="js/form-elements.js"></script></body>
+  <script defer src="js/563.js"></script><script defer src="js/form-elements.js"></script></body>
 </html>

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -52,6 +53,11 @@ const config = {
         minify: false,
       }),
     ),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jquery': 'jquery'
+    }),
     new FaviconsWebpackPlugin({
       logo: './src/assets/favicons/favicon-toxin.png',
       prefix: './assets/favicons/',
