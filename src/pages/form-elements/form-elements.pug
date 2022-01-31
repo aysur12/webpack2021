@@ -51,6 +51,16 @@ block content
             placeholder: "ДД.ММ.ГГГГ",
             masked: true
           })
+        .form-elements__text-field-heading   
+          .form-elements__title-input
+            +title-input("subscription text field")    
+        .form-elements__text-field
+          +text-field({
+            type: "text",
+            name: "email",
+            placeholder: "Email",
+            withArrowButton: true
+          })
       .form-elements__grid-wrap-center
       .form-elements__grid-wrap-right
 

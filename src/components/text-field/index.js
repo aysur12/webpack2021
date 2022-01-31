@@ -1,6 +1,7 @@
 import * as jQuery from 'jquery';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 
+import '../../components/arrow';
 import './text-field.scss';
 
 jQuery(function($) {

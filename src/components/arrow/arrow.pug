@@ -1,0 +1,9 @@
+mixin arrow(params = {})
+  -
+    const {
+      withGradient= false
+    } = params;
+
+    const withGradientSpan = withGradient ? "arrow_with-gradient" : "";
+    
+  span.arrow(class= `${withGradientSpan}`) arrow_forward

@@ -1,3 +1,5 @@
+include ../../components/arrow/arrow
+
 mixin text-field(params = {})
   -
     const {
@@ -16,6 +18,7 @@ mixin text-field(params = {})
     const focusedInput = focused ? "text-field__input_focused" : "";
     const valueInput = focused ? "This is pretty awesome" : "";
     const maskedInput = masked ? "text-field__input_masked" : "";
+    const withArrowButtonInput = withArrowButton ? "text-field_subscribe" : "";
 
     const inputAttributes = {
       type: type,
@@ -25,9 +28,12 @@ mixin text-field(params = {})
       required: required,
       disabled: disabled,
       value: valueInput,
+      withArrowButton: false
     }
 
-  label.text-field
+  label.text-field(class= `${withArrowButtonInput}`)
     input.text-field__input(class= `${focusedInput} ${maskedInput}`)&attributes(inputAttributes)
     if withArrowButton
-      .text-field__button
+      button.text-field__button(type= "submit")
+        +arrow({withGradient: true})
+        
