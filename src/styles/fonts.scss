@@ -22,14 +22,3 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Material Icons';
-  src: local('Material Icons'), local('MaterialIcons'),
-    url('../assets/fonts/materialIcons-regular.woff2') format('woff2'),
-    url('../assets/fonts/materialIcons-regular.woff') format('woff'),
-    url('../assets/fonts/materialIcons-regular.ttf') format('truetype'),
-    url('../assets/fonts/materialIcons-regular.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}

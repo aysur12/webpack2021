@@ -25,6 +25,10 @@
       border-color: $color-font-a50;
     }
 
+    &_subscribe {
+      padding: 0.857em 3.143em 0.857em 1.071em;
+    }
+
     &::placeholder {
       color: $color-font-a25;
       font: 1rem $main-font-family;
@@ -36,7 +40,7 @@
       border: 1px solid $color-font-a50;
     }
   }
-  &__button {
+  &__btn {
     position: absolute;
     right: 0;
     top: 0;

@@ -19,6 +19,7 @@ mixin text-field(params = {})
     const valueInput = focused ? "This is pretty awesome" : "";
     const maskedInput = masked ? "text-field__input_masked" : "";
     const withArrowButtonInput = withArrowButton ? "text-field_subscribe" : "";
+    const subscribeInput = withArrowButton ? "text-field__input_subscribe" : "";
 
     const inputAttributes = {
       type: type,
@@ -32,8 +33,8 @@ mixin text-field(params = {})
     }
 
   label.text-field(class= `${withArrowButtonInput}`)
-    input.text-field__input(class= `${focusedInput} ${maskedInput}`)&attributes(inputAttributes)
+    input.text-field__input(class= `${focusedInput} ${maskedInput} ${subscribeInput}`)&attributes(inputAttributes)
     if withArrowButton
-      button.text-field__button(type= "submit")
+      button.text-field__btn(type= "submit")
         +arrow({withGradient: true})
         

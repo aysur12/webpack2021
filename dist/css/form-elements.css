@@ -1,7 +1,135 @@
-@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}
 @font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.title-input{margin:0;color:#1f2041;font:bold .857rem montserrat,arial,sans-serif;line-height:1.25;text-transform:uppercase}
 @font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.desc-state-input{margin:0;color:#8f90a0;font:.857rem montserrat,arial,sans-serif;line-height:1.25;text-transform:uppercase}
-@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.text-field__input{width:100%;max-height:3.143em;max-width:22.857em;padding:.929em 1.071em;color:#575871;font:1rem montserrat,arial,sans-serif;line-height:1.71;border:1px solid #c7c7d0;border-radius:.286em;outline:none}.text-field__input_focused{padding:.857em 1.071em;border-color:#8f90a0}.text-field__input::-moz-placeholder{color:#c7c7d0;font:1rem montserrat,arial,sans-serif;line-height:1.28}.text-field__input:-ms-input-placeholder{color:#c7c7d0;font:1rem montserrat,arial,sans-serif;line-height:1.28}.text-field__input::placeholder{color:#c7c7d0;font:1rem montserrat,arial,sans-serif;line-height:1.28}.text-field__input:focus,.text-field__input:hover{border:1px solid #8f90a0}
-@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.form-elements{margin:0 auto;padding:2.08%;width:100%;max-width:1440px}.form-elements__grid{display:grid;grid:"left . center . right" 1fr/27.63% 10.88% 27.63% 6.22% 27.63%;margin:4.429em 7.929em 7.214em}.form-elements__grid-wrap-left{grid-area:left}.form-elements__text-field-heading{display:flex;justify-content:space-between;max-width:100%;margin-bottom:.357em}.form-elements__title-input_padding_top{padding-top:.214em}.form-elements__desc-state-input__padding_bottom{padding-bottom:.214em}.form-elements__text-field{margin-bottom:1.429em}.form-elements__grid-wrap-center{grid-area:center}.form-elements__grid-wrap-right{grid-area:right}
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../assets/fonts/material-icons.woff2) format("woff2"), url(../assets/fonts/material-icons.woff) format("woff");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+
+@font-face {
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../assets/fonts/material-icons-outlined.woff2) format("woff2"), url(../assets/fonts/material-icons-outlined.woff) format("woff");
+}
+.material-icons-outlined {
+  font-family: "Material Icons Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+
+@font-face {
+  font-family: "Material Icons Round";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../assets/fonts/material-icons-round.woff2) format("woff2"), url(../assets/fonts/material-icons-round.woff) format("woff");
+}
+.material-icons-round {
+  font-family: "Material Icons Round";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+
+@font-face {
+  font-family: "Material Icons Sharp";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../assets/fonts/material-icons-sharp.woff2) format("woff2"), url(../assets/fonts/material-icons-sharp.woff) format("woff");
+}
+.material-icons-sharp {
+  font-family: "Material Icons Sharp";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+
+@font-face {
+  font-family: "Material Icons Two Tone";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../assets/fonts/material-icons-two-tone.woff2) format("woff2"), url(../assets/fonts/material-icons-two-tone.woff) format("woff");
+}
+.material-icons-two-tone {
+  font-family: "Material Icons Two Tone";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+
+@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.arrow{display:inline-block;font:1.714em "Material Icons";line-height:1.71}.arrow_with-gradient{background-image:linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);background-size:100%;-webkit-background-clip:text;-moz-background-clip:text;-webkit-text-fill-color:transparent;-moz-text-fill-color:transparent}
+@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.text-field{display:flex;position:relative}.text-field_subscribe{max-width:83.44%}.text-field__input{width:100%;max-height:3.143em;max-width:22.857em;padding:.929em 1.071em;color:#575871;font:1rem montserrat,arial,sans-serif;line-height:1.71;border:1px solid #c7c7d0;border-radius:.286em;outline:none}.text-field__input_focused{padding:.857em 1.071em;border-color:#8f90a0}.text-field__input_subscribe{padding:.857em 3.143em .857em 1.071em}.text-field__input::-moz-placeholder{color:#c7c7d0;font:1rem montserrat,arial,sans-serif;line-height:1.28}.text-field__input:-ms-input-placeholder{color:#c7c7d0;font:1rem montserrat,arial,sans-serif;line-height:1.28}.text-field__input::placeholder{color:#c7c7d0;font:1rem montserrat,arial,sans-serif;line-height:1.28}.text-field__input:focus,.text-field__input:hover{border:1px solid #8f90a0}.text-field__btn{position:absolute;right:0;top:0;min-width:44px;min-height:100%;padding:0;border:none;background-color:transparent;cursor:pointer}
+@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.dropdown__btn{list-style:none}
+.masked-text-field__input{width:100%;max-height:44px;max-width:22.857em}.masked-text-field__input::-webkit-calendar-picker-indicator,.masked-text-field__input::-webkit-inner-spin-button{display:none}.masked-text-field__input::-webkit-datetime-edit-month-field{font:18px}
+@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}
+@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Regular"),url(../assets/fonts/montserrat-regular.woff2) format("woff2"),url(../assets/fonts/montserrat-regular.woff) format("woff"),url(../assets/fonts/montserrat-regular.ttf) format("truetype"),url(../assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:Montserrat;src:local("Montserrat"),local("Montserrat-Bold"),url(../assets/fonts/montserrat-bold.woff2) format("woff2"),url(../assets/fonts/montserrat-bold.woff) format("woff"),url(../assets/fonts/montserrat-bold.ttf) format("truetype"),url(../assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal;font-display:swap}html{height:100%;box-sizing:border-box;font-size:.875em}*,*::before,*::after{box-sizing:inherit}body{min-width:100%;height:100%;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif;color:#575871;background-color:#fff;scroll-behavior:smooth}.form-elements{margin:0 auto;padding:2.08%;width:100%;max-width:1440px}.form-elements__grid{display:grid;grid:"left . center . right" 1fr/27.63% 10.88% 27.63% 6.22% 27.63%;margin:4.429em 7.929em 7.214em}.form-elements__grid-wrap-left{grid-area:left}.form-elements__text-field-heading{display:flex;justify-content:space-between;max-width:100%;margin-bottom:.357em}.form-elements__title-input_padding_top{padding-top:.214em}.form-elements__desc-state-input__padding_bottom{padding-bottom:.214em}.form-elements__text-field{margin-bottom:1.429em}.form-elements__masked-text-field{margin-bottom:1.429em}.form-elements__grid-wrap-center{grid-area:center}.form-elements__grid-wrap-right{grid-area:right}
 
 /*# sourceMappingURL=form-elements.css.map*/

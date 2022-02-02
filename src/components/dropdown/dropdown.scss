@@ -1,0 +1,7 @@
+@use '../../styles/main' as *;
+
+.dropdown {
+  &__btn {
+    list-style: none;
+  }
+}  
