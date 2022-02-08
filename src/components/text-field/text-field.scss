@@ -1,12 +1,8 @@
 @use '../../styles/main' as *;
 
 .text-field {
-  display: flex;
+  display: block;
   position: relative;
-
-  &_subscribe {
-    max-width: 83.44%;
-  }
 
   &__input {
     width: 100%;
@@ -19,6 +15,11 @@
     border: 1px solid $color-font-a25;
     border-radius: 0.286em;
     outline: none;
+
+    &:focus,
+    &:hover {
+      border: 1px solid $color-font-a50;
+    }
 
     &_focused {
       padding: 0.857em 1.071em;
@@ -33,11 +34,6 @@
       color: $color-font-a25;
       font: 1rem $main-font-family;
       line-height: 1.28;
-    }
-
-    &:focus,
-    &:hover {
-      border: 1px solid $color-font-a50;
     }
   }
   &__btn {

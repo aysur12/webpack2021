@@ -39,6 +39,9 @@
 
   &__text-field {
     margin-bottom: 1.429em;
+    &_subscribe {
+      max-width: 83.44%;
+    }
   }
 
   &__dropdown-common-value {
