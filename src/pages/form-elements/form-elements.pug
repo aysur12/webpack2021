@@ -4,7 +4,7 @@ include ../../components/logo/logo
 include ../../components/title-input/title-input
 include ../../components/desc-state-input/desc-state-input
 include ../../components/text-field/text-field
-include ../../components/dropdown/dropdown
+include ../../components/dropdown-common-value/dropdown-common-value
 include ../../components/masked-text-field/masked-text-field
 
 block variables
@@ -45,8 +45,15 @@ block content
         .form-elements__text-field-heading   
           .form-elements__title-input
             +title-input("dropdown")  
-        .form-elements__dropdown 
-          +dropdown
+        .form-elements__dropdown-common-value 
+          +dropdown-common-value({
+            params: {open: false},
+            elements: [
+              {title: "Взрослые"},
+              {title: "Дети"},
+              {title: "Младенцы"},
+            ]
+          })
         .form-elements__text-field-heading   
           .form-elements__title-input
             +title-input("masked text field") 

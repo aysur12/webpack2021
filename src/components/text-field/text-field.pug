@@ -28,12 +28,12 @@ mixin text-field(params = {})
       autofocus: autofocus,
       required: required,
       disabled: disabled,
-      value: valueInput,
-      withArrowButton: false
+      value: valueInput
     }
 
   label.text-field(class= `${withArrowButtonInput}`)
-    input.text-field__input(class= `${focusedInput} ${maskedInput} ${subscribeInput}`)&attributes(inputAttributes)
+    input.text-field__input(
+      class= `${focusedInput} ${maskedInput} ${subscribeInput}`)&attributes(inputAttributes)
     if withArrowButton
       button.text-field__btn(type= "submit")
         +arrow({withGradient: true})

@@ -1,0 +1,17 @@
+mixin dropdown-common-value({params = {}, elements=[]})
+  -
+    const {
+      open= false,
+    } = params 
+    
+    const detailsAttributes = {
+      open: open,
+    }
+
+  details.dropdown-common-value&attributes(detailsAttributes) 
+    summary.dropdown-common-value__field 
+      span.dropdown-common-value__text Сколько гостей
+      span.dropdown-common-value__arrow expand_more
+    ul.dropdown-common-value__collapsible-content
+      each elem in elements
+        li.dropdown-common-value__item #{elem.title}

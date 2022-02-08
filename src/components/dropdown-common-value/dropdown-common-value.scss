@@ -1,0 +1,44 @@
+@use '../../styles/main' as *;
+
+.dropdown-common-value {
+  width: 100%;
+  border: 1px solid $color-font-a25;
+  border-radius: 0.286em;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $color-font-a50;
+  }
+
+  &__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+  }
+
+
+  &__text {
+    display: inline-block;
+    padding: 0.571em 1.071em ;
+    font: 1rem $main-font-family;
+    line-height: 1.71;
+  }
+
+  &__arrow {
+    flex-basis: 16.3%;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font: 1.714em 'Material Icons';
+    line-height: 1.71;
+  }
+
+  &__collapsible-content {
+    margin: 0;
+    border-top: 1px solid $color-font-a25;
+  }
+}  
