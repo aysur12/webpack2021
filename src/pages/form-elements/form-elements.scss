@@ -23,12 +23,17 @@
     justify-content: space-between;
     max-width: 100%;
     margin-bottom: 0.357em;
+
+    &_button {
+      margin-bottom: 1.143em;
+    }
   }
 
   &__title-input {
     &_padding_top {
       padding-top: 0.214em;
     }
+
   }
 
   &__desc-state-input {
@@ -53,7 +58,14 @@
   }
 
   &__grid-wrap-center {
-    grid-area: center; 
+    grid-area: center;
+    padding-top: 3px; 
+  }
+
+  &__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
   
   &__grid-wrap-right {

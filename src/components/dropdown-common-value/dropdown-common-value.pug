@@ -14,4 +14,9 @@ mixin dropdown-common-value({params = {}, elements=[]})
       span.dropdown-common-value__arrow expand_more
     ul.dropdown-common-value__collapsible-content
       each elem in elements
-        li.dropdown-common-value__item #{elem.title}
+        li.dropdown-common-value__collapsible-item 
+          p.dropdown-common-value__collapsible-item-title= elem.title
+          .dropdown-common-value__button-group
+            button.dropdown-common-value__button-counter 2
+            span.dropdown-common-value__count-value
+            button.dropdown-common-value__button-counter 1

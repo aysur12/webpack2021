@@ -22,12 +22,19 @@
     }
 
     &_focused {
-      padding: 0.857em 1.071em;
+      padding: 0.786em 1em 0.5em;
       border-color: $color-font-a50;
+      line-height: 1.714em;
+    }
+
+    &_masked {
+      padding: 0.786em 1em 0.5em;
+      line-height: 1.714em;
     }
 
     &_subscribe {
       padding: 0.857em 3.143em 0.857em 1.071em;
+      line-height: 1.714em;
     }
 
     &::placeholder {

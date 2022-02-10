@@ -5,7 +5,8 @@ include ../../components/title-input/title-input
 include ../../components/desc-state-input/desc-state-input
 include ../../components/text-field/text-field
 include ../../components/dropdown-common-value/dropdown-common-value
-include ../../components/masked-text-field/masked-text-field
+
+include ../../components/checkbox/checkbox
 
 block variables
   title Form elements
@@ -75,5 +76,24 @@ block content
             withArrowButton: true
           })
       .form-elements__grid-wrap-center
+        .form-elements__text-field-heading_button   
+          .form-elements__title-input
+            +title-input("checkbox buttons")
+        .form-elements__checkbox-group    
+          .form-elements__checkbox
+            +checkbox({
+              text: "Можно курить",
+              checked: false,
+            })
+          .form-elements__checkbox
+            +checkbox({
+              text: "Можно с питомцами",
+              checked: true,
+            })
+          .form-elements__checkbox
+            +checkbox({
+              text: "Можно пригласить гостей (до 10 человек)",
+              checked: true,
+            })    
       .form-elements__grid-wrap-right
 
