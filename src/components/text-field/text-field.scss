@@ -30,6 +30,7 @@
     &_masked {
       padding: 0.786em 1em 0.5em;
       line-height: 1.714em;
+      min-height: 3.143em;
     }
 
     &_subscribe {
@@ -43,6 +44,7 @@
       line-height: 1.28;
     }
   }
+  
   &__btn {
     position: absolute;
     right: 0;

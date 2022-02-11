@@ -24,16 +24,25 @@
     max-width: 100%;
     margin-bottom: 0.357em;
 
-    &_button {
-      margin-bottom: 1.143em;
-    }
   }
 
   &__title-input {
+    margin-bottom: 0.357em;
     &_padding_top {
       padding-top: 0.214em;
     }
 
+    &_without-margin-bottom {
+      margin-bottom: 0;
+    }
+
+    &_checkbox-buttons {
+      margin-bottom: 1.183em;
+    }
+
+    &_radio-buttons {
+      margin-bottom: 1.143em;
+    }
   }
 
   &__desc-state-input {
@@ -50,7 +59,7 @@
   }
 
   &__dropdown-common-value {
-    margin-bottom: 1.786em;
+    margin-bottom: 1.607em;
   }
 
   &__masked-text-field {
@@ -65,7 +74,13 @@
   &__checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 11px;
+    margin-bottom: 2.92em;
+  }
+
+  &__radio-group {
+    display: flex;
+    gap: 1.429em;
   }
   
   &__grid-wrap-right {

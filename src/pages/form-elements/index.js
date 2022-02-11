@@ -4,6 +4,7 @@ import '../../components/text-field';
 import '../../components/dropdown-common-value';
 
 import '../../components/checkbox';
+import '../../components/radio';
 import '../../index';
 
 import './form-elements.scss';

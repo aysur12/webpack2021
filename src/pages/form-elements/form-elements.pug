@@ -7,6 +7,7 @@ include ../../components/text-field/text-field
 include ../../components/dropdown-common-value/dropdown-common-value
 
 include ../../components/checkbox/checkbox
+include ../../components/radio/radio
 
 block variables
   title Form elements
@@ -18,7 +19,7 @@ block content
     .form-elements__grid
       .form-elements__grid-wrap-left
         .form-elements__text-field-heading
-          .form-elements__title-input(
+          .form-elements__title-input_without-margin-bottom(
             class= "form-elements__title-input_padding_top")
             +title-input("text field")
           .form-elements__desc-state-input(
@@ -32,7 +33,7 @@ block content
             placeholder: "Email",
           })
         .form-elements__text-field-heading 
-          .form-elements__title-input
+          .form-elements__title-input_without-margin-bottom
             +title-input("text field")
           .form-elements__desc-state-input 
             +desc-state-input("hover / focus")
@@ -42,10 +43,9 @@ block content
             name: "text",
             placeholder: "This is pretty awesome",
             focused: true
-          })
-        .form-elements__text-field-heading   
-          .form-elements__title-input
-            +title-input("dropdown")  
+          })  
+        .form-elements__title-input
+          +title-input("dropdown")  
         .form-elements__dropdown-common-value 
           +dropdown-common-value({
             params: {open: false},
@@ -54,19 +54,17 @@ block content
               {title: "Дети"},
               {title: "Младенцы"},
             ]
-          })
-        .form-elements__text-field-heading   
-          .form-elements__title-input
-            +title-input("masked text field") 
+          })  
+        .form-elements__title-input
+          +title-input("masked text field") 
         .form-elements__masked-text-field 
           +text-field({
             type: "text",
             name: "dateOfBirth",
             placeholder: "ДД.ММ.ГГГГ",
             masked: true
-          })
-        .form-elements__text-field-heading   
-          .form-elements__title-input
+          }) 
+        .form-elements__title-input
             +title-input("subscription text field")    
         .form-elements__text-field_subscribe
           +text-field({
@@ -75,9 +73,8 @@ block content
             placeholder: "Email",
             withArrowButton: true
           })
-      .form-elements__grid-wrap-center
-        .form-elements__text-field-heading_button   
-          .form-elements__title-input
+      .form-elements__grid-wrap-center  
+        .form-elements__title-input_checkbox-buttons
             +title-input("checkbox buttons")
         .form-elements__checkbox-group    
           .form-elements__checkbox
@@ -94,6 +91,19 @@ block content
             +checkbox({
               text: "Можно пригласить гостей (до 10 человек)",
               checked: true,
-            })    
+            }) 
+        .form-elements__title-input_radio-buttons
+          +title-input("radio buttons")
+        .form-elements__radio-group
+          .form-elements__radio
+            +radio({
+              text: "Мужчина",
+              checked: true,
+            })
+          .form-elements__radio
+            +radio({
+              text: "Женщина",
+              checked: false,
+            })  
       .form-elements__grid-wrap-right
 

@@ -1,0 +1,10 @@
+mixin radio(params={})
+  -
+    const {
+      text= "",
+      checked= false,
+    } = params;
+
+  label.radio
+    input.radio__input(type= "radio" name="radio" checked= checked)
+    =text

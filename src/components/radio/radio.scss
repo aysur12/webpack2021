@@ -1,16 +1,21 @@
 @use '../../styles/main' as *;
 
-.checkbox {
+.radio {
   display: flex;
   gap: 0.714em;
   width: 100%;
-  max-width: 15.857em;
+  max-width: 7.339em;
   color: $color-font-a50;
   font: 1rem $main-font-family;
   line-height: 1.28;
+  
+  &:focus,
+  &:hover {
+    color: $color-font-a75;
+  }
 }
 
-.checkbox__input {
+.radio__input {
   display: grid;
   place-content: center;
   appearance: none;
@@ -18,22 +23,19 @@
   margin: 0;
   font: inherit;
   color: currentColor;
-  min-width: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  max-height: 20px;
+  width: 20px;
+  height: 20px;
   border: 1px solid $color-font-a25;
-  border-radius: 0.286em;
+  border-radius: 50%;
   outline: none;
 
   &::before {
     content: "";
-    width: 10px;
-    height: 8px;
-    clip-path: polygon(19% 21.3%, 48.6% 60.3%, 84.8% 12.5%, 100% 27%, 48.9% 98.3%, 2.5% 40.5%);
-    transition: 120ms transform ease-in-out;
+    width: 0.857em;
+    height: 0.857em;
+    clip-path: circle(50% at 50% 50%);
     transform: scale(0);
-    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
     background-image: $primary-gradient;
   }
 
@@ -46,5 +48,6 @@
   &:checked::before {
     transform: scale(1);
   }
-}
+}  
+
 
