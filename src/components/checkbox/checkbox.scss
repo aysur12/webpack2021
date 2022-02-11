@@ -36,9 +36,14 @@
     background-image: $primary-gradient;
   }
 
+  &:checked {
+    border: 1px solid $color-primary-bg;
+  }
+
   &:checked::before {
     transform: scale(1);
   }
+
   &:focus,
   &:hover {
     border: 1px solid $color-primary-bg;
