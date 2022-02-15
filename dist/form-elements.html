@@ -18,7 +18,7 @@
       <div class="form-elements__grid">
         <div class="form-elements__grid-wrap-left">
           <div class="form-elements__text-field-heading">
-            <div class="form-elements__title-input form-elements__title-input_padding_top">
+            <div class="form-elements__title-input_without-margin-bottom form-elements__title-input_padding_top">
               <h3 class="title-input">text field</h3>
             </div>
             <div class="form-elements__desc-state-input form-elements__desc-state-input_padding_bottom"> 
@@ -31,7 +31,7 @@
             </label>
           </div>
           <div class="form-elements__text-field-heading"> 
-            <div class="form-elements__title-input">
+            <div class="form-elements__title-input_without-margin-bottom">
               <h3 class="title-input">text field</h3>
             </div>
             <div class="form-elements__desc-state-input"> 
@@ -43,33 +43,49 @@
               <input class="text-field__input text-field__input_focused  " type="text" name="text" placeholder="This is pretty awesome" required value="This is pretty awesome">
             </label>
           </div>
-          <div class="form-elements__text-field-heading">  
-            <div class="form-elements__title-input">
-              <h3 class="title-input">dropdown</h3>
-            </div>
+          <div class="form-elements__title-input">
+            <h3 class="title-input">dropdown</h3>
           </div>
-          <div class="form-elements__dropdown"> 
-            <details class="dropdown"> 
-              <summary class="dropdown__btn">Сколько гостей </summary>
-              <div class="dropdown__emergence">jhjhj</div>
+          <div class="form-elements__dropdown-common-value"> 
+            <details class="dropdown-common-value"> 
+              <summary class="dropdown-common-value__field"> <span class="dropdown-common-value__text">Сколько гостей</span><span class="dropdown-common-value__arrow">expand_more</span></summary>
+              <ul class="dropdown-common-value__collapsible-content">
+                <li class="dropdown-common-value__collapsible-item"> 
+                  <p class="dropdown-common-value__collapsible-item-title">Взрослые</p>
+                  <div class="dropdown-common-value__button-group">
+                    <button class="dropdown-common-value__button-counter">2</button><span class="dropdown-common-value__count-value"></span>
+                    <button class="dropdown-common-value__button-counter">1</button>
+                  </div>
+                </li>
+                <li class="dropdown-common-value__collapsible-item"> 
+                  <p class="dropdown-common-value__collapsible-item-title">Дети</p>
+                  <div class="dropdown-common-value__button-group">
+                    <button class="dropdown-common-value__button-counter">2</button><span class="dropdown-common-value__count-value"></span>
+                    <button class="dropdown-common-value__button-counter">1</button>
+                  </div>
+                </li>
+                <li class="dropdown-common-value__collapsible-item"> 
+                  <p class="dropdown-common-value__collapsible-item-title">Младенцы</p>
+                  <div class="dropdown-common-value__button-group">
+                    <button class="dropdown-common-value__button-counter">2</button><span class="dropdown-common-value__count-value"></span>
+                    <button class="dropdown-common-value__button-counter">1</button>
+                  </div>
+                </li>
+              </ul>
             </details>
           </div>
-          <div class="form-elements__text-field-heading">  
-            <div class="form-elements__title-input">
-              <h3 class="title-input">masked text field</h3>
-            </div>
+          <div class="form-elements__title-input">
+            <h3 class="title-input">masked text field</h3>
           </div>
           <div class="form-elements__masked-text-field"> 
             <label class="text-field">
               <input class="text-field__input  text-field__input_masked " type="text" name="dateOfBirth" placeholder="ДД.ММ.ГГГГ" required value="">
             </label>
           </div>
-          <div class="form-elements__text-field-heading">  
-            <div class="form-elements__title-input">
-              <h3 class="title-input">subscription text field</h3>
-            </div>
+          <div class="form-elements__title-input">
+            <h3 class="title-input">subscription text field</h3>
           </div>
-          <div class="form-elements__text-field">
+          <div class="form-elements__text-field_subscribe">
             <label class="text-field text-field_subscribe">
               <input class="text-field__input   text-field__input_subscribe" type="text" name="email" placeholder="Email" required value="">
               <button class="text-field__btn" type="submit"><span class="arrow arrow_with-gradient">arrow_forward</span>
@@ -77,7 +93,43 @@
             </label>
           </div>
         </div>
-        <div class="form-elements__grid-wrap-center"></div>
+        <div class="form-elements__grid-wrap-center"> 
+          <div class="form-elements__title-input_checkbox-buttons">
+            <h3 class="title-input">checkbox buttons</h3>
+          </div>
+          <div class="form-elements__checkbox-group">   
+            <div class="form-elements__checkbox">
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox" name="checkbox">Можно курить
+              </label>
+            </div>
+            <div class="form-elements__checkbox">
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox" name="checkbox" checked>Можно с питомцами
+              </label>
+            </div>
+            <div class="form-elements__checkbox">
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox" name="checkbox" checked>Можно пригласить гостей (до 10 человек)
+              </label>
+            </div>
+          </div>
+          <div class="form-elements__title-input_radio-buttons">
+            <h3 class="title-input">radio buttons</h3>
+          </div>
+          <div class="form-elements__radio-group">
+            <div class="form-elements__radio">
+              <label class="radio">
+                <input class="radio__input" type="radio" name="radio" checked>Мужчина
+              </label>
+            </div>
+            <div class="form-elements__radio">
+              <label class="radio">
+                <input class="radio__input" type="radio" name="radio">Женщина
+              </label>
+            </div>
+          </div>
+        </div>
         <div class="form-elements__grid-wrap-right"></div>
       </div>
     </main>

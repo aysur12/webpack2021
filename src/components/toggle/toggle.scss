@@ -1,0 +1,37 @@
+@use '../../styles/main' as *;
+
+.toggle {
+  display: flex;
+  gap: 0.714em;
+  width: 100%;
+  max-width: 18.571em;
+  @include font-body;
+  cursor: pointer;
+
+  &__input {
+    display: grid;
+    place-content: center left;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 0.286em;
+    font: inherit;
+    color: currentColor;
+    width: 40px;
+    max-width: 15,38%;
+    max-height: 20px;
+    border: 1px solid $color-font-a25;
+    border-radius: 0.714em;
+    outline: none;
+    
+    &::before {
+      content: "";
+      width: 0.857em;
+      height: 0.857em;
+      clip-path: circle(50% at 50% 50%);
+      background-color: $color-font-a25;
+    } 
+
+  }
+}
+

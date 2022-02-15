@@ -43,6 +43,10 @@
     &_radio-buttons {
       margin-bottom: 1.143em;
     }
+
+    &_toggle {
+      margin-bottom: 1.143em;
+    }
   }
 
   &__desc-state-input {
@@ -81,8 +85,13 @@
   &__radio-group {
     display: flex;
     gap: 1.429em;
+    margin-bottom: 2.611em;
   }
   
+  &__toggle {
+
+  }
+
   &__grid-wrap-right {
     grid-area: right;
   }

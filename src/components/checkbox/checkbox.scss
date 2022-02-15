@@ -8,6 +8,7 @@
   color: $color-font-a50;
   font: 1rem $main-font-family;
   line-height: 1.28;
+  cursor: pointer;
 }
 
 .checkbox__input {
@@ -41,6 +42,7 @@
   &:hover,
   &:checked {
     border: 1px solid $color-primary-bg;
+    cursor: pointer;
   }
 
   &:checked::before {

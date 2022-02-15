@@ -7,47 +7,51 @@
   max-width: 7.339em;
   color: $color-font-a50;
   font: 1rem $main-font-family;
-  line-height: 1.28;
+  line-height: 1.71;
+  cursor: pointer;
   
   &:focus,
   &:hover {
-    color: $color-font-a75;
+    @include font-body;
   }
+
+  &__input {
+    display: grid;
+    place-content: center;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-font-a25;
+    border-radius: 50%;
+    outline: none;
+  
+    &::before {
+      content: "";
+      width: 0.857em;
+      height: 0.857em;
+      clip-path: circle(50% at 50% 50%);
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      background-image: $primary-gradient;
+    }
+  
+    &:focus,
+    &:hover,
+    &:checked {
+      border: 1px solid $color-primary-bg;
+      cursor: pointer;
+    }
+  
+    &:checked::before {
+      transform: scale(1);
+    }
+  }  
 }
 
-.radio__input {
-  display: grid;
-  place-content: center;
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
-  font: inherit;
-  color: currentColor;
-  width: 20px;
-  height: 20px;
-  border: 1px solid $color-font-a25;
-  border-radius: 50%;
-  outline: none;
 
-  &::before {
-    content: "";
-    width: 0.857em;
-    height: 0.857em;
-    clip-path: circle(50% at 50% 50%);
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-    background-image: $primary-gradient;
-  }
-
-  &:focus,
-  &:hover,
-  &:checked {
-    border: 1px solid $color-primary-bg;
-  }
-
-  &:checked::before {
-    transform: scale(1);
-  }
-}  
 
 

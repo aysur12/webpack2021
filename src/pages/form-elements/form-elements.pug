@@ -8,6 +8,7 @@ include ../../components/dropdown-common-value/dropdown-common-value
 
 include ../../components/checkbox/checkbox
 include ../../components/radio/radio
+include ../../components/toggle/toggle
 
 block variables
   title Form elements
@@ -104,6 +105,10 @@ block content
             +radio({
               text: "Женщина",
               checked: false,
-            })  
+            })
+        .form-elements__title-input_toggle
+          +title-input("toggle")
+        .form-elements__toggle
+          +toggle("Получать спецпредложения")        
       .form-elements__grid-wrap-right
 
