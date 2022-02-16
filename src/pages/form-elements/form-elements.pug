@@ -109,6 +109,13 @@ block content
         .form-elements__title-input_toggle
           +title-input("toggle")
         .form-elements__toggle
-          +toggle("Получать спецпредложения")        
+          +toggle({
+            text: "Получать спецпредложения",
+            checked: true,
+          })    
+          +toggle({
+            text: "Получать спецпредложения",
+            checked: false,
+          })     
       .form-elements__grid-wrap-right
 

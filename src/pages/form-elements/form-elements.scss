@@ -89,7 +89,9 @@
   }
   
   &__toggle {
-
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
   }
 
   &__grid-wrap-right {

@@ -1,4 +1,10 @@
-mixin toggle(text)
+mixin toggle(params={})
+  -
+    const {
+      text= "",
+      checked= false,
+    } = params;
+
   label.toggle
-    input.toggle__input(type="checkbox")
+    input.toggle__input(type="checkbox" name="toggle" checked= checked)
     = text

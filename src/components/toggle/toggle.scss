@@ -30,7 +30,23 @@
       height: 0.857em;
       clip-path: circle(50% at 50% 50%);
       background-color: $color-font-a25;
+      transform: translateX(0);
+      transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
     } 
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:checked {
+      border: 1px solid $color-primary-bg;
+    }
+
+    &:checked::before {
+      transform: translateX(calc(100% + 4px));
+      background-image: $primary-gradient; 
+    }
 
   }
 }
