@@ -10,8 +10,7 @@
     max-width: 22.857em;
     padding: 0.929em 1.071em;
     color: $color-font-a75;
-    font: 1rem $main-font-family;
-    line-height: 1.71;
+    font: 1rem/1.71 $main-font-family;
     border: 1px solid $color-font-a25;
     border-radius: 0.286em;
     outline: none;
@@ -24,18 +23,15 @@
     &_focused {
       padding: 0.786em 1em 0.5em;
       border-color: $color-font-a50;
-      line-height: 1.714em;
     }
 
     &_masked {
       padding: 0.786em 1em 0.5em;
-      line-height: 1.714em;
       min-height: 3.143em;
     }
 
     &_subscribe {
       padding: 0.857em 3.143em 0.857em 1.071em;
-      line-height: 1.714em;
     }
 
     &::placeholder {

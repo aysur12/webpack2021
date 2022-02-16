@@ -21,8 +21,7 @@
   &__text {
     display: inline-block;
     padding: 0.786em 1em 0.5em;
-    font: 1rem $main-font-family;
-    line-height: 1.71;
+    font: 1rem/1.71 $main-font-family;
   }
 
   &__arrow {

@@ -48,8 +48,7 @@ $color-list: (
     flex-direction: column;
     margin: 0.368em 0;
     min-width: 9em;
-    font: 1.357rem $main-font-family;
-    line-height: 1.474;
+    font: 1.357rem/1.474 $main-font-family;
     color: $color-font-a100;
   }
 

@@ -6,6 +6,7 @@ import '../../components/dropdown-common-value';
 import '../../components/checkbox';
 import '../../components/radio';
 import '../../components/toggle';
+import '../../components/like-button';
 import '../../index';
 
 import './form-elements.scss';

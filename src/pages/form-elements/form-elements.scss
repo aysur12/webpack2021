@@ -36,15 +36,7 @@
       margin-bottom: 0;
     }
 
-    &_checkbox-buttons {
-      margin-bottom: 1.183em;
-    }
-
-    &_radio-buttons {
-      margin-bottom: 1.143em;
-    }
-
-    &_toggle {
+    &_button {
       margin-bottom: 1.143em;
     }
   }
@@ -92,6 +84,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    margin-bottom: 3.143em;
   }
 
   &__grid-wrap-right {

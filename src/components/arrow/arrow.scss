@@ -2,8 +2,7 @@
 
 .arrow {
   display: inline-block;
-  font: 1.714em 'Material Icons';
-  line-height: 1.71;
+  font: 1.714em/1.71 'Material Icons';
 
   &_with-gradient {
     background-image: $primary-gradient;

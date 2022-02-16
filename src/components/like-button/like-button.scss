@@ -1,0 +1,28 @@
+@use '../../styles/main' as *;
+
+.like-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 40px;
+  border: 1px solid $color-font-a25;
+  border-radius: 0.714em;
+  outline: none;
+  cursor: pointer;
+
+  &__icon {
+    display: inline-block;
+    padding: 5px;
+    font: 0.714rem/0.85 'Material Icons';
+    background-image: $primary-gradient;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+  }
+
+  &__count {
+    font: 0.714rem/1.219 $main-font-family;
+  }
+}
