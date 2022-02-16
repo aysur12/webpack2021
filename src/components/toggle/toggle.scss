@@ -34,11 +34,11 @@
       transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
     } 
 
-    &:focus,
     &:hover {
       cursor: pointer;
     }
 
+    &:focus,
     &:checked {
       border: 1px solid $color-primary-bg;
     }
@@ -47,7 +47,6 @@
       transform: translateX(calc(100% + 4px));
       background-image: $primary-gradient; 
     }
-
   }
 }
 

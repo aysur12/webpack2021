@@ -43,6 +43,9 @@
     &:hover,
     &:checked {
       border: 1px solid $color-primary-bg;
+    }
+
+    &:hover {
       cursor: pointer;
     }
   
