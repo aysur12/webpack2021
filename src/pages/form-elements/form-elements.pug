@@ -125,6 +125,11 @@ block content
         .form-elements__like-button
           +like-button({
             count: 2,
+            isActive: false,
+          })
+          +like-button({
+            count: 12,
+            isActive: true,
           })
       .form-elements__grid-wrap-right
         .form-elements__title-input
@@ -132,6 +137,6 @@ block content
         .form-elements__bullet 
           +bullet("Нельзя с питомцами")
           +bullet("Без вечеринок и мероприятий")
-          +bullet("Время прибытия — после 13:00,а выезд до 12:00")
+          +bullet("Время прибытия — после 13:00, а выезд до 12:00")
         
 

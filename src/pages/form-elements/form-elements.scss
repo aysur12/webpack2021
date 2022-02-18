@@ -94,6 +94,11 @@
     margin-bottom: 2.889em;
   }
 
+  &__like-button {
+    display: flex;
+    gap: 0.714em;
+  }
+
   &__grid-wrap-right {
     grid-area: right;
   }

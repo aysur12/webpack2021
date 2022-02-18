@@ -2,14 +2,15 @@ mixin like-button(params = {})
   -
     const {
       count,
-<<<<<<< HEAD
-=======
-      isChecked= false,
->>>>>>> 538504607cc8ee54d10eb7da5c066384a5e23e53
+      isActive= true,
     } = params;
 
+    const likeButtonActive = isActive ? "like-button_active" : "";
 
-  button.like-button
-    .like-button__icon favorite_border
+  button.like-button(class= `${likeButtonActive} js-like-button`)
+    if isActive
+      .like-button__icon favorite
+    else
+      .like-button__icon favorite_border
     .like-button__count= count  
 
