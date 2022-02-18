@@ -27,18 +27,25 @@
   }
 
   &__title-input {
-    margin-bottom: 0.357em;
-    &_padding_top {
-      padding-top: 0.214em;
-    }
+    margin-bottom: 1.143em;
 
     &_without-margin-bottom {
       margin-bottom: 0;
     }
 
-    &_button {
-      margin-bottom: 1.143em;
+    &_text-field {
+      margin-bottom: 0.357em;
     }
+
+    &_dropdown {
+      margin-bottom: 0.357em;
+    }
+
+    &_padding_top {
+      padding-top: 0.214em;
+    }
+
+
   }
 
   &__desc-state-input {
@@ -89,6 +96,12 @@
 
   &__grid-wrap-right {
     grid-area: right;
+  }
+
+  &__bullet {
+    display: flex;
+    gap: 0.714em;
+    flex-direction: column;
   }
 }
 

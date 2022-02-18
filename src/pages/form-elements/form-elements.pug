@@ -11,6 +11,8 @@ include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/like-button/like-button
 
+include ../../components/bullet/bullet
+
 block variables
   title Form elements
 
@@ -46,7 +48,7 @@ block content
             placeholder: "This is pretty awesome",
             focused: true
           })  
-        .form-elements__title-input
+        .form-elements__title-input_dropdown
           +title-input("dropdown")  
         .form-elements__dropdown-common-value 
           +dropdown-common-value({
@@ -57,7 +59,7 @@ block content
               {title: "Младенцы"},
             ]
           })  
-        .form-elements__title-input
+        .form-elements__title-input_text-field
           +title-input("masked text field") 
         .form-elements__masked-text-field 
           +text-field({
@@ -66,7 +68,7 @@ block content
             placeholder: "ДД.ММ.ГГГГ",
             masked: true
           }) 
-        .form-elements__title-input
+        .form-elements__title-input_text-field
             +title-input("subscription text field")    
         .form-elements__text-field_subscribe
           +text-field({
@@ -76,7 +78,7 @@ block content
             withArrowButton: true
           })
       .form-elements__grid-wrap-center  
-        .form-elements__title-input_button
+        .form-elements__title-input
             +title-input("checkbox buttons")
         .form-elements__checkbox-group    
           .form-elements__checkbox
@@ -94,7 +96,7 @@ block content
               text: "Можно пригласить гостей (до 10 человек)",
               checked: true,
             }) 
-        .form-elements__title-input_button
+        .form-elements__title-input
           +title-input("radio buttons")
         .form-elements__radio-group
           .form-elements__radio
@@ -107,7 +109,7 @@ block content
               text: "Женщина",
               checked: false,
             })
-        .form-elements__title-input_button
+        .form-elements__title-input
           +title-input("toggle")
         .form-elements__toggle
           +toggle({
@@ -118,11 +120,18 @@ block content
             text: "Получать спецпредложения",
             checked: false,
           })
-        .form-elements__title-input_button
+        .form-elements__title-input
           +title-input("like button")  
         .form-elements__like-button
           +like-button({
             count: 2,
-          })      
+          })
       .form-elements__grid-wrap-right
+        .form-elements__title-input
+          +title-input("bullet list")
+        .form-elements__bullet 
+          +bullet("Нельзя с питомцами")
+          +bullet("Без вечеринок и мероприятий")
+          +bullet("Время прибытия — после 13:00,а выезд до 12:00")
+        
 

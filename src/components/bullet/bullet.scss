@@ -1,0 +1,19 @@
+@use '../../styles/main' as *;
+
+.bullet {
+  display: flex;
+  align-items: center;
+  gap: 0.745em;
+  width: 100%;
+  
+  &__icon {
+    min-width: 0.745em;
+    min-height: 0.714em;
+    clip-path: circle(50% at 50% 50%);
+    background-color: $color-font-a25;
+  }
+
+  &__text {
+    @include font-body;
+  }
+}
