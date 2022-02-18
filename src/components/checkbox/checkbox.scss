@@ -40,7 +40,7 @@
   &:focus,
   &:hover,
   &:checked {
-    border: 1px solid $color-primary-bg;
+    border-color: $color-primary-bg;
   }
 
   &:hover {

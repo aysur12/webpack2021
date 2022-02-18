@@ -17,7 +17,7 @@
 
     &:focus,
     &:hover {
-      border: 1px solid $color-font-a50;
+      border-color: $color-font-a50;
     }
 
     &_focused {
