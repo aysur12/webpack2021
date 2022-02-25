@@ -7,7 +7,7 @@ likeButton.forEach((button) => {
     button.classList.toggle('like-button_active');
     button.children[1].classList.toggle('like-button__count_active');
 
-    let number = button.children[1].textContent;
+    const number = button.children[1].textContent;
     if (button.classList.contains('like-button_active')) {
       button.children[0].textContent = 'favorite';
       button.children[1].textContent = parseInt(number) + 1;
