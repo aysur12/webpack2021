@@ -6,6 +6,7 @@
   width: 100%;
   max-width: 18.571em;
   @include font-body;
+
   cursor: pointer;
 
   &__input {
@@ -16,9 +17,9 @@
     margin: 0;
     padding: 0.286em;
     font: inherit;
-    color: currentColor;
+    color: currentcolor;
     width: 40px;
-    max-width: 15,38%;
+    max-width: 15, 38%;
     max-height: 20px;
     border: 1px solid $color-font-a25;
     border-radius: 0.714em;
@@ -32,21 +33,20 @@
     &:checked {
       border-color: $color-primary-bg;
     }
-    
+
     &::before {
-      content: "";
+      content: '';
       width: 0.857em;
       height: 0.857em;
       clip-path: circle(50% at 50% 50%);
       background-color: $color-font-a25;
       transform: translateX(0);
       transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    } 
+    }
 
     &:checked::before {
       transform: translateX(calc(100% + 4px));
-      background-image: $primary-gradient; 
+      background-image: $primary-gradient;
     }
   }
 }
-

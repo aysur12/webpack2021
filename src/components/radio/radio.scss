@@ -8,7 +8,7 @@
   color: $color-font-a50;
   font: 1rem/1.71 $main-font-family;
   cursor: pointer;
-  
+
   &:focus,
   &:hover {
     @include font-body;
@@ -21,15 +21,15 @@
     background-color: #fff;
     margin: 0;
     font: inherit;
-    color: currentColor;
+    color: currentcolor;
     width: 20px;
     height: 20px;
     border: 1px solid $color-font-a25;
     border-radius: 50%;
     outline: none;
-  
+
     &::before {
-      content: "";
+      content: '';
       width: 0.857em;
       height: 0.857em;
       clip-path: circle(50% at 50% 50%);
@@ -37,7 +37,7 @@
       transition: 120ms transform ease-in-out;
       background-image: $primary-gradient;
     }
-  
+
     &:focus,
     &:hover,
     &:checked {
@@ -47,13 +47,9 @@
     &:hover {
       cursor: pointer;
     }
-  
+
     &:checked::before {
       transform: scale(1);
     }
-  }  
+  }
 }
-
-
-
-

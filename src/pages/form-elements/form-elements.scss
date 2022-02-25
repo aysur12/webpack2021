@@ -1,16 +1,16 @@
 @use '../../styles/main' as *;
 
 .form-elements {
-  margin: 0 auto;
-  padding: 2.08%;
   width: 100%;
   max-width: 1440px;
+  margin: 0 auto;
+  padding: 2.08%;
 
-  &__grid{
+  &__grid {
     display: grid;
     grid:
-    "left . center . right" 1fr
-    / 27.63% 10.88% 27.63% 6.22% 27.63%;
+      'left . center . right' 1fr
+      / 27.63% 10.88% 27.63% 6.22% 27.63%;
     margin: 4.429em 7.929em 7.214em;
   }
 
@@ -23,7 +23,6 @@
     justify-content: space-between;
     max-width: 100%;
     margin-bottom: 0.357em;
-
   }
 
   &__title-input {
@@ -44,8 +43,6 @@
     &_padding_top {
       padding-top: 0.214em;
     }
-
-
   }
 
   &__desc-state-input {
@@ -56,6 +53,7 @@
 
   &__text-field {
     margin-bottom: 1.429em;
+
     &_subscribe {
       max-width: 83.44%;
     }
@@ -71,7 +69,7 @@
 
   &__grid-wrap-center {
     grid-area: center;
-    padding-top: 3px; 
+    padding-top: 3px;
   }
 
   &__checkbox-group {
@@ -86,7 +84,7 @@
     gap: 1.429em;
     margin-bottom: 2.611em;
   }
-  
+
   &__toggle {
     display: flex;
     flex-direction: column;
@@ -105,9 +103,7 @@
 
   &__bullet {
     display: flex;
-    gap: 0.714em;
     flex-direction: column;
+    gap: 0.714em;
   }
 }
-
-
