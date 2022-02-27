@@ -3,9 +3,19 @@ mixin checkbox(params = {})
     const {
       text= "",
       checked= false,
-    } = params; 
+      rich= false,
+      title= "",
+      textBoxSizeSmall= false,
+    } = params;
+
+    const boxSmall = textBoxSizeSmall ? "checkbox__text_box-small" : "";
 
   label.checkbox
     input.checkbox__input(type= "checkbox" name="checkbox" checked= checked)
-    =text
+    if rich 
+      .checkbox__text-group 
+        h4.checkbox__title= title
+        p.checkbox__text_rich(class= `${boxSmall}`)= text
+    else 
+      p.checkbox__text= text
 

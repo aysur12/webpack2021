@@ -75,7 +75,7 @@
   &__checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 10px;
     margin-bottom: 2.92em;
   }
 
@@ -95,6 +95,19 @@
   &__like-button {
     display: flex;
     gap: 0.714em;
+    margin-bottom: 2.857em;
+  }
+
+  &__rate-button {
+    display: flex;
+    gap: 1.429em;
+    margin-bottom: 14em;
+  }
+
+  &__rich-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__grid-wrap-right {

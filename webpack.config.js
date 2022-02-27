@@ -3,7 +3,6 @@ const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -86,17 +85,17 @@ const config = {
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/images/[name][ext]',
-        },
-      },
-      {
         test: /\.(ttf|svg|woff|woff2)$/,
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[name][ext]',
+        },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext]',
         },
       },
     ],

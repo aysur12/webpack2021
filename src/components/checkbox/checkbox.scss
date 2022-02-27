@@ -2,59 +2,87 @@
 
 .checkbox {
   display: flex;
+  align-items: baseline;
   gap: 0.714em;
   width: 100%;
-  max-width: 15.857em;
+  max-width: 19em;
   color: $color-font-a50;
   font: 1rem/1.28 $main-font-family;
   cursor: pointer;
-}
 
-.checkbox__input {
-  display: grid;
-  place-content: center;
-  appearance: none;
-  margin: 0;
-  background-color: #fff;
-  font: inherit;
-  color: currentcolor;
-  min-width: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  max-height: 20px;
-  border: 1px solid $color-font-a25;
-  border-radius: 0.286em;
-  outline: none;
+  &__input {
+    display: grid;
+    place-content: center;
+    appearance: none;
+    margin: 0;
+    background-color: #fff;
+    font: inherit;
+    color: currentcolor;
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    border: 1px solid $color-font-a25;
+    border-radius: 0.286em;
+    outline: none;
 
-  &::before {
-    content: '';
-    width: 10px;
-    height: 8px;
-    clip-path: polygon(
-      19% 21.3%,
-      48.6% 60.3%,
-      84.8% 12.5%,
-      100% 27%,
-      48.9% 98.3%,
-      2.5% 40.5%
-    );
-    transition: 120ms transform ease-in-out;
-    transform: scale(0);
-    transform-origin: bottom left;
-    background-image: $primary-gradient;
+    &::before {
+      content: '';
+      width: 10px;
+      height: 8px;
+      clip-path: polygon(
+        19% 21.3%,
+        48.6% 60.3%,
+        84.8% 12.5%,
+        100% 27%,
+        48.9% 98.3%,
+        2.5% 40.5%
+      );
+      transition: 120ms transform ease-in-out;
+      transform: scale(0);
+      transform-origin: bottom left;
+      background-image: $primary-gradient;
+    }
+
+    &:focus,
+    &:hover,
+    &:checked {
+      border-color: $color-primary-bg;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
   }
 
-  &:focus,
-  &:hover,
-  &:checked {
-    border-color: $color-primary-bg;
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.357em;
+    max-width: 16.143em;
   }
 
-  &:hover {
-    cursor: pointer;
+  &__title {
+    margin: 0;
+    color: $color-font-a75;
+    font-weight: bold;
   }
 
-  &:checked::before {
-    transform: scale(1);
+  &__text {
+    max-width: 13.714em;
+    margin: 0;
+
+    &_rich {
+      margin: 0;
+      font: 0.857rem/1.16 $main-font-family;
+    }
+
+    &_box-small {
+      max-width: 16.083em;
+    }
   }
 }

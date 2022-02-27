@@ -10,6 +10,7 @@ include ../../components/checkbox/checkbox
 include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/like-button/like-button
+include ../../components/rate-button/rate-button
 
 include ../../components/bullet/bullet
 
@@ -81,21 +82,18 @@ block content
         .form-elements__title-input
             +title-input("checkbox buttons")
         .form-elements__checkbox-group    
-          .form-elements__checkbox
-            +checkbox({
-              text: "Можно курить",
-              checked: false,
-            })
-          .form-elements__checkbox
-            +checkbox({
-              text: "Можно с питомцами",
-              checked: true,
-            })
-          .form-elements__checkbox
-            +checkbox({
-              text: "Можно пригласить гостей (до 10 человек)",
-              checked: true,
-            }) 
+          +checkbox({
+            text: "Можно курить",
+            checked: false,
+          })
+          +checkbox({
+            text: "Можно с питомцами",
+            checked: true,
+          })
+          +checkbox({
+            text: "Можно пригласить гостей (до 10 человек)",
+            checked: true,
+          }) 
         .form-elements__title-input
           +title-input("radio buttons")
         .form-elements__radio-group
@@ -121,7 +119,7 @@ block content
             checked: false,
           })
         .form-elements__title-input
-          +title-input("like button")  
+          +title-input("like button")
         .form-elements__like-button
           +like-button({
             count: 2,
@@ -130,6 +128,31 @@ block content
           +like-button({
             count: 12,
             isActive: true,
+          })
+        .form-elements__title-input
+          +title-input("rate button") 
+        .form-elements__rate-button
+          +rate-button({
+            rating: 4,
+          })
+          +rate-button({
+            rating: 5,
+          })
+        .form-elements__title-input
+          +title-input("rich checkbox buttons") 
+        .form-elements__rich-checkbox-group
+          +checkbox({
+            text: "Ширина коридоров в номере не менее 91 см.",
+            checked: true,
+            rich: true,
+            title: "Широкий коридор",
+            textBoxSizeSmall: true,
+          })
+          +checkbox({
+            text: "На 1 этаже вас встретит специалист  и проводит до номера.",
+            checked: true,
+            rich: true,
+            title: "Помощник для инвалидов"
           })
       .form-elements__grid-wrap-right
         .form-elements__title-input

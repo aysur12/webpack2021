@@ -3,8 +3,8 @@ module.exports = {
             "stylelint-config-rational-order",
             "stylelint-prettier/recommended"],
   plugins: ["stylelint-order",
-            "stylelint-scss",
-            "stylelint-config-rational-order/plugin"],
+            "stylelint-config-rational-order/plugin",
+            "stylelint-scss",],
   "customSyntax" : "postcss-scss",
   rules: {
     "order/properties-order": [],
