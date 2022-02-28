@@ -1,0 +1,34 @@
+@use '../../styles/main' as *;
+
+.benefit {
+  display: flex;
+  width: 100%;
+  max-width: 20.143em;
+  padding-bottom: 1em;
+  @include font-body;
+  border-bottom: 1px solid $color-font-a10;
+
+  &__icon {
+    max-height: 1em;
+    font: 3.429rem 'Material Icons';
+    background-image: $primary-gradient;
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: bold;
+    padding: 0.214em 0.714em 0;
+  }
+
+  &__text {
+    padding: 0 0.714em 0.214em;
+  }
+}

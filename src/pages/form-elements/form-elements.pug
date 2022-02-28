@@ -6,6 +6,9 @@ include ../../components/desc-state-input/desc-state-input
 include ../../components/text-field/text-field
 include ../../components/dropdown-common-value/dropdown-common-value
 
+include ../../components/checkbox-list/checkbox-list
+include ../../components/benefit/benefit
+
 include ../../components/checkbox/checkbox
 include ../../components/radio/radio
 include ../../components/toggle/toggle
@@ -78,6 +81,28 @@ block content
             placeholder: "Email",
             withArrowButton: true
           })
+        .form-elements__checkbox-list_closed
+          +checkbox-list({
+            open: false,
+            title: "expandable checkbox list",
+          })
+        .form-elements__checkbox-list
+          +checkbox-list({
+            open: true,
+            title: "expandable checkbox list",
+          })
+        .form-elements__benefit
+          +benefit({
+            benefitIcon: "insert_emoticon",
+            title: "Комфорт",
+            text: "Шумопоглощающие стены"
+          })
+        .form-elements__benefit
+          +benefit({
+            benefitIcon: "location_city",
+            title: "Удобство",
+            text: "Окно в каждой из спален"
+          })  
       .form-elements__grid-wrap-center  
         .form-elements__title-input
             +title-input("checkbox buttons")
@@ -143,14 +168,14 @@ block content
         .form-elements__rich-checkbox-group
           +checkbox({
             text: "Ширина коридоров в номере не менее 91 см.",
-            checked: true,
+            checked: false,
             rich: true,
             title: "Широкий коридор",
             textBoxSizeSmall: true,
           })
           +checkbox({
             text: "На 1 этаже вас встретит специалист  и проводит до номера.",
-            checked: true,
+            checked: false,
             rich: true,
             title: "Помощник для инвалидов"
           })

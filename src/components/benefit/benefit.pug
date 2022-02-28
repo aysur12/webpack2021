@@ -1,0 +1,13 @@
+mixin benefit(params = {})
+  -
+    const {
+      benefitIcon = "",
+      title= "",
+      text= "",
+    } = params;
+
+  .benefit
+    .benefit__icon= benefitIcon
+    .benfit__text-group 
+      .benefit__title= title 
+      .benefit__text= text

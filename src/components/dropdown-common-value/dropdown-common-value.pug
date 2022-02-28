@@ -1,14 +1,11 @@
 mixin dropdown-common-value({params = {}, elements=[]})
   -
     const {
-      open= false,
+      open= true,
     } = params 
     
-    const detailsAttributes = {
-      open: open,
-    }
 
-  details.dropdown-common-value&attributes(detailsAttributes) 
+  details.dropdown-common-value(open= open)
     summary.dropdown-common-value__field 
       span.dropdown-common-value__text Сколько гостей
       span.dropdown-common-value__arrow expand_more
