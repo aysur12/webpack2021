@@ -16,6 +16,7 @@ include ../../components/like-button/like-button
 include ../../components/rate-button/rate-button
 
 include ../../components/bullet/bullet
+include ../../components/testimonial/testimonial
 
 block variables
   title Form elements
@@ -186,5 +187,14 @@ block content
           +bullet("Нельзя с питомцами")
           +bullet("Без вечеринок и мероприятий")
           +bullet("Время прибытия — после 13:00, а выезд до 12:00")
-        
+      .form-elements__testimonial
+        +testimonial({
+          avatar: require("../../components/testimonial/images/murad.jpg"),
+          altImg: "Мурад Сарафанов",
+          fullName: "Мурад Сарафанов",
+          writingTime: "5 дней назад",
+          desc: "Великолепный матрас на кровати в основной спальне!\
+                А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
+                Выкрикивал комплименты повару — никто не жаловался из соседей."
+        })  
 

@@ -13,6 +13,7 @@ import '../../components/like-button';
 import '../../components/rate-button';
 
 import '../../components/bullet';
+import '../../components/testimonial';
 import '../../index';
 
 import './form-elements.scss';

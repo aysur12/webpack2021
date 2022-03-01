@@ -53,14 +53,12 @@
 
   &__collapsible-item-title {
     margin: 0;
-    @include font-h3;
-
     text-transform: uppercase;
+    @include font-h3;
   }
 
   &__count-value {
-    @include font-h3;
-
     text-transform: uppercase;
+    @include font-h3;
   }
 }
