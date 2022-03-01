@@ -32,13 +32,14 @@
   }
 
   &__count {
-    padding: 2px 9px 3px 0;
+    display: inline-block;
+    width: 1.986em;
+    text-align: left;
     color: $color-font-a25;
-    font: 0.714rem/1.219 $main-font-family;
+    font: 0.714rem/1.8 $main-font-family;
 
     &_active {
       color: $color-primary-bg;
-      font: 0.714rem/1.219 $main-font-family;
     }
   }
 }
