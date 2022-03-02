@@ -15,6 +15,7 @@ include ../../components/toggle/toggle
 include ../../components/like-button/like-button
 include ../../components/rate-button/rate-button
 
+include ../../components/button/button
 include ../../components/bullet/bullet
 include ../../components/testimonial/testimonial
 
@@ -28,7 +29,7 @@ block content
     .form-elements__grid
       .form-elements__grid-wrap-left
         .form-elements__text-field-heading
-          .form-elements__title-input_without-margin-bottom(
+          .form-elements__title-input.form-elements__title-input_without-margin-bottom(
             class= "form-elements__title-input_padding_top")
             +title-input("text field")
           .form-elements__desc-state-input(
@@ -42,7 +43,7 @@ block content
             placeholder: "Email",
           })
         .form-elements__text-field-heading 
-          .form-elements__title-input_without-margin-bottom
+          .form-elements__title-input.form-elements__title-input_without-margin-bottom
             +title-input("text field")
           .form-elements__desc-state-input 
             +desc-state-input("hover / focus")
@@ -53,7 +54,7 @@ block content
             placeholder: "This is pretty awesome",
             focused: true
           })  
-        .form-elements__title-input_dropdown
+        .form-elements__title-input.form-elements__title-input_dropdown
           +title-input("dropdown")  
         .form-elements__dropdown-common-value 
           +dropdown-common-value({
@@ -73,16 +74,16 @@ block content
             placeholder: "ДД.ММ.ГГГГ",
             masked: true
           }) 
-        .form-elements__title-input_text-field
+        .form-elements__title-input.form-elements__title-input_text-field
             +title-input("subscription text field")    
-        .form-elements__text-field_subscribe
+        .form-elements__text-field.form-elements__text-field_subscribe
           +text-field({
             type: "text",
             name: "email",
             placeholder: "Email",
             withArrowButton: true
           })
-        .form-elements__checkbox-list_closed
+        .form-elements__checkbox-list.form-elements__checkbox-list_closed
           +checkbox-list({
             open: false,
             title: "expandable checkbox list",
@@ -165,7 +166,7 @@ block content
             rating: 5,
           })
         .form-elements__title-input
-          +title-input("rich checkbox buttons") 
+          +title-input("rich checkbox buttons")
         .form-elements__rich-checkbox-group
           +checkbox({
             text: "Ширина коридоров в номере не менее 91 см.",
@@ -181,6 +182,49 @@ block content
             title: "Помощник для инвалидов"
           })
       .form-elements__grid-wrap-right
+        .form-elements__title-input
+          +title-input("buttons")
+        .form-elements__button-group.form-elements__button-group_default
+          +button({
+            type: "button",
+            text: "click me",
+          })
+          +button({
+            type: "button",
+            text: "click me",
+            isHovered: true,
+          })
+        .form-elements__button-group.form-elements__button-group_with-border
+          +button({
+            type: "button",
+            text: "click me",
+            withBorder: true,
+          })
+          +button({
+            type: "button",
+            text: "click me",
+            withBorder: true,
+            isHovered: true,
+          })
+        .form-elements__button-group.form-elements__button-group_border-less
+          +button({
+            type: "button",
+            text: "click me",
+            borderLess: true,
+          })
+          +button({
+            type: "button",
+            text: "click me",
+            borderLess: true,
+            borderLessHovered: true,
+          }) 
+        .form-elements__button
+          +button({
+            type: "button",
+            text: "перейти к оплате",
+            withArrow: true,
+            paymentGo: true,
+          })
         .form-elements__title-input
           +title-input("bullet list")
         .form-elements__bullet 

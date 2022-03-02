@@ -1,0 +1,41 @@
+include ../../components/arrow/arrow
+
+mixin button(params = {})
+  -
+    const {
+      type= "button",
+      href= "",
+      text= "",
+      withArrow= false,
+      isHovered= false,
+      withBorder= false,
+      borderLess= false,
+      borderLessHovered= false,
+      paymentGo= false,
+      disabled= false,
+    } = params;
+
+    const tagBtn = href ? "a" : "button";
+    const buttonAttributes = {
+      a: {
+        href: href,
+      },
+      button: {
+        type: type,
+        disabled: disabled,
+      }
+    }
+    const btnModifiers = {
+      "btn_with-arrow" : withArrow,
+      "btn_hovered" : isHovered,
+      "btn_with-border" : withBorder,
+      "btn_border-less" : borderLess,
+      "btn_border-less-hovered" : borderLessHovered,
+      "btn_payment-go" : paymentGo,
+    }
+
+  #{tagBtn}.btn(class= btnModifiers)&attributes(buttonAttributes[tagBtn])
+    span.btn__text= text
+    if withArrow
+      .btn__arrow
+        +arrow({withGradient: false})

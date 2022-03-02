@@ -3,6 +3,7 @@
 .arrow {
   display: inline-block;
   font: 1.714rem/1.71 'Material Icons';
+  text-transform: none;
 
   &_with-gradient {
     background-image: $primary-gradient;

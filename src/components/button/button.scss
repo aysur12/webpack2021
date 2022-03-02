@@ -1,0 +1,87 @@
+@use '../../styles/main' as *;
+
+.btn {
+  display: inline-block;
+  padding: 1.167em 1.61em 1.25em;
+  @include font-h3;
+  color: $border-primary;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  appearance: none;
+  background: $primary-gradient;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &_hovered {
+    opacity: 0.5;
+  }
+
+  &_with-border {
+    position:relative;
+    color: $color-primary-bg;
+    background: $color-third-bg;
+
+    &::before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      border-radius:22px; 
+      padding:2px; 
+      background: $primary-gradient; 
+      -webkit-mask: 
+        linear-gradient($color-third-bg 0 0) content-box, 
+        linear-gradient($color-third-bg 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+    }
+  }
+
+  &_border-less {
+    padding: 0;
+    color: $color-primary-bg;
+    border: none;
+    background: none;
+
+    &:hover,
+    &:focus {
+      color: $color-font-a50;
+    }
+  }
+
+  &_border-less-hovered {
+    color: $color-font-a50;
+  }
+
+  &_payment-go {
+    position: relative;
+    width: 100%;
+    max-width: 26.667em;
+    padding: 1.25em 3.667em 1.25em 1.667em;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    padding: 3px 0;
+  }
+
+  &:disabled {
+    color: $color-font-a50;
+    background: none;
+    cursor: auto;
+  }
+}

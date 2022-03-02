@@ -12,6 +12,7 @@ import '../../components/toggle';
 import '../../components/like-button';
 import '../../components/rate-button';
 
+import '../../components/button';
 import '../../components/bullet';
 import '../../components/testimonial';
 import '../../index';
