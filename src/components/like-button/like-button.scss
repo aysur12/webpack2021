@@ -4,9 +4,9 @@
   display: flex;
   gap: 2px;
   align-items: center;
-  padding: 0;
   width: 100%;
   max-width: 40px;
+  padding: 0;
   background-color: $color-third-bg;
   border: 1px solid $color-font-a25;
   border-radius: 0.714em;
@@ -23,7 +23,7 @@
   &__icon {
     display: inline-block;
     padding: 4px;
-    font: 0.714rem/1 'Material Icons';
+    font: 0.714rem/1 'Material Icons', sans-serif;
     background-image: $primary-gradient;
     background-size: 100%;
     background-clip: text;
@@ -34,9 +34,9 @@
   &__count {
     display: inline-block;
     width: 1.986em;
-    text-align: left;
     color: $color-font-a25;
     font: 0.714rem/1.8 $main-font-family;
+    text-align: left;
 
     &_active {
       color: $color-primary-bg;

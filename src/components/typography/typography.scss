@@ -4,8 +4,8 @@
   margin: 0;
   padding: 0;
   color: $color-font-a25;
-  text-align: right;
   font: $main-font-family;
+  text-align: right;
 }
 
 @mixin style-sizes($min-width, $font-size, $line-height) {
@@ -20,9 +20,9 @@
   &__list {
     display: flex;
     flex-direction: column;
+    min-width: 31.143em;
     margin: 0;
     padding: 0;
-    min-width: 31.143em;
     row-gap: 3.643em;
     list-style: none;
   }

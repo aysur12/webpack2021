@@ -6,8 +6,8 @@
 
   &__field {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     list-style: none;
     cursor: pointer;
   }
@@ -20,16 +20,16 @@
 
   &__arrow {
     display: flex;
+    flex-basis: 16.3%;
     align-items: center;
     justify-content: center;
-    flex-basis: 16.3%;
     max-width: 44px;
     padding: 0;
     text-align: center;
 
     &::before {
+      font: 1.714rem 'Material Icons', sans-serif;
       content: '\e5cf';
-      font: 1.714rem 'Material Icons';
     }
   }
 

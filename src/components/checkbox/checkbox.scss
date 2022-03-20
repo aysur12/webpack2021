@@ -2,8 +2,8 @@
 
 .checkbox {
   display: flex;
-  align-items: baseline;
   gap: 0.714em;
+  align-items: baseline;
   width: 100%;
   max-width: 19em;
   color: $color-font-a50;
@@ -13,20 +13,24 @@
   &__input {
     display: grid;
     place-content: center;
-    appearance: none;
-    margin: 0;
-    background-color: $color-third-bg;
-    color: currentColor;
     width: 20px;
     height: 20px;
+    margin: 0;
+    color: currentColor;
+    background-color: $color-third-bg;
     border: 1px solid $color-font-a25;
     border-radius: 0.286em;
     outline: none;
+    appearance: none;
 
     &::before {
-      content: '';
       width: 10px;
       height: 8px;
+      background-image: $primary-gradient;
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: 120ms transform ease-in-out;
+      content: '';
       clip-path: polygon(
         19% 21.3%,
         48.6% 60.3%,
@@ -35,10 +39,6 @@
         48.9% 98.3%,
         2.5% 40.5%
       );
-      transition: 120ms transform ease-in-out;
-      transform: scale(0);
-      transform-origin: bottom left;
-      background-image: $primary-gradient;
     }
 
     &:focus,

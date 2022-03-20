@@ -17,25 +17,25 @@
   &__input {
     display: grid;
     place-content: center;
-    appearance: none;
-    background-color: $color-third-bg;
-    margin: 0;
-    font: inherit;
-    color: currentColor;
     width: 20px;
     height: 20px;
+    margin: 0;
+    color: currentColor;
+    font: inherit;
+    background-color: $color-third-bg;
     border: 1px solid $color-font-a25;
     border-radius: 50%;
     outline: none;
+    appearance: none;
 
     &::before {
-      content: '';
       width: 0.857em;
       height: 0.857em;
-      clip-path: circle(50% at 50% 50%);
+      background-image: $primary-gradient;
       transform: scale(0);
       transition: 120ms transform ease-in-out;
-      background-image: $primary-gradient;
+      content: '';
+      clip-path: circle(50% at 50% 50%);
     }
 
     &:focus,

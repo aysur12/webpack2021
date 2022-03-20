@@ -8,13 +8,13 @@
   &__icon {
     min-width: 0.745em;
     min-height: 0.714em;
-    clip-path: circle(50% at 50% 50%);
     background-color: $color-font-a25;
+    clip-path: circle(50% at 50% 50%);
   }
 
   &__text {
-    padding: 0 0.745em;
     max-width: 19em;
+    padding: 0 0.745em;
     @include font-body;
   }
 }

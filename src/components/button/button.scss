@@ -6,15 +6,15 @@
   @include font-h3;
 
   color: $border-primary;
+  text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
-  text-align: center;
-  appearance: none;
   background: $primary-gradient;
   border: none;
   border-radius: 22px;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
+  appearance: none;
 
   &:hover,
   &:focus {
@@ -31,15 +31,15 @@
     background: $color-third-bg;
 
     &::before {
-      content: '';
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
-      border-radius: 22px;
+      left: 0;
       padding: 2px;
       background: $primary-gradient;
+      border-radius: 22px;
+      content: '';
       mask: linear-gradient($color-third-bg 0 0) content-box,
         linear-gradient($color-third-bg 0 0);
       mask-composite: xor;
@@ -50,12 +50,13 @@
   &_border-less {
     padding: 0;
     color: $color-primary-bg;
-    border: none;
     background: none;
+    border: none;
 
     &:hover,
     &:focus {
       color: $color-font-a50;
+      opacity: 1;
     }
   }
 

@@ -12,8 +12,8 @@
 
   &__field {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     list-style: none;
     cursor: pointer;
   }
@@ -26,29 +26,29 @@
 
   &__arrow {
     display: flex;
+    flex-basis: 16.3%;
     align-items: center;
     justify-content: center;
-    flex-basis: 16.3%;
     max-width: 44px;
     padding: 0;
-    border: none;
-    background-color: transparent;
+    font: 1.714rem 'Material Icons', sans-serif;
     text-align: center;
-    font: 1.714rem 'Material Icons';
+    background-color: transparent;
+    border: none;
   }
 
   &__collapsible-content {
+    width: 93.13%;
     margin: 0;
     padding: 0.429em 0.5em 1.357em 1.071em;
-    width: 93.13%;
     border-top: 1px solid $color-font-a25;
   }
 
   &__collapsible-item {
-    list-style-type: none;
     display: flex;
     gap: 10.25em;
     margin-bottom: 0.583em;
+    list-style-type: none;
   }
 
   &__collapsible-item-title {

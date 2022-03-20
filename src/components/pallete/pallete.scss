@@ -25,9 +25,9 @@ $color-list: (
     display: flex;
     flex-direction: column;
     row-gap: 1.429em;
+    min-width: 20.071em;
     margin: 0;
     padding: 0;
-    min-width: 20.071em;
     list-style: none;
   }
 
@@ -46,10 +46,10 @@ $color-list: (
   &__block {
     display: flex;
     flex-direction: column;
-    margin: 0.368em 0;
     min-width: 9em;
-    font: 1.357rem/1.474 $main-font-family;
+    margin: 0.368em 0;
     color: $color-font-a100;
+    font: 1.357rem/1.474 $main-font-family;
   }
 
   &__color-name {
