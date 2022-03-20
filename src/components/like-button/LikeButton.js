@@ -4,7 +4,7 @@ class LikeButton {
     this.bindEventListeners();
   }
 
-  bindEventListeners () {
+  bindEventListeners() {
     this.button.addEventListener('click', this.handleLikeButtonClick.bind(this));
   }
 
