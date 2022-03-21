@@ -1,5 +1,6 @@
 .vscode
-node_modules
 dist
+eslintrc.js
+node_modules
 package-lock.json
 webpack.config.js

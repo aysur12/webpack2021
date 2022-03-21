@@ -4,8 +4,6 @@ import 'material-icons/iconfont/material-icons.css';
 import '../arrow';
 import './text-field.scss';
 
-jQuery(($) => {
-  $('.js-text-field__input_masked').each(function() {
-    new TextField($(this));
-  });
+$('.js-text-field__input_masked').each(function () {
+  const inputMasked = new TextField($(this));
 });
