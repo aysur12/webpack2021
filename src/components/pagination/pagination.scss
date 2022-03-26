@@ -1,0 +1,24 @@
+@use '../../styles/main' as *;
+
+.pagination {
+  max-width: 17.214em;
+
+  &__list {
+    display: flex;
+    margin-bottom: 0.754em;
+  }
+
+  &__ellipse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.27em;
+    @include font-h3;
+    color: $color-font-a50;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0 0.429em;
+  }
+}

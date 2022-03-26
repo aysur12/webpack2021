@@ -12,6 +12,9 @@ mixin button(params = {})
       borderLess= false,
       borderLessHovered= false,
       paymentGo= false,
+      isForPage= false,
+      isSelectedPage= false,
+      isTurnNextPage= false,
       disabled= false,
     } = params;
 
@@ -32,6 +35,9 @@ mixin button(params = {})
       "btn_border-less" : borderLess,
       "btn_border-less-hovered" : borderLessHovered,
       "btn_payment-go" : paymentGo,
+      "btn_page" : isForPage,
+      "btn_selected-page" : isSelectedPage,
+      "btn_turned-next-page" : isTurnNextPage,
     }
 
   #{tagBtn}.btn(class= btnModifiers)&attributes(buttonAttributes[tagBtn])
@@ -39,3 +45,5 @@ mixin button(params = {})
     if withArrow
       .btn__arrow
         +arrow({withGradient: false})
+    if isTurnNextPage
+      +arrow({withGradient: false})

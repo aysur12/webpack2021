@@ -1,0 +1,17 @@
+include ../../components/button/button
+
+mixin pagination({currentPage, totalVisibleItems, totalPages})
+  -
+    const endVisibleItem = totalVisibleItems * currentPage;
+    const startVisibleItem = endVisibleItem - totalVisibleItems + 1;
+    const text = `${startVisibleItem} - ${endVisibleItem} из 100+ вариантов аренды`;
+
+  .pagination
+    .pagination__list
+      +button({type: "button", text: "1", isSelectedPage: true})
+      +button({type: "button", text: "2", isForPage: true})
+      +button({type: "button", text: "3", isForPage: true})
+      span.pagination__ellipse ...
+      +button({type: "button", text: totalPages, isForPage: true})
+      +button({type: "button", isTurnNextPage: true})
+    p.pagination__text= text

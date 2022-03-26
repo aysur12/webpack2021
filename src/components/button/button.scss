@@ -71,6 +71,35 @@
     padding: 1.25em 3.667em 1.25em 1.667em;
   }
 
+  &_page,
+  &_selected-page,
+  &_turned-next-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  &_page {
+    color: $color-font-a50;
+    background: none;
+    border: none;
+    font-weight: normal;
+
+    &:hover,
+    &:focus {
+      color: $border-primary;
+      background: $primary-gradient;
+      opacity: 1;
+    }
+  }
+
+  &_turned-next-page {
+    background: $secondary-gradient;
+    font-weight: normal;
+  }
+
   &__arrow {
     position: absolute;
     top: 0;
