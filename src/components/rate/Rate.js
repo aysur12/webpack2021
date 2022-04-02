@@ -7,13 +7,13 @@ class Rate {
   }
 
   init() {
-    this.bindEventListeners()
+    this.bindEventListeners();
   }
-  
+
   bindEventListeners() {
     this.rateItem.addEventListener('click', this.handleRateClick.bind(this));
   }
-  
+
   handleRateClick() {
     this.rateItems.forEach((otherRateItem, otherIdx) => {
       if (otherIdx <= this.clickedIdx) {
@@ -21,8 +21,8 @@ class Rate {
       } else {
         otherRateItem.classList.remove('rate__item_active');
       }
-    })
-  } 
+    });
+  }
 }
 
 export default Rate;

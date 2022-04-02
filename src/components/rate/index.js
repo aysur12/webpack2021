@@ -12,7 +12,7 @@ rateItems.forEach((rateItem, clickedIdx, rateItems) => new Rate(rateItem, clicke
 //         otherRateStar.classList.add('rate__item_active');
 //       } else {
 //        otherRateStar.classList.remove('rate__item_active');
-//       } 
+//       }
 //     });
 //   });
 // });

@@ -7,15 +7,15 @@ const options = {
   behaviour: 'drag-tap',
   connect: true,
   range: {
-    'min': 0,
-    'max': 15000,
+    min: 0,
+    max: 15000,
   },
   format: wNumb({
     decimals: 0,
     thousand: ' ',
     suffix: '₽',
-  })
-}
+  }),
+};
 
 class Slider {
   constructor(slider) {
@@ -33,9 +33,9 @@ class Slider {
   createSlider() {
     noUiSlider.create(this.sliderContainer, options);
   }
-  
+
   bindEventListeners() {
-    this.sliderContainer.noUiSlider.on('update', this.handleValuesUpdate.bind(this)); 
+    this.sliderContainer.noUiSlider.on('update', this.handleValuesUpdate.bind(this));
   }
 
   handleValuesUpdate(values) {

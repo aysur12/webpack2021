@@ -5,9 +5,12 @@ const valueRange = '.js-range-slider__value';
 
 class RangeSlider {
   sliderContainer = null;
+
   snapValue = null;
+
   rangeSlider = null;
-  constructor (slider) {
+
+  constructor(slider) {
     this.slider = slider;
     this.init();
   }
@@ -22,13 +25,13 @@ class RangeSlider {
     this.sliderContainer = this.slider.querySelector(`${sliderRange}`);
     this.snapValue = this.slider.querySelector(`${valueRange}`);
   }
-  
+
   createSlider() {
-    this.rangeSlider = new Slider(this.sliderContainer,this.snapValue)
+    this.rangeSlider = new Slider(this.sliderContainer, this.snapValue);
   }
 
   bindEventListeners() {
-    this.rangeSlider.noUiSlider.on('update', this.handleValuesUpdate); 
+    this.rangeSlider.noUiSlider.on('update', this.handleValuesUpdate);
   }
 
   handleValuesUpdate(values) {

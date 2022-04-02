@@ -15,5 +15,6 @@ module.exports = {
     'linebreak-style': 'off',
     'no-unused-vars': 'off',
     'func-names': 'off',
+    'import/no-unresolved': 'off',
   },
 };
