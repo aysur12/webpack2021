@@ -1,0 +1,16 @@
+mixin rate(params = {})
+  -
+    const {
+      rating= "",
+    } = params;
+    let i = 0;
+
+
+  .rate
+    ul.rate__list
+      while i < 5
+        if (i < rating)
+          li.rate__item(class= "js-rate rate__item_active")
+        else
+          li.rate__item(class= "js-rate")
+        - i++ 

@@ -1,8 +1,8 @@
 extends ../../layouts/ui-kit-layout/ui-kit-layout
 
 include ../../components/logo/logo
-include ../../components/title-input/title-input
-include ../../components/desc-state-input/desc-state-input
+include ../../components/title-component/title-component
+include ../../components/desc-state/desc-state
 include ../../components/text-field/text-field
 include ../../components/dropdown-common-value/dropdown-common-value
 
@@ -14,7 +14,9 @@ include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/like-button/like-button
 include ../../components/rate-button/rate-button
+include ../../components/rate/rate
 
+include ../../components/range-slider/range-slider
 include ../../components/button/button
 include ../../components/pagination/pagination
 include ../../components/bullet/bullet
@@ -30,13 +32,13 @@ block content
     .form-elements__grid
       .form-elements__grid-wrap-left
         .form-elements__text-field-heading
-          .form-elements__title-input.form-elements__title-input_without-margin-bottom(
-            class= "form-elements__title-input_padding_top")
-            +title-input("text field")
-          .form-elements__desc-state-input(
-            class= "form-elements__desc-state-input_padding_bottom"
+          .form-elements__title-component.form-elements__title-component_without-margin-bottom(
+            class= "form-elements__title-component_padding_top")
+            +title-component("text field")
+          .form-elements__desc-state(
+            class= "form-elements__desc-state_padding_bottom"
           ) 
-            +desc-state-input("default")
+            +desc-state("default")
         .form-elements__text-field 
           +text-field({
             type: "email",
@@ -44,10 +46,10 @@ block content
             placeholder: "Email",
           })
         .form-elements__text-field-heading 
-          .form-elements__title-input.form-elements__title-input_without-margin-bottom
-            +title-input("text field")
-          .form-elements__desc-state-input 
-            +desc-state-input("hover / focus")
+          .form-elements__title-component.form-elements__title-component_without-margin-bottom
+            +title-component("text field")
+          .form-elements__desc-state
+            +desc-state("hover / focus")
         .form-elements__text-field 
           +text-field({
             type: "text",
@@ -55,8 +57,8 @@ block content
             placeholder: "This is pretty awesome",
             focused: true
           })  
-        .form-elements__title-input.form-elements__title-input_dropdown
-          +title-input("dropdown")  
+        .form-elements__title-component.form-elements__title-component_dropdown
+          +title-component("dropdown")  
         .form-elements__dropdown-common-value 
           +dropdown-common-value({
             params: {open: false},
@@ -66,8 +68,8 @@ block content
               {title: "Младенцы"},
             ]
           })  
-        .form-elements__title-input_text-field
-          +title-input("masked text field") 
+        .form-elements__title-component_text-field
+          +title-component("masked text field") 
         .form-elements__masked-text-field 
           +text-field({
             type: "text",
@@ -75,8 +77,8 @@ block content
             placeholder: "ДД.ММ.ГГГГ",
             masked: true
           }) 
-        .form-elements__title-input.form-elements__title-input_text-field
-            +title-input("subscription text field")    
+        .form-elements__title-component.form-elements__title-component_text-field
+            +title-component("subscription text field")    
         .form-elements__text-field.form-elements__text-field_subscribe
           +text-field({
             type: "text",
@@ -107,8 +109,8 @@ block content
             text: "Окно в каждой из спален"
           })  
       .form-elements__grid-wrap-center  
-        .form-elements__title-input
-            +title-input("checkbox buttons")
+        .form-elements__title-component
+            +title-component("checkbox buttons")
         .form-elements__checkbox-group    
           +checkbox({
             text: "Можно курить",
@@ -122,8 +124,8 @@ block content
             text: "Можно пригласить гостей (до 10 человек)",
             checked: true,
           }) 
-        .form-elements__title-input
-          +title-input("radio buttons")
+        .form-elements__title-component
+          +title-component("radio buttons")
         .form-elements__radio-group
           .form-elements__radio
             +radio({
@@ -135,8 +137,8 @@ block content
               text: "Женщина",
               checked: false,
             })
-        .form-elements__title-input
-          +title-input("toggle")
+        .form-elements__title-component
+          +title-component("toggle")
         .form-elements__toggle
           +toggle({
             text: "Получать спецпредложения",
@@ -146,9 +148,9 @@ block content
             text: "Получать спецпредложения",
             checked: false,
           })
-        .form-elements__title-input
-          +title-input("like button")
-        .form-elements__like-button
+        .form-elements__title-component
+          +title-component("like button")
+        .form-elements__like-button-group
           +like-button({
             count: 2,
             isActive: false,
@@ -157,17 +159,17 @@ block content
             count: 12,
             isActive: true,
           })
-        .form-elements__title-input
-          +title-input("rate button") 
-        .form-elements__rate-button
-          +rate-button({
-            rating: 4,
+        .form-elements__title-component
+          +title-component("rate button") 
+        .form-elements__rate-group
+          +rate({
+            rating: 2,
           })
-          +rate-button({
-            rating: 5,
-          })
-        .form-elements__title-input
-          +title-input("rich checkbox buttons")
+          +rate({
+            rating: 1,
+          })  
+        .form-elements__title-component
+          +title-component("rich checkbox buttons")
         .form-elements__rich-checkbox-group
           +checkbox({
             text: "Ширина коридоров в номере не менее 91 см.",
@@ -183,8 +185,12 @@ block content
             title: "Помощник для инвалидов"
           })
       .form-elements__grid-wrap-right
-        .form-elements__title-input
-          +title-input("buttons")
+        .form-elements__range-slider 
+          +range-slider({
+            titleText: "range slider",
+          })
+        .form-elements__title-component
+          +title-component("buttons")
         .form-elements__button-group.form-elements__button-group_default
           +button({
             type: "button",
@@ -226,16 +232,16 @@ block content
             withArrow: true,
             paymentGo: true,
           })
-        .form-elements__title-input
-          +title-input("pagination")
+        .form-elements__title-component
+          +title-component("pagination")
         .form-elements__pagination
           +pagination({
             currentPage: 1, 
             totalVisibleItems: 12, 
             totalPages: 15
           })
-        .form-elements__title-input
-          +title-input("bullet list")
+        .form-elements__title-component
+          +title-component("bullet list")
         .form-elements__bullet 
           +bullet("Нельзя с питомцами")
           +bullet("Без вечеринок и мероприятий")

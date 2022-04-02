@@ -62,6 +62,8 @@
     "air-datepicker": "^3.1.1",
     "jquery": "^3.6.0",
     "jquery.maskedinput": "^1.4.1",
-    "material-icons": "^1.10.6"
+    "material-icons": "^1.10.6",
+    "nouislider": "^15.5.1",
+    "wnumb": "^1.2.0"
   }
 }

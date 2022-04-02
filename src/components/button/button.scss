@@ -83,9 +83,9 @@
 
   &_page {
     color: $color-font-a50;
+    font-weight: normal;
     background: none;
     border: none;
-    font-weight: normal;
 
     &:hover,
     &:focus {
@@ -96,8 +96,8 @@
   }
 
   &_turned-next-page {
-    background: $secondary-gradient;
     font-weight: normal;
+    background: $secondary-gradient;
   }
 
   &__arrow {

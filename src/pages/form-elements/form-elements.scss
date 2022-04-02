@@ -26,7 +26,7 @@
     margin-bottom: 0.357em;
   }
 
-  &__title-input {
+  &__title-component {
     margin-bottom: 1.143em;
 
     &_without-margin-bottom {
@@ -46,7 +46,7 @@
     }
   }
 
-  &__desc-state-input {
+  &__desc-state {
     &__padding_bottom {
       padding-bottom: 0.214em;
     }
@@ -106,13 +106,13 @@
     margin-bottom: 2.889em;
   }
 
-  &__like-button {
+  &__like-button-group {
     display: flex;
     gap: 0.714em;
     margin-bottom: 2.857em;
   }
 
-  &__rate-button {
+  &__rate-group {
     display: flex;
     gap: 1.429em;
     margin-bottom: 14em;
@@ -127,6 +127,10 @@
 
   &__grid-wrap-right {
     grid-area: right;
+  }
+
+  &__range-slider {
+    margin-bottom: 2.897em;
   }
 
   &__button-group {
@@ -153,7 +157,7 @@
   }
 
   &__pagination {
-    margin-bottom: 230px;
+    margin-bottom: 16.429em;
   }
 
   &__bullet {

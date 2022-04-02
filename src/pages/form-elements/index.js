@@ -1,5 +1,5 @@
-import '../../components/title-input';
-import '../../components/desc-state-input';
+import '../../components/title-component';
+import '../../components/desc-state';
 import '../../components/text-field';
 import '../../components/dropdown-common-value';
 
@@ -11,7 +11,9 @@ import '../../components/radio';
 import '../../components/toggle';
 import '../../components/like-button';
 import '../../components/rate-button';
+import '../../components/rate';
 
+import '../../components/range-slider';
 import '../../components/button';
 import '../../components/pagination';
 import '../../components/bullet';

@@ -1,0 +1,18 @@
+include ../../components/title-component/title-component
+
+mixin range-slider(params = {})
+  -
+    const {
+      titleText = '',
+      hasDesc = false,
+      textDesc = '',
+    } = params;
+
+  .range-slider(class= "js-range-slider")
+    .range-slider__title-and-value-group
+      .range-slider__title
+        +title-component(titleText)
+      .range-slider__value
+    .range-slider__container(class= "js-range-slider__container") 
+    if hasDesc 
+      p.range-slider__desc= textDesc

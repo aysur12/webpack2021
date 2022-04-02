@@ -1,0 +1,44 @@
+@use '../../styles/main' as *;
+
+.rate {
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &:hover .rate__item::before {
+    content: '\e838';
+  } 
+
+  &__item {
+    display: flex;
+    align-items: center;
+    max-height: 24px;
+    margin: 0;
+    list-style-type: none;
+    cursor: pointer;
+
+    &::before {
+      font: 1.714rem/1.71 'Material Icons', sans-serif;
+      background-image: $primary-gradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      content: '\e83a';
+    }
+
+    &:hover::before{
+      content: '\e838';
+    }
+
+    &:hover ~ .rate__item::before {
+      content: '\e83a'
+    }
+
+    &_active::before {
+      content: '\e838';
+    }
+  }  
+}

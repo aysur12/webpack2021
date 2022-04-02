@@ -1,7 +1,11 @@
 class LikeButton {
   constructor(button) {
     this.button = button;
-    this.bindEventListeners();
+    this.init();
+  }
+
+  init() {
+    this.bindEventListeners()
   }
 
   bindEventListeners() {

@@ -1,0 +1,24 @@
+@use '../../styles/main' as *;
+
+.range-slider {
+  width: 100%;
+  max-width: 19em;
+
+  &__title-and-value-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.429em;
+  }
+  
+  &__value {
+    color: $color-font-a50;
+    font: 0.857rem/1.25 $main-font-family;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    margin: 1.397em 0 0 0 ;
+    color: $color-font-a50;
+    font: 0.857rem/1 $main-font-family;
+  }
+}

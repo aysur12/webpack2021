@@ -2,10 +2,10 @@
   display: grid;
   grid-auto-flow: column;
   grid-template-areas:
-  'logo . . . . .'
-  '. . . . . .'
-  '. . pallete . typography .'
-  '. . pallete . . .';
+    'logo . . . . .'
+    '. . . . . .'
+    '. . pallete . typography .'
+    '. . pallete . . .';
   grid-template-rows: 48px 67px 321px 289px;
   grid-template-columns: 3.48% 5.22% 20.36% 30.07% 31.59% 9.28%;
   max-width: 1440px;
