@@ -1,7 +1,6 @@
 @use '../../styles/main' as *;
 
 .rate {
-
   &__list {
     display: flex;
     margin: 0;
@@ -10,7 +9,7 @@
 
   &:hover .rate__item::before {
     content: '\e838';
-  } 
+  }
 
   &__item {
     display: flex;
@@ -29,16 +28,16 @@
       content: '\e83a';
     }
 
-    &:hover::before{
+    &:hover::before {
       content: '\e838';
     }
 
     &:hover ~ .rate__item::before {
-      content: '\e83a'
+      content: '\e83a';
     }
 
     &_active::before {
       content: '\e838';
     }
-  }  
+  }
 }
