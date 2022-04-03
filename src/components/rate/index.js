@@ -1,9 +1,9 @@
 import Rate from './Rate';
 import './rate.scss';
 
-const rateItems = document.querySelectorAll('ul.rate__list .js-rate');
+const rateLists = document.querySelectorAll('.js-rate__list');
 
-rateItems.forEach((rateItem, clickedIdx, rateItems) => new Rate(rateItem, clickedIdx, rateItems));
+rateLists.forEach((rateList) => new Rate(rateList));
 
 // rateStars.forEach((rateStar, clickedIdx) => {
 //   rateStar.addEventListener('click', () => {

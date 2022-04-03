@@ -7,10 +7,10 @@ mixin rate(params = {})
 
 
   .rate
-    ul.rate__list
+    ul.rate__list(class = "js-rate__list")
       while i < 5
         if (i < rating)
-          li.rate__item(class= "js-rate rate__item_active")
+          li.rate__item(class= "js-rate__item rate__item_active")
         else
-          li.rate__item(class= "js-rate")
+          li.rate__item(class= "js-rate__item")
         - i++ 

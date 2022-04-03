@@ -1,8 +1,7 @@
 class Rate {
-  constructor(rateItem, clickedIdx, rateItems) {
-    this.rateItem = rateItem;
-    this.clickedIdx = clickedIdx;
-    this.rateItems = rateItems;
+  constructor(rateList) {
+    this.rateList = rateList;
+    this.rateItems = rateList.querySelectorAll('.js-rate__item');
     this.init();
   }
 
@@ -11,16 +10,16 @@ class Rate {
   }
 
   bindEventListeners() {
-    this.rateItem.addEventListener('click', this.handleRateClick.bind(this));
-  }
-
-  handleRateClick() {
-    this.rateItems.forEach((otherRateItem, otherIdx) => {
-      if (otherIdx <= this.clickedIdx) {
-        otherRateItem.classList.add('rate__item_active');
-      } else {
-        otherRateItem.classList.remove('rate__item_active');
-      }
+    this.rateItems.forEach((rateItem, clickedIdx) => {
+      rateItem.addEventListener('click', () => {
+        this.rateItems.forEach((otherRateItem, otherIdx) => {
+          if (otherIdx <= clickedIdx) {
+            otherRateItem.classList.add('rate__item_active');
+          } else {
+            otherRateItem.classList.remove('rate__item_active');
+          }
+        });
+      });
     });
   }
 }
