@@ -1,7 +1,9 @@
+const itemRate = '.js-rate__item';
+const itemActive = 'rate__item_active';
 class Rate {
   constructor(rateList) {
     this.rateList = rateList;
-    this.rateItems = rateList.querySelectorAll('.js-rate__item');
+    this.rateItems = rateList.querySelectorAll(`${itemRate}`);
     this.init();
   }
 
@@ -10,14 +12,16 @@ class Rate {
   }
 
   bindEventListeners() {
-    this.rateItems.forEach((rateItem, clickedIdx) => {
+    const { rateItems } = this;
+
+    rateItems.forEach((rateItem, clickedIdx) => {
       rateItem.addEventListener('click', () => {
-        this.rateItems.forEach((otherRateItem, otherIdx) => {
+        rateItems.forEach((otherRateItem, otherIdx) => {
           if (otherIdx <= clickedIdx) {
-            otherRateItem.classList.add('rate__item_active');
+            otherRateItem.classList.add(`${itemActive}`);
           } else {
-            otherRateItem.classList.remove('rate__item_active');
-          }
+            otherRateItem.classList.remove(`${itemActive}`);
+          };
         });
       });
     });

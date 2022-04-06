@@ -1,3 +1,8 @@
+const modifierActive = 'like-button_active';
+const countActive = 'like-button__count_active';
+const iconContent = 'favorite_border';
+const iconActiveContent = 'favorite';
+
 class LikeButton {
   constructor(button) {
     this.button = button;
@@ -9,21 +14,26 @@ class LikeButton {
   }
 
   bindEventListeners() {
-    this.button.addEventListener('click', this.handleLikeButtonClick.bind(this));
+    const { button } = this;
+
+    button.addEventListener('click', this.handleLikeButtonClick.bind(this));
   }
 
   handleLikeButtonClick() {
-    this.button.classList.toggle('like-button_active');
-    this.button.children[1].classList.toggle('like-button__count_active');
+    const { button } = this;
+    const [ icon, count ] = button.children;
 
-    const number = this.button.children[1].textContent;
+    button.classList.toggle(`${modifierActive}`);
+    count.classList.toggle(`${countActive}`);
 
-    if (this.button.classList.contains('like-button_active')) {
-      this.button.children[0].textContent = 'favorite';
-      this.button.children[1].textContent = parseInt(number, 10) + 1;
+    const number = count.textContent;
+
+    if (button.classList.contains(`${modifierActive}`)) {
+      icon.textContent = `${iconActiveContent}`;
+      count.textContent = parseInt(number, 10) + 1;
     } else {
-      this.button.children[0].textContent = 'favorite_border';
-      this.button.children[1].textContent = parseInt(number, 10) - 1;
+      icon.textContent = `${iconContent}`;
+      count.textContent = parseInt(number, 10) - 1;
     }
   }
 }

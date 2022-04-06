@@ -1,6 +1,8 @@
 import noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
-import 'nouislider/dist/nouislider.css';
+
+const containerSlider = '.js-range-slider__container';
+const valueSlider = '.range-slider__value';
 
 const options = {
   start: [5000, 10000],
@@ -20,8 +22,8 @@ const options = {
 class Slider {
   constructor(slider) {
     this.slider = slider;
-    this.sliderContainer = slider.querySelector('.js-range-slider__container');
-    this.snapValue = slider.querySelector('.range-slider__value');
+    this.sliderContainer = slider.querySelector(`${containerSlider}`);
+    this.snapValue = slider.querySelector(`${valueSlider}`);
     this.init();
   }
 
