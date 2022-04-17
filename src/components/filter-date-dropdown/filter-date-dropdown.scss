@@ -1,0 +1,13 @@
+@use '../../styles/main' as *;
+
+.filter-date-dropdown {
+  width: 100%;
+  max-width: 19em;
+  border: 1px solid $color-font-a25;
+  border-radius: 4px;
+
+  &:focus,
+  &:hover {
+    border-color: $color-font-a50;
+  }
+}

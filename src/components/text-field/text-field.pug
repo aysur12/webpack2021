@@ -3,7 +3,7 @@ include ../../components/arrow/arrow
 mixin text-field(params = {})
   -
     const {
-      type= "",
+      typeInput= "",
       name= "",
       placeholder= "",
       value= "",
@@ -15,14 +15,14 @@ mixin text-field(params = {})
       withArrowButton= false,
     } = params;
 
-    const focusedInput = focused ? "text-field__input_focused" : "";
     const valueInput = focused ? "This is pretty awesome" : "";
+    const focusedInput = focused ? "text-field__input_focused" : "";
     const maskedInput = masked ? "text-field__input_masked js-text-field__input_masked" : "";
     const withArrowButtonInput = withArrowButton ? "text-field_subscribe" : "";
     const subscribeInput = withArrowButton ? "text-field__input_subscribe" : "";
 
     const inputAttributes = {
-      type: type,
+      type: typeInput,
       name: name,
       placeholder: placeholder,
       autofocus: autofocus,

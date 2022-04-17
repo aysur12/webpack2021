@@ -1,0 +1,52 @@
+@use '../../styles/main' as *;
+
+.calendar {
+  width: 100%;
+
+  &__wrap {
+    width: 100%;
+    max-width: 22.857em;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+
+    &:focus,
+    &:hover {
+      border-color: $color-font-a50;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 19em;
+    padding: 0;
+    color: $color-font-a75;
+    font: 1rem/1.71 $main-font-family;
+    text-transform: lowercase;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+
+    &_filtered {
+      flex-basis: 83.46%;
+      padding: 0.643em 0.857em;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    flex-basis: 16.3%;
+    align-items: center;
+    justify-content: center;
+    max-width: 44px;
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      font: 1.714rem 'Material Icons', sans-serif;
+      content: '\e5cf';
+    }
+  }
+}

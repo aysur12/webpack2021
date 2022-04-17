@@ -1,0 +1,28 @@
+@use '../../styles/main' as *;
+
+.cards {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2.08%;
+
+  &__grid {
+    display: grid;
+    grid:
+      'left . center . right'
+      / 32.76% 3.45% 32.76% 3.45% 27.59%;
+    padding: 5.143em 7.857em 7.857em;  
+  }
+
+  &__grid-wrap-left {
+    grid-area: left;
+  }
+
+  &__grid-wrap-center {
+    grid-area: center;
+  }
+
+  &__grid-wrap-right {
+    grid-area: right;
+  }
+}

@@ -6,6 +6,7 @@ include ../../components/desc-state/desc-state
 include ../../components/text-field/text-field
 include ../../components/dropdown-common-value/dropdown-common-value
 
+include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/checkbox-list/checkbox-list
 include ../../components/benefit/benefit
 
@@ -22,14 +23,12 @@ include ../../components/pagination/pagination
 include ../../components/bullet/bullet
 include ../../components/testimonial/testimonial
 
-include ../../components/calendar/calendar
-
 block variables
   title Form elements
 
 block content
   main.form-elements
-    .form-elements__logo-link
+    .form-elements__logo
       +logo({typeLogo: "logoColorless"})
     .form-elements__grid
       .form-elements__grid-wrap-left
@@ -43,24 +42,24 @@ block content
             +desc-state("default")
         .form-elements__text-field 
           +text-field({
-            type: "email",
+            typeInput: "email",
             name: "email",
             placeholder: "Email",
           })
-        .form-elements__text-field-heading 
+        .form-elements__text-field-heading
           .form-elements__title-component.form-elements__title-component_without-margin-bottom
             +title-component("text field")
           .form-elements__desc-state
             +desc-state("hover / focus")
         .form-elements__text-field 
           +text-field({
-            type: "text",
+            typeInput: "text",
             name: "text",
             placeholder: "This is pretty awesome",
             focused: true
           })  
         .form-elements__title-component.form-elements__title-component_dropdown
-          +title-component("dropdown")  
+          +title-component("dropdown")
         .form-elements__dropdown-common-value 
           +dropdown-common-value({
             params: {open: false},
@@ -71,19 +70,23 @@ block content
             ]
           })  
         .form-elements__title-component_text-field
-          +title-component("masked text field") 
+          +title-component("masked text field")
         .form-elements__masked-text-field 
           +text-field({
-            type: "text",
+            typeInput: "text",
             name: "dateOfBirth",
             placeholder: "ДД.ММ.ГГГГ",
             masked: true
           }) 
+        .form-elements__title-component.form-elements__title-component_dropdown
+          +title-component("filter date dropdown")
+        .form-elements__filter-date-dropdown
+          +filter-date-dropdown
         .form-elements__title-component.form-elements__title-component_text-field
-            +title-component("subscription text field")    
+            +title-component("subscription text field")
         .form-elements__text-field.form-elements__text-field_subscribe
           +text-field({
-            type: "text",
+            typeInput: "email",
             name: "email",
             placeholder: "Email",
             withArrowButton: true
@@ -110,10 +113,10 @@ block content
             title: "Удобство",
             text: "Окно в каждой из спален"
           })  
-      .form-elements__grid-wrap-center  
+      .form-elements__grid-wrap-center
         .form-elements__title-component
             +title-component("checkbox buttons")
-        .form-elements__checkbox-group    
+        .form-elements__checkbox-group
           +checkbox({
             text: "Можно курить",
             checked: false,
@@ -162,7 +165,7 @@ block content
             isActive: true,
           })
         .form-elements__title-component
-          +title-component("rate button") 
+          +title-component("rate button")
         .form-elements__rate-group
           +rate({
             rating: 4,
@@ -187,7 +190,7 @@ block content
             title: "Помощник для инвалидов"
           })
       .form-elements__grid-wrap-right
-        .form-elements__range-slider 
+        .form-elements__range-slider
           +range-slider({
             titleText: "range slider",
           })
@@ -239,7 +242,7 @@ block content
         .form-elements__pagination
           +pagination({
             currentPage: 1, 
-            totalVisibleItems: 12, 
+            totalVisibleItems: 12,
             totalPages: 15
           })
         .form-elements__title-component
@@ -248,7 +251,6 @@ block content
           +bullet("Нельзя с питомцами")
           +bullet("Без вечеринок и мероприятий")
           +bullet("Время прибытия — после 13:00, а выезд до 12:00")
-        .form-elements__calendar
       .form-elements__testimonial
         +testimonial({
           avatar: require("../../components/testimonial/images/murad.jpg"),

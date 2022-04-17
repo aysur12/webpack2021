@@ -1,0 +1,20 @@
+extends ../../layouts/ui-kit-layout/ui-kit-layout
+
+include ../../components/logo/logo
+
+include ../../components/arrow/arrow
+include ../../components/calendar/calendar
+
+block variables
+  title Cards 
+
+block content
+  main.cards
+    .cards__logo 
+      +logo({typeLogo: "logoColorless"})
+    .cards__grid 
+      .cards__grid-wrap-left
+      .cards__grid-wrap-center
+      .cards__grid-wrap-right
+        .cards__calendar
+          +calendar({blockIsDiv: true})

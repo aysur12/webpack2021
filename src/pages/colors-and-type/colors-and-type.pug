@@ -9,8 +9,11 @@ block variables
 
 block content
   main.colors-and-type
-    .colors-and-type__logo-link
-      +logo({typeLogo: "logoColorless"})
+    .colors-and-type__logo
+      +logo({
+        typeLogo: 'logoColorless',
+        srcImg: '../../components/logo/images/logo-ui-kit.svg',
+      })
     .colors-and-type__pallete
       +pallete(colorItems)
     .colors-and-type__typography
