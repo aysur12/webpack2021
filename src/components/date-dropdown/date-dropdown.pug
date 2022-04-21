@@ -1,0 +1,32 @@
+include ../../components/title-component/title-component
+
+mixin date-dropdown(params = {})
+  -
+    const {
+      readonly= true,
+      placeholder= "",
+    } = params;
+
+    const inputAttributes = {
+      readonly: readonly,
+      placeholder: placeholder,
+    }
+
+  .date-dropdown
+    .date-dropdown__input-group 
+      .date-dropdown__title
+        +title-component("date dropdown")
+      label.date-dropdown__label
+        input.date-dropdown__input.date-dropdown__input_start(
+          class= "js-date-dropdown__input_start" 
+          )&attributes(inputAttributes)
+        .date-dropdown__button  
+    .date-dropdown__input-group   
+      .date-dropdown__title
+        +title-component("date Dropdown")
+      label.date-dropdown__label
+        input.date-dropdown__input.date-dropdown__input_end(
+          class= "js-date-dropdown__input_end"
+          )&attributes(inputAttributes)
+        .date-dropdown__button
+  

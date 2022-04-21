@@ -1,6 +1,5 @@
 import AirDatepicker from 'air-datepicker';
 
-const dp = new AirDatepicker(calendar, options);
 const calendar = document.querySelector('.calendar');
 const calendarInput = document.querySelector('.js-calendar__input');
 const selector = calendar.contains(calendarInput) ? '.js-calendar__input' : '.js-calendar__wrap';
@@ -9,8 +8,9 @@ const calendars = document.querySelectorAll(selector);
 const applyButton = {
   content: 'Применить',
   className: 'air-datepicker__button',
-  onClick: (dp) => {
-    dp.hide();
+  onClick: (datepicker
+    ) => {
+    datepicker.hide();
   },
 }; 
 const options = {

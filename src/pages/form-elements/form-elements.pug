@@ -6,6 +6,7 @@ include ../../components/desc-state/desc-state
 include ../../components/text-field/text-field
 include ../../components/dropdown-common-value/dropdown-common-value
 
+include ../../components/date-dropdown/date-dropdown
 include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/checkbox-list/checkbox-list
 include ../../components/benefit/benefit
@@ -77,7 +78,9 @@ block content
             name: "dateOfBirth",
             placeholder: "ДД.ММ.ГГГГ",
             masked: true
-          }) 
+          })
+        .form-elements__date-date-dropdown
+          +date-dropdown({placeholder: "дд.мм.гггг"})
         .form-elements__title-component.form-elements__title-component_dropdown
           +title-component("filter date dropdown")
         .form-elements__filter-date-dropdown

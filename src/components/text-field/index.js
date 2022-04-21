@@ -1,6 +1,4 @@
 import TextField from './TextField';
-import 'material-icons/iconfont/material-icons.css';
-
 import '../arrow';
 import './text-field.scss';
 

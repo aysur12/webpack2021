@@ -2,17 +2,13 @@ mixin calendar(params = {})
   -
     const {
       blockIsDiv= false,
-      forFilter= false,
       readonly= true,
       placeholder= "",
     } = params;
 
-    const filterInput = forFilter ? "calendar__input_filtered" : "";
-    const valuePlaceholder = forFilter ? "Выберите даты" : "ДД.ММ.ГГГГ";
-
     const inputAttributes = {
       readonly: readonly,
-      placeholder: valuePlaceholder,
+      placeholder: placeholder,
     }
 
   .calendar
@@ -20,5 +16,5 @@ mixin calendar(params = {})
       .calendar__wrap(class= "js-calendar__wrap")
     else
       label.calendar__label
-        input.calendar__input(class= `${filterInput} js-calendar__input`)&attributes(inputAttributes)
-        .calendar__arrow
+        input.calendar__input(class= "js-calendar__input")&attributes(inputAttributes)
+        .calendar__button

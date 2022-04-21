@@ -1,16 +1,23 @@
 @use '../../styles/main' as *;
 
-.calendar {
-  width: 100%;
+.date-dropdown {
+  display: flex;
+  gap: 1.429em;
 
-  &__wrap {
-    width: 100%;
-    max-width: 22.857em;
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 0.389em;
   }
 
   &__label {
     display: flex;
     justify-content: space-between;
+    border: 1px solid $color-font-a25;
+    border-radius: 4px;
 
     &:focus,
     &:hover {
@@ -19,12 +26,12 @@
   }
 
   &__input {
-    flex-basis: 83.46%;
-    max-width: 19em;
-    padding: 0.643em 0.857em;
+    flex-basis: 70.27%;
+    max-width: 7.429em;
+    padding: 0.643em 0 0.643em 0.857em;
     color: $color-font-a75;
     font: 1rem/1.71 $main-font-family;
-    text-transform: lowercase;
+    text-transform: uppercase;
     border: 1px solid transparent;
     border-radius: 4px;
     outline: none;
@@ -37,10 +44,10 @@
 
   &__button {
     display: flex;
-    flex-basis: 16.3%;
+    flex-basis: 29.73%;
     align-items: center;
     justify-content: center;
-    max-width: 44px;
+    min-width: 44px;
     padding: 0;
     text-align: center;
 
