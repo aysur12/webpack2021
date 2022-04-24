@@ -14,10 +14,14 @@ $color-secondary-bg: #6fcf97;
 $color-third-bg: #fff;
 
 $border-primary: #fff;
+$body-bg-color: #e5e5e5;
 
 $primary-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $secondary-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
 $main-font-family: Montserrat, arial, sans-serif;
 
-$color-shadow-primary: rgba(31, 32, 65, 10%);
+$shadow-avatar: 0 10px 20px rgba(31, 32, 65, 0.1);
+$shadow-header-footer: 0 10px 20px rgba(31, 32, 65, 0.05);
+
+

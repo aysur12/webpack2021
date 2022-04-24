@@ -1,0 +1,30 @@
+include ../../components/nav-menu-item/nav-menu-item
+
+mixin nav-menu
+  nav.nav-menu
+    ul.nav-menu__list
+      li.nav-menu__item
+        +nav-menu-item({
+          navItemName: "О нас",
+          href: "/mock-address/change-me",
+        })
+      li.nav-menu__item  
+        +nav-menu-item({
+          navItemName: "Услуги",
+          withDropdown: true,
+        })
+      li.nav-menu__item
+        +nav-menu-item({
+          navItemName: "Вакансии",
+          href: "/mock-address/change-me",
+        })
+      li.nav-menu__item
+        +nav-menu-item({
+          navItemName: "Новости",
+          href: "/mock-address/change-me",
+        })
+      li.nav-menu__item  
+        +nav-menu-item({
+          navItemName: "Соглашения",
+          withDropdown: true,
+        })

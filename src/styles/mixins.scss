@@ -19,3 +19,8 @@
   color: $color-font-a75;
   font: 1rem/1.71 $main-font-family;
 }
+
+@mixin font-link {
+  color: $color-font-a50;
+  font: 1rem/1.22 $main-font-family;
+}

@@ -2,6 +2,7 @@
 
 .btn {
   display: inline-block;
+  min-width: 34px;
   padding: 1.167em 1.61em 1.25em;
   @include font-h3;
 
@@ -12,6 +13,7 @@
   background: $primary-gradient;
   border: none;
   border-radius: 22px;
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   appearance: none;
@@ -98,6 +100,11 @@
   &_turned-next-page {
     font-weight: normal;
     background: $secondary-gradient;
+  }
+
+  &_login,
+  &_registration  {
+    padding: 0.750em 1.667em 0.833em;
   }
 
   &__arrow {

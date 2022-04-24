@@ -1,0 +1,86 @@
+@use '../../styles/main' as *;
+
+.nav-menu-item {
+  @include font-link;
+
+  &__details {
+
+    &:focus,
+    &:hover {
+      color: $color-font-a75;
+      font-weight: bold;
+    }
+
+    &:visited {
+      color: $color-primary-bg;
+    }
+
+    &::after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+      &[open] .nav-menu-item__arrow::before {
+      content: '\e5ce';
+    }
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      color: $color-font-a75;
+      font-weight: bold;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    flex-basis: 16.3%;
+    align-items: center;
+    justify-content: center;
+    max-width: 44px;
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      font: 1.714rem 'Material Icons', sans-serif;
+      content: '\e5cf';
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    color: $color-font-a50;
+    text-decoration: none;
+    outline: none;
+
+    &:focus,
+    &:hover {
+      color: $color-font-a75;
+      font-weight:bold;
+    }
+
+    &:visited {
+      color: $color-primary-bg;
+    }
+
+    &::after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+}

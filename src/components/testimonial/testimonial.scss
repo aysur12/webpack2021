@@ -26,7 +26,7 @@
     object-fit: cover;
     border: 2px solid $border-primary;
     border-radius: 32px;
-    filter: drop-shadow(0 10px 20px $color-shadow-primary);
+    filter: drop-shadow($shadow-avatar);
   }
 
   &__info {

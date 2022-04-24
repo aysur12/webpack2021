@@ -1,0 +1,42 @@
+include ../../components/logo/logo
+include ../../components/nav-menu/nav-menu
+include ../../components/button/button
+
+mixin page-header(params = {})
+  -
+    const {
+      loggedIn= false,
+      userName= "",
+      hrefUserPanel= "",
+    } = params;
+
+    const navWithLogged = loggedIn
+    ? "page-header__nav-menu_with-logged"
+    : "";
+
+  header.page-header 
+    .page-header__container
+      .page-header__logo
+        +logo({typeLogo: "logoWithText"})
+      .page-header__nav-group
+        .page-header__nav-menu(class = `${navWithLogged}`)
+          +nav-menu
+        if loggedIn
+          .page-header__user-panel
+            a.page-header__user-link(href= hrefUserPanel, title= userName)= userName
+        else
+          .page-header__button
+            +button({
+              href: "/mock-address/change-me",
+              text: "войти",
+              withBorder: true,
+              forLogin: true,
+            })
+          .page-header__button
+            +button({
+              href: "/mock-address/change-me",
+              text: "зарегистрироваться",
+              forRegistration: true,
+            })
+
+

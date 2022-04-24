@@ -1,0 +1,23 @@
+@use '../../styles/main' as *;
+
+.headers-and-footers {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $body-bg-color;
+
+  &__logo {
+    position: absolute;
+    top: 2.143em;
+    left: 2.143em;
+  }
+
+  &__container {
+    padding-top: 10em;
+  }
+
+  &__page-header {
+    margin-bottom: 2.857em;
+  }
+}

@@ -1,4 +1,3 @@
-import 'material-icons/iconfont/material-icons.scss'
 import '../../components/title-component';
 import '../../components/desc-state';
 import '../../components/text-field';

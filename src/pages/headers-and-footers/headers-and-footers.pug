@@ -1,0 +1,22 @@
+extends ../../layouts/ui-kit-layout/ui-kit-layout
+
+include ../../components/logo/logo
+include ../../components/page-header/page-header
+
+block variables
+  title Headers and Footers 
+
+block content
+  main.headers-and-footers
+    .headers-and-footers__logo 
+      +logo({typeLogo: "logoColorless"})
+    .headers-and-footers__container
+      .headers-and-footers__page-header
+        +page-header({loggedIn: false})
+      .headers-and-footers__page-header
+        +page-header({
+          loggedIn: true,
+          userName: "Юлий Цезарь",
+          hrefUserPanel: "/mock-address/change-me",
+          })
+      

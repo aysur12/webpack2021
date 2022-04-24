@@ -1,0 +1,66 @@
+@use '../../styles/main' as *;
+
+.page-header {
+  width: 100%;
+  max-width: 1920px;
+  background-color: $color-third-bg;
+  box-shadow: $shadow-header-footer;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 1.071em 0;
+  }
+
+  &__nav-group {
+    display: flex;
+    align-items: center;
+    gap: 1.429em;
+  }
+
+  &__nav-menu {
+    padding-top: 3px;
+
+    &_with-logged {
+      padding-top: 0;
+    }
+  }
+
+  &__user-panel {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1.143em;
+    border-left: 1px solid $color-font-a10;
+  }
+
+  &__user-link {
+    display: inline-block;
+    @include font-link;
+    text-align: center;
+    text-decoration: none;
+
+    outline: none;
+
+    &:focus,
+    &:hover {
+      color: $color-font-a75;
+      font-weight:bold;
+    }
+
+    &:visited {
+      color: $color-primary-bg;
+    }
+
+    &::after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+}
