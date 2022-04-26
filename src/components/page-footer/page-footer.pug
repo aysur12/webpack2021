@@ -1,0 +1,30 @@
+include ../../components/logo/logo
+include ../../components/nav-menu/nav-menu
+
+mixin page-footer(params = {})
+  -
+    const {
+      isLargeFooter = true,
+      shortDesc= "",
+      subsTitle= "",
+      subsText = "",
+      footerNavMenuItems,
+    } = params;
+
+  footer.page-footer
+    .page-footer__container
+      section.page-footer__desc
+        .page-footer__logo
+          +logo({typeLogo: "logoWithText"})
+        if isLargeFooter
+          p.page-footer__text.page-footer__text_desc= shortDesc
+      section.page-footer__navigation-list
+        +nav-menu({forFooter: true, navMenuItems: footerNavMenuItems}) 
+      section.page-footer__subs
+        h3.page-footer__subs-title= subsTitle
+        p.page-footer__text.page-footer__text_subs= subsText
+
+
+
+
+

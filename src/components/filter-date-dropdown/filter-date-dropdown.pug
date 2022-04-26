@@ -1,7 +1,12 @@
 include ../../components/calendar/calendar
 
-mixin filter-date-dropdown
+mixin filter-date-dropdown(params = {})
+  - 
+    const {
+      placeholder= "",
+    } = params;
+
   .filter-date-dropdown
-    +calendar({placeholder: "Выберите даты"})
+    +calendar({placeholder: placeholder})
 
 

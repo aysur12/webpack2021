@@ -2,6 +2,7 @@ extends ../../layouts/ui-kit-layout/ui-kit-layout
 
 include ../../components/logo/logo
 include ../../components/page-header/page-header
+include ../../components/page-footer/page-footer
 
 block variables
   title Headers and Footers 
@@ -12,11 +13,59 @@ block content
       +logo({typeLogo: "logoColorless"})
     .headers-and-footers__container
       .headers-and-footers__page-header
-        +page-header({loggedIn: false})
+        +page-header({
+          loggedIn: false,
+          navMenuItems: [
+            { navItemName: "О нас", href: "/mock-address/change-me"},
+            { navItemName: "Услуги", withDropdown: true},
+            { navItemName: "Вакансии", href: "/mock-address/change-me"},
+            { navItemName: "Новости", href: "/mock-address/change-me"},
+            { navItemName: "Соглашения", withDropdown: true},
+          ]
+        })
       .headers-and-footers__page-header
         +page-header({
           loggedIn: true,
           userName: "Юлий Цезарь",
           hrefUserPanel: "/mock-address/change-me",
-          })
-      
+          navMenuItems: [
+            { navItemName: "О нас", href: "/mock-address/change-me"},
+            { navItemName: "Услуги", withDropdown: true},
+            { navItemName: "Вакансии", href: "/mock-address/change-me"},
+            { navItemName: "Новости", href: "/mock-address/change-me"},
+            { navItemName: "Соглашения", withDropdown: true},
+          ]
+        })
+      .headers-and-footers__page-footer
+        +page-footer({
+          isLargeFooter: true,
+          shortDesc: "Бронирование номеров в лучшем отеле 2019 года по версии\
+                      ассоциации «Отельные взгляды»",
+          subsTitle: "Подписка",
+          subsText: "Получайте специальные предложения и новости сервиса",
+          footerNavMenuItems: [
+            { title: "Навигация",
+              links: [
+                { navItemName: "О нас", href: "/mock-address/change-me"},
+                { navItemName: "Новости", href: "/mock-address/change-me"},
+                { navItemName: "Служба поддержки", href: "/mock-address/change-me"},
+                { navItemName: "Услуги", href: "/mock-address/change-me"},
+              ]
+            },
+            { title: "О нас",
+              links: [
+                { navItemName: "О сервисе", href: "/mock-address/change-me"},
+                { navItemName: "Наша команда", href: "/mock-address/change-me"},
+                { navItemName: "Вакансии", href: "/mock-address/change-me"},
+                { navItemName: "Инвесторы", href: "/mock-address/change-me"},
+              ]
+            },
+            { title: "Служба поддержки",
+              links: [
+                { navItemName: "Соглашения", href: "/mock-address/change-me"},
+                { navItemName: "Сообщества", href: "/mock-address/change-me"},
+                { navItemName: "Связь с нами", href: "/mock-address/change-me"},
+              ]
+            },
+          ],
+        })

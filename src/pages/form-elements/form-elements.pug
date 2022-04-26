@@ -84,7 +84,7 @@ block content
         .form-elements__title-component.form-elements__title-component_dropdown
           +title-component("filter date dropdown")
         .form-elements__filter-date-dropdown
-          +filter-date-dropdown
+          +filter-date-dropdown({placeholder: "Выберите даты"})
         .form-elements__title-component.form-elements__title-component_text-field
             +title-component("subscription text field")
         .form-elements__text-field.form-elements__text-field_subscribe
@@ -98,11 +98,27 @@ block content
           +checkbox-list({
             open: false,
             title: "expandable checkbox list",
+            listItems: [
+              { text: "Завтрак", checked: false},
+              { text: "Письменный стол", checked: true},
+              { text: "Стул для кормления", checked: true},
+              { text: "Кроватка", checked: true},
+              { text: "Телевизор", checked: false},
+              { text: "Шампунь", checked: false},
+            ]
           })
         .form-elements__checkbox-list
           +checkbox-list({
             open: true,
             title: "expandable checkbox list",
+            listItems: [
+              { text: "Завтрак", checked: false},
+              { text: "Письменный стол", checked: true},
+              { text: "Стул для кормления", checked: true},
+              { text: "Кроватка", checked: true},
+              { text: "Телевизор", checked: false},
+              { text: "Шампунь", checked: false},
+            ]
           })
         .form-elements__benefit
           +benefit({
@@ -262,7 +278,9 @@ block content
           writingTime: "5 дней назад",
           desc: "Великолепный матрас на кровати в основной спальне!\
                 А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
-                Выкрикивал комплименты повару — никто не жаловался из соседей."
+                Выкрикивал комплименты повару — никто не жаловался из соседей.",
+          likeBtnCount: 12,
+          likeBtnActive: true,
         })
           
 

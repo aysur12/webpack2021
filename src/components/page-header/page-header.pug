@@ -8,6 +8,7 @@ mixin page-header(params = {})
       loggedIn= false,
       userName= "",
       hrefUserPanel= "",
+      navMenuItems,
     } = params;
 
     const navWithLogged = loggedIn
@@ -20,7 +21,7 @@ mixin page-header(params = {})
         +logo({typeLogo: "logoWithText"})
       .page-header__nav-group
         .page-header__nav-menu(class = `${navWithLogged}`)
-          +nav-menu
+          +nav-menu({navMenuItems})
         if loggedIn
           .page-header__user-panel
             a.page-header__user-link(href= hrefUserPanel, title= userName)= userName

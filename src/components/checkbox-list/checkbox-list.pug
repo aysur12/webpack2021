@@ -5,34 +5,18 @@ mixin checkbox-list(params = {})
     const {
       open= false,
       title= "",
+      listItems = [],
     } = params 
 
   details.checkbox-list(open= open)
     summary.checkbox-list__field
       span.checkbox-list__title= title
       span.checkbox-list__arrow 
-    .checkbox-list__checkbox-group
-      +checkbox({
-        text: "Завтрак",
-        checked: false,
-      })
-      +checkbox({
-        text: "Письменный стол",
-        checked: true,
-      })
-      +checkbox({
-        text: "Стул для кормления",
-        checked: true,
-      })
-      +checkbox({
-        text: "Кроватка",
-        checked: true,
-      })
-      +checkbox({
-        text: "Телевизор",
-        checked: false,
-      })
-      +checkbox({
-        text: "Шампунь",
-        checked: false,
-      })
+    ul.checkbox-list__checkbox-group
+      each item in listItems
+        li.checkbox-list__item
+          +checkbox({
+            text: item.text,
+            checked: item.checked
+          })
+

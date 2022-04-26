@@ -1,30 +1,32 @@
 include ../../components/nav-menu-item/nav-menu-item
 
-mixin nav-menu
-  nav.nav-menu
-    ul.nav-menu__list
-      li.nav-menu__item
-        +nav-menu-item({
-          navItemName: "О нас",
-          href: "/mock-address/change-me",
-        })
-      li.nav-menu__item  
-        +nav-menu-item({
-          navItemName: "Услуги",
-          withDropdown: true,
-        })
-      li.nav-menu__item
-        +nav-menu-item({
-          navItemName: "Вакансии",
-          href: "/mock-address/change-me",
-        })
-      li.nav-menu__item
-        +nav-menu-item({
-          navItemName: "Новости",
-          href: "/mock-address/change-me",
-        })
-      li.nav-menu__item  
-        +nav-menu-item({
-          navItemName: "Соглашения",
-          withDropdown: true,
-        })
+mixin nav-menu(params = {})
+  -
+    const {
+      forFooter = false,
+      navMenuItems = [],
+    } = params;
+
+    const menuListFooter = forFooter ? "nav-menu__list_footer" : "";
+
+  if forFooter
+    each item in navMenuItems
+      .nav-menu__group
+        h3.nav-menu__title= item.title
+        ul.nav-menu__list(class= `${menuListFooter}`)
+          each link in item.links
+            li.nav-menu__item
+              +nav-menu-item({
+                navItemName: link.navItemName,
+                href: link.href,
+              })
+  else
+    nav.nav-menu
+      ul.nav-menu__list
+        each item in navMenuItems
+          li.nav-menu__item
+            +nav-menu-item({
+              navItemName: item.navItemName,
+              href: item.href,
+              withDropdown: item.withDropdown,
+            })

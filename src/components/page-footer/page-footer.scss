@@ -1,0 +1,50 @@
+@use '../../styles/main' as *;
+
+.page-footer {
+  width: 100%;
+  max-width: 1920px;
+  background-color: $color-third-bg;
+
+  &__container {
+    display: grid;
+    grid:
+      'desc . nav . subs' 1fr
+      / 22.41% 3.45% 47.33% 4.4% 22.41%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 7.143em 0;
+    border-bottom: 1px solid $body-bg-color;
+  }
+
+  &__desc {
+    grid-area: desc;
+    max-width: 18.571em;
+    @include font-body;
+  }
+
+  &__logo {
+    margin-bottom: 1.286em;
+  }
+
+  &__text {
+    margin: 0;
+    @include font-body;
+  }
+
+  &__navigation-list {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__subs {
+    grid-area: subs;
+  }
+
+  &__subs-title {
+    margin: 0 0 1.583em;
+    padding-top: 0.333em; 
+    @include font-h3;
+    text-transform: uppercase;
+  }
+}

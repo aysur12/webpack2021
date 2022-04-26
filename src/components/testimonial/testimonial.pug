@@ -8,6 +8,8 @@ mixin testimonial(params = {})
       fullName= "",
       writingTime= "",
       desc= "",
+      likeBtnCount= null,
+      likeBtnActive= true,
     } = params;
 
   section.testimonial
@@ -20,8 +22,8 @@ mixin testimonial(params = {})
     .testimonial__desc-and-btn 
       .testimonial__btn 
         +like-button({
-          count: 12,
-          isActive: true
+          count: likeBtnCount,
+          isActive: likeBtnActive
         })
       p.testimonial__desc= desc
 
