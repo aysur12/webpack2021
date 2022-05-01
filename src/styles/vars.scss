@@ -19,9 +19,7 @@ $body-bg-color: #f4f4f6;
 $primary-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $secondary-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
-$main-font-family: Montserrat, arial, sans-serif;
+$main-font-family: montserrat, arial, sans-serif;
 
-$shadow-avatar: 0 10px 20px rgba(31, 32, 65, 0.1);
-$shadow-header-footer: 0 10px 20px rgba(31, 32, 65, 0.05);
-
-
+$shadow-avatar: 0 10px 20px rgba(31, 32, 65, 10%);
+$shadow-header-footer: 0 10px 20px rgba(31, 32, 65, 5%);

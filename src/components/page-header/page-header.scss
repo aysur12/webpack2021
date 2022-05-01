@@ -8,8 +8,8 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     max-width: 1160px;
     margin: 0 auto;
     padding: 1.071em 0;
@@ -17,8 +17,8 @@
 
   &__nav-group {
     display: flex;
-    align-items: center;
     gap: 1.429em;
+    align-items: center;
   }
 
   &__nav-menu {
@@ -39,15 +39,15 @@
   &__user-link {
     display: inline-block;
     @include font-link;
+
     text-align: center;
     text-decoration: none;
-
     outline: none;
 
     &:focus,
     &:hover {
       color: $color-font-a75;
-      font-weight:bold;
+      font-weight: bold;
     }
 
     &:visited {
@@ -56,11 +56,11 @@
 
     &::after {
       display: block;
-      content: attr(title);
-      font-weight: bold;
       height: 0;
       overflow: hidden;
+      font-weight: bold;
       visibility: hidden;
+      content: attr(title);
     }
   }
 }

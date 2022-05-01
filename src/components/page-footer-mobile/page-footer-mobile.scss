@@ -2,8 +2,8 @@
 
 .page-footer-mobile {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   max-width: 768px;
   margin: 0 auto;
   background-color: $color-third-bg;
@@ -12,8 +12,8 @@
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     max-width: 26.571em;
     padding: 8.571em 0;
   }
@@ -30,7 +30,7 @@
 
   &__social-links {
     display: flex;
-    justify-content: center;
     gap: 1.571em;
+    justify-content: center;
   }
 }

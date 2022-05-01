@@ -1,19 +1,18 @@
 @use '../../styles/main' as *;
 
 .nav-menu {
-  
   &__list {
     display: flex;
-    align-items: center;
     gap: 1.429em;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style-type: none;
 
     &_footer {
       flex-direction: column;
-      align-items: flex-start;
       gap: 1.54em;
+      align-items: flex-start;
     }
   }
 
@@ -26,6 +25,7 @@
   &__title {
     margin: 0.333em 0 1.75em;
     @include font-h3;
+
     text-transform: uppercase;
   }
 

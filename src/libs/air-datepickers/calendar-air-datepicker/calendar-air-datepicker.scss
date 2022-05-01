@@ -6,7 +6,7 @@
   --adp-font-family: $main-font-family;
   --adp-padding: 20px;
   --adp-nav-arrow-color: $color-primary-bg;
-  
+
   width: 22.714em;
   border: 1px solid $color-font-a25;
 
@@ -17,14 +17,14 @@
   }
 
   &-nav {
+    padding: 10px 16px 17px;
     border-bottom: none;
-    padding: 10px 16px 17px 16px;
 
     &--title {
+      color: $color-font-a100;
       font-weight: bold;
       font-size: 19px;
       line-height: 23px;
-      color: $color-font-a100;
     }
 
     &__arrow {
@@ -35,7 +35,7 @@
 
   &--content {
     padding-top: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   &-body {
@@ -44,37 +44,37 @@
     }
 
     &--day-name {
-      text-transform: none;
+      color: $color-primary-bg;
       font-weight: bold;
       font-size: 12px;
       line-height: 15px;
-      color: $color-primary-bg;
+      text-transform: none;
     }
   }
 
   &-cell {
-    height: 0px;
+    height: 0;
     padding: 50% 0%;
 
     &.-day- {
+      color: $color-font-a50;
       font-size: 12px;
       line-height: 15px;
-      color: $color-font-a50;
 
       &.-current-,
-      &.-current-.-in-range-{
-          background: $secondary-gradient;
-          border-radius: 22px;
-          color: #FFFFFF;
+      &.-current-.-in-range- {
+        color: #fff;
+        background: $secondary-gradient;
+        border-radius: 22px;
       }
-      
+
       &:hover,
       &:focus,
       &.-focus- {
-        background: $primary-gradient;
-        border-radius: 22px;
         color: #fff;
         font-weight: bold;
+        background: $primary-gradient;
+        border-radius: 22px;
 
         &.-in-range- {
           color: $color-font-a50;
@@ -83,52 +83,52 @@
 
       &.-range-from-,
       &.-range-to- {
-        background: $primary-gradient;
-        border-radius: 22px;
         color: #fff;
         font-weight: bold;
+        background: $primary-gradient;
         border: none;
+        border-radius: 22px;
 
-        &:before {
-          content: "";
+        &::before {
+          position: absolute;
+          z-index: -1;
           width: 50%;
           height: 100%;
-          position: absolute;
           background: $primary-gradient;
           opacity: 0.25;
-          z-index: -1;
+          content: '';
         }
       }
 
       &.-range-to- {
-        &:before {
+        &::before {
           right: 50%;
         }
       }
 
       &.-range-from- {
-        &:before {
+        &::before {
           left: 50%;
         }
       }
 
       &.-selected- {
-        background: $primary-gradient;
-        border-radius: 22px;
         color: #fff;
         font-weight: bold;
+        background: $primary-gradient;
+        border-radius: 22px;
       }
 
       &.-in-range- {
         background: none;
 
-        &:after {
-          content: "";
+        &::after {
+          position: absolute;
           width: 100%;
           height: 100%;
-          position: absolute;
           background: $primary-gradient;
           opacity: 0.25;
+          content: '';
         }
       }
 
@@ -139,8 +139,8 @@
   }
 
   &--buttons {
-    border: none;
     padding: 12px 20px;
+    border: none;
   }
 
   &-buttons {
@@ -151,7 +151,7 @@
     display: inline-block;
     padding: 0;
     @include font-h3;
-  
+
     color: $color-primary-bg;
     text-align: center;
     text-transform: uppercase;

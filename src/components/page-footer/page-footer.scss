@@ -38,8 +38,8 @@
   }
 
   &__navigation-list {
-    grid-area: nav;
     display: flex;
+    grid-area: nav;
     gap: 2.857em;
     max-width: 40em;
   }
@@ -50,8 +50,9 @@
 
   &__subs-title {
     margin: 0 0 1.583em;
-    padding-top: 0.333em; 
+    padding-top: 0.333em;
     @include font-h3;
+
     text-transform: uppercase;
   }
 
@@ -61,8 +62,8 @@
 
   &__copyrights {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     max-width: 1160px;
     margin: 0 auto;
     padding: 1.643em 0;
@@ -76,8 +77,8 @@
 
   &__social-links {
     display: flex;
-    justify-content: space-between;
     gap: 1.571em;
+    justify-content: space-between;
     margin: 0;
     list-style-type: none;
   }
