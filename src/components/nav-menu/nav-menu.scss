@@ -17,6 +17,12 @@
     }
   }
 
+  &__group {
+    display: flex;
+    flex-direction: column;
+    min-width: 11.429em;
+  }
+
   &__title {
     margin: 0.333em 0 1.75em;
     @include font-h3;

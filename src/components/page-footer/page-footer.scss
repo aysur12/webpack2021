@@ -4,16 +4,22 @@
   width: 100%;
   max-width: 1920px;
   background-color: $color-third-bg;
+  border-bottom: 1px solid $body-bg-color;
+  box-shadow: $shadow-header-footer;
 
   &__container {
+    border-bottom: 1px solid $body-bg-color;
+  }
+
+  &__content {
     display: grid;
     grid:
-      'desc . nav . subs' 1fr
-      / 22.41% 3.45% 47.33% 4.4% 22.41%;
+      'desc nav subs'
+      / 22.41% 1fr 22.41%;
+    gap: 40px;
     max-width: 1160px;
     margin: 0 auto;
     padding: 7.143em 0;
-    border-bottom: 1px solid $body-bg-color;
   }
 
   &__desc {
@@ -34,7 +40,8 @@
   &__navigation-list {
     grid-area: nav;
     display: flex;
-    justify-content: space-between;
+    gap: 2.857em;
+    max-width: 40em;
   }
 
   &__subs {
@@ -46,5 +53,36 @@
     padding-top: 0.333em; 
     @include font-h3;
     text-transform: uppercase;
+  }
+
+  &__subs-input {
+    margin-top: 1.571em;
+  }
+
+  &__copyrights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 1.643em 0;
+  }
+
+  &__copyright-text {
+    margin: 0;
+    color: $color-font-a75;
+    font: 1rem/1.22 $main-font-family;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.571em;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__link {
+    width: 30px;
   }
 }

@@ -1,0 +1,20 @@
+include ../../components/logo/logo
+include ../../components/social-links/social-links
+
+mixin page-footer-mobile(params = {})
+  -
+    const {
+      copyrightText = "",
+      footerSocialLinks,
+    } = params;
+
+  footer.page-footer-mobile
+    .page-footer-mobile__container
+      .page-footer-mobile__logo
+        +logo({typeLogo: "logoWithText"})
+      section.page-footer-mobile__copyrights
+        p.page-footer-mobile__copyright-text= copyrightText
+        .page-footer-mobile__social-links
+          +social-links({
+            socialLinks: footerSocialLinks,
+            })

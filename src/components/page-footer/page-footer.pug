@@ -1,28 +1,47 @@
 include ../../components/logo/logo
 include ../../components/nav-menu/nav-menu
+include ../../components/text-field/text-field
+include ../../components/social-links/social-links
 
 mixin page-footer(params = {})
   -
     const {
-      isLargeFooter = true,
-      shortDesc= "",
-      subsTitle= "",
+      shortDesc = "",
+      subsTitle = "",
       subsText = "",
       footerNavMenuItems,
+      copyrightText = "",
+      footerSocialLinks,
     } = params;
 
   footer.page-footer
     .page-footer__container
-      section.page-footer__desc
-        .page-footer__logo
-          +logo({typeLogo: "logoWithText"})
-        if isLargeFooter
+      .page-footer__content
+        section.page-footer__desc
+          .page-footer__logo
+            +logo({typeLogo: "logoWithText"})
           p.page-footer__text.page-footer__text_desc= shortDesc
-      section.page-footer__navigation-list
-        +nav-menu({forFooter: true, navMenuItems: footerNavMenuItems}) 
-      section.page-footer__subs
-        h3.page-footer__subs-title= subsTitle
-        p.page-footer__text.page-footer__text_subs= subsText
+        section.page-footer__navigation-list
+          +nav-menu({forFooter: true, navMenuItems: footerNavMenuItems}) 
+        section.page-footer__subs
+          h3.page-footer__subs-title= subsTitle
+          p.page-footer__text.page-footer__text_subs= subsText
+          .page-footer__subs-input
+            +text-field({
+              typeInput: "email",
+              name: "email",
+              placeholder: "Email",
+              withArrowButton: true
+            })
+    section.page-footer__copyrights
+      p.page-footer__copyright-text= copyrightText
+      .page-footer__social-links
+        +social-links({
+          socialLinks: footerSocialLinks,
+          })
+
+
+
 
 
 

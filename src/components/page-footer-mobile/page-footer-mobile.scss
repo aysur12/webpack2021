@@ -1,0 +1,36 @@
+@use '../../styles/main' as *;
+
+.page-footer-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: $color-third-bg;
+  box-shadow: $shadow-header-footer;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 26.571em;
+    padding: 8.571em 0;
+  }
+
+  &__copyrights {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copyright-text {
+    margin: 0;
+    padding: 1.429em 0 1.786em;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.571em;
+  }
+}

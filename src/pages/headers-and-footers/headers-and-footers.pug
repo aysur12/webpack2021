@@ -3,6 +3,7 @@ extends ../../layouts/ui-kit-layout/ui-kit-layout
 include ../../components/logo/logo
 include ../../components/page-header/page-header
 include ../../components/page-footer/page-footer
+include ../../components/page-footer-mobile/page-footer-mobile
 
 block variables
   title Headers and Footers 
@@ -38,7 +39,6 @@ block content
         })
       .headers-and-footers__page-footer
         +page-footer({
-          isLargeFooter: true,
           shortDesc: "Бронирование номеров в лучшем отеле 2019 года по версии\
                       ассоциации «Отельные взгляды»",
           subsTitle: "Подписка",
@@ -68,4 +68,43 @@ block content
               ]
             },
           ],
+          copyrightText: "Copyright © 2018 Toxin отель. Все права защищены.",
+          footerSocialLinks: [
+            {
+              name: "twitter",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/twitter-icon.svg"),
+            },
+            {
+              name: "facebook",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/facebook-icon.svg"),
+            },
+            {
+              name: "instagram",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/intagram-icon.svg"),
+            },
+          ]
+        })
+      .headers-and-footers__page-footer-mobile
+        +page-footer-mobile({
+          copyrightText: "Copyright © 2018 Toxin отель. Все права защищены.",
+          footerSocialLinks: [
+            {
+              name: "twitter",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/twitter-icon.svg"),
+            },
+            {
+              name: "facebook",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/facebook-icon.svg"),
+            },
+            {
+              name: "instagram",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/intagram-icon.svg"),
+            },
+          ]
         })

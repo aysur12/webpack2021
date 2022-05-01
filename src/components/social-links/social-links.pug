@@ -1,0 +1,17 @@
+mixin social-links(params = {})
+  -
+    const {
+      socialLinks = [],
+    } = params;
+  
+  each link in socialLinks
+    a.social-link(
+      class= `social-link_${link.name}`,
+      href= link.href,
+      target: "_blank",
+      rel: "noopener noreferrer"
+      )
+      img.social-link__img(
+        src= link.imgSrc
+        alt= link.name,
+      )
