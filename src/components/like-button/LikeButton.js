@@ -21,7 +21,7 @@ class LikeButton {
 
   handleLikeButtonClick() {
     const { button } = this;
-    const [ icon, count ] = button.children;
+    const [icon, count] = button.children;
 
     button.classList.toggle(`${modifierActive}`);
     count.classList.toggle(`${countActive}`);

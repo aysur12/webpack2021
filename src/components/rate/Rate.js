@@ -21,7 +21,7 @@ class Rate {
             otherRateItem.classList.add(`${itemActive}`);
           } else {
             otherRateItem.classList.remove(`${itemActive}`);
-          };
+          }
         });
       });
     });

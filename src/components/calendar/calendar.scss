@@ -29,8 +29,7 @@
     border-radius: 4px;
     outline: none;
 
-    &:focus,
-    &:hover {
+    &:focus {
       border-color: $color-font-a50;
     }
   }

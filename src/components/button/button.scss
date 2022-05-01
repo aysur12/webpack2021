@@ -4,6 +4,7 @@
   display: inline-block;
   min-width: 34px;
   padding: 1.167em 1.61em 1.25em;
+  @include font-h3;
   color: $border-primary;
   text-align: center;
   text-transform: uppercase;
@@ -15,7 +16,6 @@
   outline: none;
   cursor: pointer;
   appearance: none;
-  @include font-h3;
 
   &:hover,
   &:focus {

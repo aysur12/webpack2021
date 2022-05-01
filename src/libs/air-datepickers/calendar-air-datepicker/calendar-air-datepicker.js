@@ -8,26 +8,25 @@ const calendars = document.querySelectorAll(selector);
 const applyButton = {
   content: 'Применить',
   className: 'air-datepicker__button',
-  onClick: (datepicker
-    ) => {
+  onClick: (datepicker) => {
     datepicker.hide();
   },
-}; 
+};
 const options = {
-    inline: calendar.contains(calendarInput) ? false : true,
-    position: 'bottom left',
-    dateFormat: 'dd MMM',
-    navTitles: {
-      days: 'MMMM yyyy',
-    },
-    prevHtml: '<i class="air-datepicker-nav__arrow material-icons">arrow_back</i>',
-    nextHtml: '<i class="air-datepicker-nav__arrow material-icons">arrow_forward</i>',
-    multipleDates: 2,
-    multipleDatesSeparator: ' - ',
-    range: true,
-    dynamicRange: true,
-    keyboardNav: true,
-    buttons: ['clear', applyButton]
-}
+  inline: !calendar.contains(calendarInput),
+  position: 'bottom left',
+  dateFormat: 'dd MMM',
+  navTitles: {
+    days: 'MMMM yyyy',
+  },
+  prevHtml: '<i class="air-datepicker-nav__arrow material-icons">arrow_back</i>',
+  nextHtml: '<i class="air-datepicker-nav__arrow material-icons">arrow_forward</i>',
+  multipleDates: 2,
+  multipleDatesSeparator: ' - ',
+  range: true,
+  dynamicRange: true,
+  keyboardNav: true,
+  buttons: ['clear', applyButton],
+};
 
 calendars.forEach((calendar) => new AirDatepicker(calendar, options));

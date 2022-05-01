@@ -1,5 +1,4 @@
-import '../../components/logo';
-import '../../components/nav-menu';
-import '../../components/button';
+import '../logo';
+import '../nav-menu';
+import '../button';
 import './page-header.scss';
-
