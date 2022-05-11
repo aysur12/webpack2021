@@ -4,7 +4,7 @@ include ../../components/logo/logo
 include ../../components/title-component/title-component
 include ../../components/desc-state/desc-state
 include ../../components/text-field/text-field
-include ../../components/dropdown-common-value/dropdown-common-value
+include ../../components/dropdown/dropdown
 
 include ../../components/date-dropdown/date-dropdown
 include ../../components/filter-date-dropdown/filter-date-dropdown
@@ -61,15 +61,17 @@ block content
           })  
         .form-elements__title-component.form-elements__title-component_dropdown
           +title-component("dropdown")
-        .form-elements__dropdown-common-value 
-          +dropdown-common-value({
-            params: {open: false},
-            elements: [
-              {title: "Взрослые"},
-              {title: "Дети"},
-              {title: "Младенцы"},
-            ]
-          })  
+        .form-elements__dropdown
+          +dropdown({
+            hasCommonValue: true,
+            type: 'guest',
+            text: "Сколько гостей",
+            items: [
+              { text: 'Взрослые', count: 0 },
+              { text: 'Дети', count: 0 },
+              { text: 'Младенцы', count: 0 },
+            ],
+          })
         .form-elements__title-component_text-field
           +title-component("masked text field")
         .form-elements__masked-text-field 
@@ -191,6 +193,20 @@ block content
           })
           +rate({
             rating: 5,
+          })
+        .form-elements__title-component.form-elements__title-component_dropdown
+          +title-component("dropdown")
+        .form-elements__dropdown.form-elements__dropdown_empty-value-open
+          +dropdown({
+            hasCommonValue: true,
+            open: true,
+            type: 'guest-open',
+            text: "Сколько гостей",
+            items: [
+              { text: 'Взрослые', count: 0 },
+              { text: 'Дети', count: 0 },
+              { text: 'Младенцы', count: 0 },
+            ],
           })  
         .form-elements__title-component
           +title-component("rich checkbox buttons")
@@ -264,12 +280,29 @@ block content
             totalVisibleItems: 12,
             totalPages: 15
           })
+        .form-elements__title-component.form-elements__title-component_dropdown
+          +title-component("dropdown")
+        .form-elements__dropdown.form-elements__dropdown_with-value-open
+          +dropdown({
+            hasCommonValue: true,
+            open: true,
+            type: 'guest-full',
+            text: "Сколько гостей",
+            items: [
+              { text: 'Взрослые', count: 2 },
+              { text: 'Дети', count: 1 },
+              { text: 'Младенцы', count: 0 },
+            ],
+          })    
         .form-elements__title-component
           +title-component("bullet list")
         .form-elements__bullet 
-          +bullet("Нельзя с питомцами")
-          +bullet("Без вечеринок и мероприятий")
-          +bullet("Время прибытия — после 13:00, а выезд до 12:00")
+          +bullet({text:"Нельзя с питомцами"})
+          +bullet({text:"Без вечеринок и мероприятий"})
+          +bullet({
+            text:"Время прибытия — после 13:00, а выезд до 12:00",
+            isUpPositionIcon: true,
+            })
       .form-elements__testimonial
         +testimonial({
           avatar: require("../../components/testimonial/images/murad.jpg"),

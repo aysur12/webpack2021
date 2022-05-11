@@ -1,4 +1,12 @@
-mixin bullet(text)
+mixin bullet(params= {})
+  -
+    const {
+      text= "",
+      isUpPositionIcon = false,
+    } = params;
+
+    const iconUpPosition = isUpPositionIcon ? "bullet__icon_up-position" : "";
+
   .bullet 
-    .bullet__icon 
+    .bullet__icon(class= `${iconUpPosition}`)
     .bullet__text= text

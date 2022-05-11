@@ -1,0 +1,84 @@
+@use '../../styles/main' as *;
+
+.dropdown {
+  width: 100%;
+  border: 1px solid $color-font-a25;
+  border-radius: 0.286em;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $color-font-a50;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  &__text {
+    display: inline-block;
+    margin: 0;
+    padding: 0.786em 1em 0.5em;
+    font: 1rem/1.71 $main-font-family;
+  }
+
+  &__arrow {
+    display: flex;
+    flex-basis: 16.3%;
+    align-items: center;
+    justify-content: center;
+    max-width: 44px;
+    padding: 0;
+    font: 1.714rem 'Material Icons', sans-serif;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.429em 0.429em 0 1em;
+    border-top: 1px solid $color-font-a25;
+  }
+
+  &__menu-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-title {
+    display: block;
+  }
+
+  &__item {
+    margin: 0;
+    padding-bottom: 0.357em;
+    text-transform: uppercase;
+    @include font-h3;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8125em 0 0.929em;
+  }
+
+  &__button {
+    padding: 0;
+    text-transform: uppercase;
+    color: $color-primary-bg;
+    background-color: transparent;
+    font: bold 0.857rem/1.25 $main-font-family;
+    border: none;
+
+    &_hide {
+      visibility: hidden;
+    }
+  }
+}

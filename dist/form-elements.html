@@ -44,29 +44,53 @@
           <div class="form-elements__title-component form-elements__title-component_dropdown">
             <h3 class="title-component">dropdown</h3>
           </div>
+          <div class="form-elements__dropdown">
+            <details class="dropdown js-dropdown_with-common-value" open>
+              <summary class="dropdown__summary">
+                <p class="dropdown__text iqdropdown-selection">Сколько гостей</p><span class="dropdown__arrow">expand_more</span>
+              </summary>
+              <div class="dropdown__menu iqdropdown-menu">
+                <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-1" data-defaultcount="0">
+                  <div class="dropdown__item-title">
+                    <p class="dropdown__item iqdropdown-item">Взрослые</p>
+                  </div>
+                </div>
+                <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-2" data-defaultcount="0">
+                  <div class="dropdown__item-title">
+                    <p class="dropdown__item iqdropdown-item">Дети</p>
+                  </div>
+                </div>
+                <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-3" data-defaultcount="0">
+                  <div class="dropdown__item-title">
+                    <p class="dropdown__item iqdropdown-item">Младенцы</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
           <div class="form-elements__dropdown-common-value"> 
-            <details class="dropdown-common-value">
-              <summary class="dropdown-common-value__field"> <span class="dropdown-common-value__text">Сколько гостей</span><span class="dropdown-common-value__arrow">expand_more</span></summary>
+            <details class="dropdown-common-value js-dropdown-common-value">
+              <summary class="dropdown-common-value__field"> <span class="dropdown-common-value__text js-dropdown-common-value__text" wordforms="Гость Гостя Гостей" default="Сколько гостей?"></span><span class="dropdown-common-value__arrow">expand_more</span></summary>
               <ul class="dropdown-common-value__collapsible-content">
                 <li class="dropdown-common-value__collapsible-item"> 
                   <p class="dropdown-common-value__collapsible-item-title">Взрослые</p>
                   <div class="dropdown-common-value__button-group">
-                    <button class="dropdown-common-value__button-counter">2</button><span class="dropdown-common-value__count-value"></span>
-                    <button class="dropdown-common-value__button-counter">1</button>
+                    <button class="dropdown-common-value__button-counter dropdown-common-value__button-counter_minus js-dropdown-common-value__button-counter_minus">-</button><span class="dropdown-common-value__count-value js-dropdown-common-value__count-value">0</span>
+                    <button class="dropdown-common-value__button-counter dropdown-common-value__button-counter_plus js-dropdown-common-value__button-counter_plus">+</button>
                   </div>
                 </li>
                 <li class="dropdown-common-value__collapsible-item"> 
                   <p class="dropdown-common-value__collapsible-item-title">Дети</p>
                   <div class="dropdown-common-value__button-group">
-                    <button class="dropdown-common-value__button-counter">2</button><span class="dropdown-common-value__count-value"></span>
-                    <button class="dropdown-common-value__button-counter">1</button>
+                    <button class="dropdown-common-value__button-counter dropdown-common-value__button-counter_minus js-dropdown-common-value__button-counter_minus">-</button><span class="dropdown-common-value__count-value js-dropdown-common-value__count-value">0</span>
+                    <button class="dropdown-common-value__button-counter dropdown-common-value__button-counter_plus js-dropdown-common-value__button-counter_plus">+</button>
                   </div>
                 </li>
                 <li class="dropdown-common-value__collapsible-item"> 
                   <p class="dropdown-common-value__collapsible-item-title">Младенцы</p>
                   <div class="dropdown-common-value__button-group">
-                    <button class="dropdown-common-value__button-counter">2</button><span class="dropdown-common-value__count-value"></span>
-                    <button class="dropdown-common-value__button-counter">1</button>
+                    <button class="dropdown-common-value__button-counter dropdown-common-value__button-counter_minus js-dropdown-common-value__button-counter_minus">-</button><span class="dropdown-common-value__count-value js-dropdown-common-value__count-value">0</span>
+                    <button class="dropdown-common-value__button-counter dropdown-common-value__button-counter_plus js-dropdown-common-value__button-counter_plus">+</button>
                   </div>
                 </li>
               </ul>
@@ -429,5 +453,5 @@
         </div>
       </div>
     </main>
-  <script defer src="js/831.js"></script><script defer src="js/522.js"></script><script defer src="js/357.js"></script><script defer src="js/form-elements.js"></script></body>
+  <script defer src="js/831.js"></script><script defer src="js/522.js"></script><script defer src="js/397.js"></script><script defer src="js/form-elements.js"></script></body>
 </html>

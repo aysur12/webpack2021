@@ -1,7 +1,7 @@
 import '../../components/title-component';
 import '../../components/desc-state';
 import '../../components/text-field';
-import '../../components/dropdown-common-value';
+import '../../components/dropdown';
 
 import '../../components/date-dropdown';
 import '../../components/filter-date-dropdown';

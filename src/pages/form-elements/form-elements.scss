@@ -61,8 +61,16 @@
     }
   }
 
-  &__dropdown-common-value {
+  &__dropdown {
     margin-bottom: 1.607em;
+
+    &_with-value-open{
+      margin-bottom: 6.857em;
+    }
+
+    &_empty-value-open {
+      margin-bottom: 7.031em;
+    }
   }
 
   &__masked-text-field {
@@ -123,7 +131,7 @@
   &__rate-group {
     display: flex;
     gap: 1.429em;
-    margin-bottom: 14em;
+    margin-bottom: 14.071em;
   }
 
   &__rich-checkbox-group {
@@ -166,7 +174,7 @@
   }
 
   &__pagination {
-    margin-bottom: 16.429em;
+    margin-bottom: 16.786em;
   }
 
   &__bullet {

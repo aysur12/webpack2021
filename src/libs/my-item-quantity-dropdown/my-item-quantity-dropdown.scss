@@ -1,0 +1,61 @@
+@use '../../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+@use '../../styles/main.scss' as *;
+
+.iqdropdown {
+
+  &-item-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6.571em;
+  }
+}
+
+.button-decrement {
+  width: 2.143em;
+  height: 2.143em;
+  padding: 0;
+  background-color: $color-third-bg;
+  border: 1px solid $color-font-a25;
+  border-radius: 50%;
+  
+  &::after {
+    color: $color-font-a50;
+    font-size: 1.286em;
+    line-height: 0.9;
+    content: '-';
+  }
+}
+
+.button-decrement-disabled {
+  opacity: 0.38;
+}
+
+.button-increment {
+  width: 2.143em;
+  height: 2.143em;
+  padding: 0;
+  background-color: $color-third-bg;
+  border: 1px solid $color-font-a25;
+  border-radius: 50%;
+
+  &::after {
+    color: $color-font-a50;
+    font-size: 1.286em;
+    line-height: 1.22;
+    content: '+';
+  }
+}
+
+.button-increment-disabled {
+  opacity: 0.38;
+}
+
+.counter {
+  padding-bottom: 0.357em;
+  text-transform: uppercase;
+  color: $color-font-a100;
+  font: bold 0.857rem/1.25 $main-font-family;
+  border: none;
+}
+
