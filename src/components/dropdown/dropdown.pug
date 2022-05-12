@@ -3,8 +3,6 @@ mixin dropdown(params = {})
     const {
       hasCommonValue = true,
       open= false,
-      type = 'item',
-      text= "",
       items = [],
     } = params;
 
@@ -12,9 +10,9 @@ mixin dropdown(params = {})
     ? "js-dropdown_with-common-value"
     : "js-dropdown_with-separate-value"
 
-  details.dropdown(class = `${dropdownWithCommonValue}` open= open data-dropdown-type=type)
+  details.dropdown(class = `${dropdownWithCommonValue}` open= open)
     summary.dropdown__summary
-      p.dropdown__text(class= "iqdropdown-selection")= text
+      p.dropdown__text(class= "iqdropdown-selection")
       span.dropdown__arrow expand_more
     .dropdown__menu(class= "iqdropdown-menu")
       each item, index in items
@@ -22,8 +20,9 @@ mixin dropdown(params = {})
         data-id=`item-${index + 1}` data-defaultcount= item.count)
           .dropdown__item-title
             p.dropdown__item(class= "iqdropdown-item")= item.text
-      .dropdown__buttons
-        button.dropdown__button(
-          class= "js-iqdropdown-button_clean dropdown__button_hide") Очистить
-        button.dropdown__button(
-          class= "js-iqdropdown-button_apply") Применить
+      if hasCommonValue     
+        .dropdown__buttons
+          button.dropdown__button(
+            class= "js-iqdropdown-button_clean dropdown__button_hide") Очистить
+          button.dropdown__button(
+            class= "js-iqdropdown-button_apply") Применить

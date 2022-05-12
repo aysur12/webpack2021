@@ -64,8 +64,6 @@ block content
         .form-elements__dropdown
           +dropdown({
             hasCommonValue: true,
-            type: 'guest',
-            text: "Сколько гостей",
             items: [
               { text: 'Взрослые', count: 0 },
               { text: 'Дети', count: 0 },
@@ -95,6 +93,35 @@ block content
             name: "email",
             placeholder: "Email",
             withArrowButton: true
+          })
+        .form-elements__text-field-heading
+          .form-elements__title-component.form-elements__title-component_without-margin-bottom
+            +title-component("dropdown")
+          .form-elements__desc-state
+            +desc-state("default")
+        .form-elements__dropdown
+          +dropdown({
+            hasCommonValue: false,
+            items: [
+              { text: 'Cпальни', count: 0 },
+              { text: 'Кровати', count: 0 },
+              { text: 'Ванные комнаты', count: 0 },
+            ],
+          })
+        .form-elements__text-field-heading
+          .form-elements__title-component.form-elements__title-component_without-margin-bottom
+            +title-component("dropdown")
+          .form-elements__desc-state
+            +desc-state("expanded")
+        .form-elements__dropdown
+          +dropdown({
+            hasCommonValue: false,
+            open: true,
+            items: [
+              { text: 'Cпальни', count: 0 },
+              { text: 'Кровати', count: 0 },
+              { text: 'Ванные комнаты', count: 0 },
+            ],
           })
         .form-elements__checkbox-list.form-elements__checkbox-list_closed
           +checkbox-list({
@@ -200,8 +227,6 @@ block content
           +dropdown({
             hasCommonValue: true,
             open: true,
-            type: 'guest-open',
-            text: "Сколько гостей",
             items: [
               { text: 'Взрослые', count: 0 },
               { text: 'Дети', count: 0 },
@@ -286,8 +311,6 @@ block content
           +dropdown({
             hasCommonValue: true,
             open: true,
-            type: 'guest-full',
-            text: "Сколько гостей",
             items: [
               { text: 'Взрослые', count: 2 },
               { text: 'Дети', count: 1 },

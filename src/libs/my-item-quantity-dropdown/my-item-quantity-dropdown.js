@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
-const dropdowns = document.querySelectorAll('.js-dropdown_with-common-value');
-dropdowns.forEach((dropdown) => $(dropdown).iqDropdown({
+const commonValuesDropdowns = document.querySelectorAll('.js-dropdown_with-common-value');
+commonValuesDropdowns.forEach((dropdown) => $(dropdown).iqDropdown({
   maxItems: 10,
   setSelectionText: function(itemCount, totalItems) {
 
@@ -26,17 +26,16 @@ dropdowns.forEach((dropdown) => $(dropdown).iqDropdown({
       } else {
         decrementButton.style.opacity = 0.4;
       }
-  })
+  });
 
   let returnString = '';
   const guestsCount = itemCount['item-1'] + itemCount['item-2'];
   const babies = itemCount['item-3'];
 
   if (totalItems === 0) return 'Сколько гостей';
-  if (guestsCount === 0) returnString +=`${guestsCount} гостей`;
+  if (guestsCount === 0 || guestsCount >= 5) returnString +=`${guestsCount} гостей`;
   if (guestsCount === 1) returnString += `${guestsCount} гость`;
   if (guestsCount >= 2 && guestsCount < 5) returnString += `${guestsCount} гостя`;
-  if (guestsCount >= 5) returnString += `${guestsCount} гостей`;
 
   if (babies === 1) returnString += `, ${babies} младенец`;
   if (babies > 1 && babies < 5) returnString += `, ${babies} младенца`;
@@ -74,4 +73,31 @@ applyBtns.forEach(btn => {
   });
 });
 
+const valuesDropdowns = document.querySelectorAll('.js-dropdown_with-separate-value');
+valuesDropdowns.forEach((dropdown) => $(dropdown).iqDropdown({
+  maxItems: 20,
+  setSelectionText: function(itemCount, totalItems) {
+    let returnString = '';
+    
+    const bedrooms = itemCount['item-1'];
+    const beds = itemCount['item-2'];
+    const bathrooms = itemCount['item-3'];
 
+    if (totalItems === 0) return 'Выберите количество';
+
+    if (bedrooms === 0 || bedrooms >= 5) returnString +=`${bedrooms} спален`;
+    if (bedrooms === 1) returnString += `${bedrooms} спальня`;
+    if (bedrooms > 1 && bedrooms < 5) returnString +=`${bedrooms} спальни`;
+
+    if (beds === 0 || beds >= 5) returnString +=`, ${beds} кроватей`;
+    if (beds === 1) returnString += `, ${beds} кровать`;
+    if (beds > 1 && beds < 5) returnString +=`, ${beds} кровати`;
+
+    if (bathrooms === 0 || bathrooms >= 5) returnString +=`, ${bathrooms} ванных комнат`;
+    if (bathrooms === 1) returnString += `, ${bathrooms} ванная комната`;
+    if (bathrooms > 1 && bathrooms < 5) returnString +=`, ${bathrooms} ванные комнаты`;
+
+    return returnString;
+  },
+})
+)
