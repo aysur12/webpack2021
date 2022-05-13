@@ -7,12 +7,16 @@ mixin dropdown(params = {})
     } = params;
 
     const dropdownWithCommonValue = hasCommonValue
-    ? "js-dropdown_with-common-value"
-    : "js-dropdown_with-separate-value"
+    ? "dropdown_with-common-value js-dropdown_with-common-value"
+    : "dropdown_with-separate-value js-dropdown_with-separate-value"
+
+    const textWithCommonValue = hasCommonValue
+    ? "dropdown__text_with-common-value"
+    : "dropdown__text_with-separate-value"
 
   details.dropdown(class = `${dropdownWithCommonValue}` open= open)
     summary.dropdown__summary
-      p.dropdown__text(class= "iqdropdown-selection")
+      p.dropdown__text.iqdropdown-selection(class= `${textWithCommonValue}`)
       span.dropdown__arrow expand_more
     .dropdown__menu(class= "iqdropdown-menu")
       each item, index in items

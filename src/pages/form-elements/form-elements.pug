@@ -94,7 +94,7 @@ block content
             placeholder: "Email",
             withArrowButton: true
           })
-        .form-elements__text-field-heading
+        .form-elements__text-field-heading.form-elements__text-field-heading_for-dropdown
           .form-elements__title-component.form-elements__title-component_without-margin-bottom
             +title-component("dropdown")
           .form-elements__desc-state
@@ -103,23 +103,23 @@ block content
           +dropdown({
             hasCommonValue: false,
             items: [
-              { text: 'Cпальни', count: 0 },
-              { text: 'Кровати', count: 0 },
+              { text: 'Cпальни', count: 2 },
+              { text: 'Кровати', count: 2 },
               { text: 'Ванные комнаты', count: 0 },
             ],
           })
-        .form-elements__text-field-heading
+        .form-elements__text-field-heading.form-elements__text-field-heading_for-dropdown
           .form-elements__title-component.form-elements__title-component_without-margin-bottom
             +title-component("dropdown")
           .form-elements__desc-state
             +desc-state("expanded")
-        .form-elements__dropdown
+        .form-elements__dropdown.form-elements__dropdown_with-separate-value
           +dropdown({
             hasCommonValue: false,
             open: true,
             items: [
-              { text: 'Cпальни', count: 0 },
-              { text: 'Кровати', count: 0 },
+              { text: 'Cпальни', count: 2 },
+              { text: 'Кровати', count: 2 },
               { text: 'Ванные комнаты', count: 0 },
             ],
           })
@@ -295,7 +295,7 @@ block content
             type: "button",
             text: "перейти к оплате",
             withArrow: true,
-            paymentGo: true,
+            longWithArrow: true,
           })
         .form-elements__title-component
           +title-component("pagination")

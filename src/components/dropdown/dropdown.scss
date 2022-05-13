@@ -5,6 +5,10 @@
   border: 1px solid $color-font-a25;
   border-radius: 0.286em;
 
+  &_with-separate-value {
+    max-width: 19em;
+  }
+
   &:focus,
   &:hover {
     border: 1px solid $color-font-a50;
@@ -21,8 +25,15 @@
   &__text {
     display: inline-block;
     margin: 0;
-    padding: 0.786em 1em 0.5em;
+    padding: 0.643em 0.929em 0.571em;
     font: 1rem/1.71 $main-font-family;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &_with-separate-value {
+      flex-basis: 65%;
+    }
   }
 
   &__arrow {
@@ -42,7 +53,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    padding: 0.429em 0.429em 0 1em;
+    padding: 0.429em 0.429em 0.357em 1em;
     border-top: 1px solid $color-font-a25;
   }
 
@@ -66,7 +77,7 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
-    padding: 0.8125em 0 0.929em;
+    padding: 0.8125em 0 0.571em;
   }
 
   &__button {

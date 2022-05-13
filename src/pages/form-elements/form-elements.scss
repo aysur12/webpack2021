@@ -22,8 +22,12 @@
   &__text-field-heading {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 0.357em;
+
+    &_for-dropdown {
+      max-width: 19em;
+    }
   }
 
   &__title-component {
@@ -62,7 +66,7 @@
   }
 
   &__dropdown {
-    margin-bottom: 1.607em;
+    margin-bottom: 1.571em;
 
     &_with-value-open{
       margin-bottom: 6.857em;
@@ -70,6 +74,10 @@
 
     &_empty-value-open {
       margin-bottom: 7.031em;
+    }
+
+    &_with-separate-value {
+      margin-bottom: 2.929em;
     }
   }
 
@@ -86,7 +94,7 @@
   }
 
   &__checkbox-list {
-    margin-bottom: 7.254em;
+    margin-bottom: 7.143em;
 
     &_closed {
       margin-bottom: 1.429em;
@@ -105,7 +113,7 @@
   &__checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 2.92em;
   }
 
@@ -138,7 +146,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 16.643em;
   }
 
   &__grid-wrap-right {
@@ -185,5 +192,6 @@
 
   &__testimonial {
     grid-area: testimonial;
+    margin-bottom: 2.286em;
   }
 }
