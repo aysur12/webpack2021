@@ -1,0 +1,71 @@
+@use '../../styles/main' as *;
+
+.card-room {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 19.286em;
+  background-color: $color-third-bg;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  box-shadow: $shadow-card;
+
+  &__info {
+    padding: 20px 17px 19px 20px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 0 0.714em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-font-a10;
+  }
+
+  &__number {
+    margin: 0;
+    @include font-h2;
+  }
+
+  &__text-before {
+    color: $color-font-a100;
+    font: bold 1rem/ 1.21 $main-font-family;
+  }
+
+  &__text-after {
+    color: $color-primary-bg;
+    font: bold 0.857rem/1.25 $main-font-family;
+    text-transform: uppercase;
+  }
+
+  &__price-block {
+    display: flex;
+    gap: 0.25em;
+  }
+
+  &__price {
+    color: $color-font-a50;
+    font: bold 1rem/1.28 $main-font-family;
+  }
+
+  &__price-text {
+    color: $color-font-a50;
+    font: 0.857em/1.5 $main-font-family;
+  }
+
+  &__rating-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reviews {
+    display: flex;
+    gap: 0.286em;
+  }
+
+  &__reviews-text {
+    letter-spacing: 0.4;
+  }
+}

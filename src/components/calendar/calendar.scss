@@ -2,6 +2,7 @@
 
 .calendar {
   width: 100%;
+  box-shadow: $shadow-calendar;
 
   &__wrap {
     width: 100%;
@@ -21,7 +22,7 @@
   &__input {
     flex-basis: 83.46%;
     max-width: 19em;
-    padding: 0.643em 0.857em;
+    padding: 0.643em 0.857em 0.5em;
     color: $color-font-a75;
     font: 1rem/1.71 $main-font-family;
     text-transform: lowercase;

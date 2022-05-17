@@ -5,19 +5,15 @@ include ../../components/title-component/title-component
 include ../../components/desc-state/desc-state
 include ../../components/text-field/text-field
 include ../../components/dropdown/dropdown
-
 include ../../components/date-dropdown/date-dropdown
 include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/checkbox-list/checkbox-list
 include ../../components/benefit/benefit
-
 include ../../components/checkbox/checkbox
 include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/like-button/like-button
-include ../../components/rate-button/rate-button
 include ../../components/rate/rate
-
 include ../../components/range-slider/range-slider
 include ../../components/button/button
 include ../../components/pagination/pagination
@@ -80,7 +76,11 @@ block content
             masked: true
           })
         .form-elements__date-date-dropdown
-          +date-dropdown({placeholder: "дд.мм.гггг"})
+          +date-dropdown({
+            placeholder: "дд.мм.гггг",
+            titleLeftDropdown: "date dropdown",
+            titleRightDropdown: "date dropdown",
+            })
         .form-elements__title-component.form-elements__title-component_dropdown
           +title-component("filter date dropdown")
         .form-elements__filter-date-dropdown
@@ -267,17 +267,19 @@ block content
             isHovered: true,
           })
         .form-elements__button-group.form-elements__button-group_with-border
-          +button({
-            type: "button",
-            text: "click me",
-            withBorder: true,
-          })
-          +button({
-            type: "button",
-            text: "click me",
-            withBorder: true,
-            isHovered: true,
-          })
+          .form-elements__button_with-border
+            +button({
+              type: "button",
+              text: "click me",
+              withBorder: true,
+            })
+          .form-elements__button_with-border
+            +button({
+              type: "button",
+              text: "click me",
+              withBorder: true,
+              isHovered: true,
+            })
         .form-elements__button-group.form-elements__button-group_border-less
           +button({
             type: "button",

@@ -8,6 +8,7 @@ $color-font-a50: tint($color-font-a100, 50%);
 $color-font-a25: tint($color-font-a100, 75%);
 $color-font-a10: tint($color-font-a100, 90%);
 $color-font-a5: tint($color-font-a100, 95%);
+$color-font-dark: #000;
 
 $color-primary-bg: #bc9cff;
 $color-secondary-bg: #6fcf97;
@@ -23,3 +24,5 @@ $main-font-family: montserrat, arial, sans-serif;
 
 $shadow-avatar: 0 10px 20px rgba(31, 32, 65, 10%);
 $shadow-header-footer: 0 10px 20px rgba(31, 32, 65, 5%);
+$shadow-card: 0px 0px 25px rgb(0 0 0 / 20%);
+$shadow-calendar: 0px 10px 20px rgba(31, 32, 65, 5%);

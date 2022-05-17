@@ -1,0 +1,86 @@
+include ../../components/date-dropdown/date-dropdown
+include ../../components/title-component/title-component
+include ../../components/dropdown/dropdown
+include ../../components/button/button
+
+mixin card-booking(params = {})
+  -
+    const {
+      textNumberBefore= "",
+      textNumber = "",
+      textNumberAfter= "",
+      priceValue= "",
+      priceText= "",
+      mathOperator= "x",
+      daysValue= "4",
+      daysText= "суток",
+      priceCalcValue= "39 960₽",
+      feeText= "",
+      hintFeeText= "",
+      discountValue= "2 179₽",
+      feeValue= "0₽",
+      additionalFeeText= "",
+      hintAdditionalFeeText= "",
+      additionalFeeValue= "300₽",
+      hintIcon= "i",
+      totalValueText= "",
+      totalValue= "38 081₽"
+    } = params;
+
+  .card-booking.js-card-booking
+    section.card-booking__header
+      h1.card-booking__number
+        span.card-booking__text-before= textNumberBefore
+        =textNumber
+        span.card-booking__text-after= textNumberAfter
+      .card-booking__price-block
+        span.card-booking__price= priceValue
+        span.card-booking__price-text= priceText
+    section.card-booking__date-dropdown
+      +date-dropdown({
+        placeholder: "дд.мм.гггг", 
+        titleLeftDropdown: "Прибытие",
+        titleRightDropdown: "Выезд",
+        })
+    section.card-booking__title-component
+      +title-component("Гости")
+    section.card-booking__dropdown
+      +dropdown({
+        hasCommonValue: true,
+        items: [
+          { text: 'Взрослые', count: 3 },
+          { text: 'Дети', count: 0 },
+          { text: 'Младенцы', count: 0 },
+        ],
+      })
+    ul.card-booking__price-list
+      li.card-booking__price-list-item
+        .card-booking__price-calc
+          span.card-booking__price-value= priceValue
+          span.card-booking__operator= mathOperator
+          span.card-booking__days-value.js-card-booking__days-value= daysValue
+          span.card-booking__days-text= daysText
+        .card-booking__price-calc-value= priceCalcValue
+      li.card-booking__price-list-item
+        .card-booking__fee
+          span.card-booking__fee-text= feeText
+          span.card-booking__discount= discountValue
+          .card-booking__hint(title = `${hintFeeText}`)= hintIcon
+        .card-booking__fee-value= feeValue
+      li.card-booking__price-list-item
+        .card-booking__additional-fee
+          span.card-booking__additional-fee-text= additionalFeeText
+          .card-booking__hint(title = `${hintAdditionalFeeText}`)= hintIcon
+        .card-booking__additional-fee-value= additionalFeeValue
+    section.card-booking__total-value-block
+      span.card-booking__total-value-text= totalValueText
+      .card-booking__differentiation
+      span.card-booking__total-value= totalValue
+    .card-booking__submit
+        +button({
+          type: "submit",
+          text: "Забронировать",
+          withArrow: true,
+          longWithArrow: true,
+        })
+

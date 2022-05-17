@@ -1,0 +1,40 @@
+mixin card-log-in(params = {})
+  -
+    const {
+      textTitle= "",
+      createAccText= "",
+    } =params;
+
+  .card-log-in
+    h1.card-log-in__header= textTitle
+    form.card-log-in__form
+      fieldset.card-log-in__login-details
+        .card-log-in__email
+          +text-field({
+            typeInput: "email",
+            name: "email",
+            placeholder: "Email",
+          })
+        .card-log-in__password
+          +text-field({
+            typeInput: "password",
+            name: "password",
+            placeholder: "Пароль",
+          })
+    .card-log-in__submit
+        +button({
+          type: "submit",
+          text: "Войти",
+          withArrow: true,
+          longWithArrow: true,
+        })
+    section.card-log-in__block-create-acc
+        p.card-log-in__create-acc-text= createAccText
+        .card-log-in__create-acc-button
+          +button({
+            type: "button",
+            href: "/mock-address/change-me",
+            text: "Создать",
+            withBorder: true,
+          })
+          

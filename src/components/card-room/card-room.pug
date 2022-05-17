@@ -1,0 +1,34 @@
+include ../../components/rate/rate
+
+mixin card-room(params = {})
+  -
+    const {
+      textNumber= "",
+      textNumberBefore= "",
+      textNumberAfter= "",
+      priceValue= "",
+      priceText= "",
+      reviewsValue= "",
+      reviewsText= "Oтзывов"
+    } = params;
+
+  .card-room
+    .card-room__img
+    section.card-room__info
+      .card-room__header
+        .card-room__number
+          span.card-room__text-before= textNumberBefore
+          =textNumber
+          span.card-room__text-after= textNumberAfter
+        .card-room__price-block
+          span.card-room__price= priceValue
+          span.card-room__price-text= priceText
+      .card-room__rating-box
+        .card-room__rating
+          +rate({rating: 5,})
+        .card-room__reviews
+          span.card-room__reviews-value= reviewsValue
+          span.card-room__reviews-text= reviewsText
+
+    
+    

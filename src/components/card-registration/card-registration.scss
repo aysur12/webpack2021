@@ -1,0 +1,81 @@
+@use '../../styles/main' as *;
+
+.card-registration {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 27.143em;
+  padding: 2.786em 2.071em 2.071em;
+  background-color: $color-third-bg;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  box-shadow: $shadow-card;
+
+  &__header {
+    margin: 0 0 0.875em;
+    @include font-h1;
+  }
+
+  &__form {
+    margin: 0;
+  }
+
+  &__user-info,
+  &__birth-date,
+  &__authorization {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &__user-info {
+    gap: 0.714em;
+    margin-bottom: 1.714em;
+  }
+
+  &__gender-selection {
+    display: flex;
+    gap: 1.429em;
+  }
+
+  &__birth-date {
+    margin-bottom: 1.429em;
+  }
+
+  &__fieldset-title {
+    padding: 0;
+    margin-bottom: 0.357em;
+  }
+
+  &__login-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.714em;
+  }
+
+  &__authorization {
+    margin-bottom: 1.429em;
+  }
+
+  &__submit {
+    margin-bottom: 2.143em;
+  }
+
+  &__block-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__block-entry-text {
+    margin: 0;
+    color: $color-font-dark;
+    font: 1rem/1.28 $main-font-family;
+  }
+
+  &__block-entry-button {
+    width: 7.071em;
+  }
+}

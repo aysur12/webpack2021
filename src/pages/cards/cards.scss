@@ -19,11 +19,23 @@
     grid-area: left;
   }
 
+  &__card-search {
+    margin-bottom: 2.929em;
+  }
+
   &__grid-wrap-center {
     grid-area: center;
   }
 
+  &__card-booking {
+    margin-bottom: 2.857em;
+  }
+
   &__grid-wrap-right {
     grid-area: right;
+  }
+
+  &__calendar {
+    margin-bottom: 2.857em;
   }
 }

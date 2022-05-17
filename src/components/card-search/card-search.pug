@@ -1,0 +1,38 @@
+include ../../components/date-dropdown/date-dropdown
+include ../../components/title-component/title-component
+include ../../components/dropdown/dropdown
+include ../../components/button/button
+
+mixin card-search(params = {})
+  -
+    const {
+      textTitle= "",
+
+    } = params;
+
+  .card-search
+    h1.card-search__header= textTitle
+    section.card-search__date-dropdown
+      +date-dropdown({
+        placeholder: "дд.мм.гггг", 
+        titleLeftDropdown: "Прибытие",
+        titleRightDropdown: "Выезд",
+        })
+    section.card-search__title-component
+      +title-component("Гости")
+    section.card-search__dropdown
+      +dropdown({
+        hasCommonValue: true,
+        items: [
+          { text: 'Взрослые', count: 0 },
+          { text: 'Дети', count: 0 },
+          { text: 'Младенцы', count: 0 },
+        ],
+      })
+    section.card-search__button
+      +button({
+        type: "button",
+        text: "подобрать номер",
+        withArrow: true,
+        longWithArrow: true,
+      })

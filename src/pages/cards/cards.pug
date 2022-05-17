@@ -1,9 +1,13 @@
 extends ../../layouts/ui-kit-layout/ui-kit-layout
 
 include ../../components/logo/logo
-
+include ../../components/card-search/card-search
+include ../../components/card-registration/card-registration
+include ../../components/card-booking/card-booking
+include ../../components/card-log-in/card-log-in
 include ../../components/arrow/arrow
 include ../../components/calendar/calendar
+include ../../components/card-room/card-room
 
 block variables
   title Cards 
@@ -14,7 +18,43 @@ block content
       +logo({typeLogo: "logoColorless"})
     .cards__grid 
       .cards__grid-wrap-left
+        .cards__card-search
+          +card-search({
+            textTitle: "Найдём номера под ваши пожелания",
+          })
+        .cards__card-registration
+          +card-registration({
+            textTitle: "Регистрация аккаунта",
+            blockEntryText: "Уже есть аккаунт на Toxin"
+            })
       .cards__grid-wrap-center
+        .cards__card-booking
+          +card-booking({
+            textNumberBefore: "№ ",
+            textNumber: "888 ",
+            textNumberAfter: "люкс",
+            priceValue: "9 990₽",
+            priceText: "в сутки",
+            feeText: "Сбор за услуги: скидка",
+            hintFeeText: "Подсказка 1",
+            additionalFeeText: "Сбор за дополнительные услуги",
+            hintAdditionalFeeText: "Подсказка 2",
+            totalValueText: "Итого",
+          })
+        .cards__card-log-in
+          +card-log-in({
+            textTitle: "Войти",
+            createAccText: "Нет аккаунта на Toxin?",
+          })
       .cards__grid-wrap-right
         .cards__calendar
           +calendar({blockIsDiv: true})
+        .cards__card-room
+          +card-room({
+            textNumberBefore: "№ ",
+            textNumber: "888",
+            textNumberAfter: "люкс",
+            priceValue: "9 990₽",
+            priceText: "в сутки",
+            reviewsValue: "145"
+          })

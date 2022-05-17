@@ -1,0 +1,51 @@
+@use '../../styles/main' as *;
+
+.card-log-in {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 27.143em;
+  padding: 2.929em 2.071em 2.143em;
+  background-color: $color-third-bg;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  box-shadow: $shadow-card;
+
+  &__header {
+    margin: 0 0 0.875em;
+    @include font-h1;
+  }
+  
+  &__form {
+    margin: 0 0 1.429em;
+  }
+
+  &__login-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.714em;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &__submit {
+    margin-bottom: 2.071em;
+  }
+
+  &__block-create-acc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__create-acc-text {
+    margin: 0;
+    color: $color-font-dark;
+    font: 1rem/1.28 $main-font-family;
+  }
+
+  &__create-acc-button {
+    width: 7.071em;
+  }
+}

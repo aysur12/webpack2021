@@ -1,0 +1,30 @@
+@use '../../styles/main' as *;
+
+.card-search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 27.143em;
+  padding: 2.786em 2.071em 2.071em;
+  background-color: $color-third-bg;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  box-shadow: $shadow-card;
+
+  &__header {
+    margin: 0 0 0.875em;
+    @include font-h1;
+  }
+
+  &__date-dropdown {
+    margin-bottom: 1.429em;
+  }
+
+  &__title-component {
+    margin-bottom: 0.429em;
+  }
+
+  &__dropdown {
+    margin-bottom: 2.174em;
+  }
+}

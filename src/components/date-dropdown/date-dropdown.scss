@@ -2,20 +2,24 @@
 
 .date-dropdown {
   display: flex;
-  gap: 1.429em;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 22.857em;
 
   &__input-group {
     display: flex;
     flex-direction: column;
+    max-width: 46.88%;
   }
 
   &__title {
-    margin-bottom: 0.389em;
+    margin-bottom: 0.429em;
   }
 
   &__label {
     display: flex;
     justify-content: space-between;
+    max-width: 10.714em;
     border: 1px solid $color-font-a25;
     border-radius: 4px;
 
@@ -26,19 +30,14 @@
   }
 
   &__input {
-    flex-basis: 70.27%;
-    max-width: 7.429em;
-    padding: 0.643em 0 0.643em 0.857em;
+    max-width: 70%;
+    padding: 6% 0 5.63% 9%;
     color: $color-font-a75;
     font: 1rem/1.71 $main-font-family;
     text-transform: uppercase;
     border: 1px solid transparent;
     border-radius: 4px;
     outline: none;
-
-    &:focus {
-      border-color: $color-font-a50;
-    }
   }
 
   &__button {
@@ -46,7 +45,7 @@
     flex-basis: 29.73%;
     align-items: center;
     justify-content: center;
-    min-width: 44px;
+    max-width: 44px;
     padding: 0;
     text-align: center;
 

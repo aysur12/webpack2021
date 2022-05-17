@@ -1,0 +1,89 @@
+include ../../components/text-field/text-field
+include ../../components/radio/radio
+include ../../components/title-component/title-component
+include ../../components/toggle/toggle
+include ../../components/button/button
+
+mixin card-registration(params = {})
+  -
+    const {
+      textTitle= "",
+      blockEntryText= "",
+    } = params;
+
+  .card-registration
+    h1.card-registration__header= textTitle
+    form.card-registration__form
+      fieldset.card-registration__user-info
+        section.card-registration__name-registration
+          +text-field({
+            typeInput: "text",
+            name: "userName",
+            placeholder: "Имя",
+          })
+        section.card-registration__surname-registration
+          +text-field({
+            typeInput: "text",
+            name: "userSurname",
+            placeholder: "Фамилия",
+          })
+        section.card-registration__gender-selection
+          .form-elements__radio
+            +radio({
+              text: "Мужчина",
+              checked: true,
+            })
+          .form-elements__radio
+            +radio({
+              text: "Женщина",
+              checked: false,
+            })
+      fieldset.card-registration__birth-date
+        legend.card-registration__fieldset-title
+          +title-component("дата рождения")
+        section.card-registration__birth-date-form
+          +text-field({
+            typeInput: "text",
+            name: "dateOfBirth",
+            placeholder: "ДД.ММ.ГГГГ",
+            masked: true
+          })
+      fieldset.card-registration__authorization
+        legend.card-registration__fieldset-title
+          +title-component("данные для входа в сервис")
+        section.card-registration__login-details
+          .card-registration__email
+            +text-field({
+              typeInput: "email",
+              name: "email",
+              placeholder: "Email",
+            })
+          .card-registration__password
+            +text-field({
+              typeInput: "password",
+              name: "password",
+              placeholder: "Пароль",
+            })
+          .card-registration__toggle
+            +toggle({
+              text: "Получать спецпредложения",
+              checked: false,
+            })
+      .card-registration__submit
+        +button({
+          type: "submit",
+          text: "Перейти к оплате",
+          withArrow: true,
+          longWithArrow: true,
+        })
+      section.card-registration__block-entry
+        p.card-registration__block-entry-text= blockEntryText
+        .card-registration__block-entry-button
+          +button({
+            type: "button",
+            href: "/mock-address/change-me",
+            text: "Войти",
+            withBorder: true,
+          })
+
+

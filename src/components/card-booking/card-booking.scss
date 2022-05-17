@@ -1,0 +1,132 @@
+@use '../../styles/main' as *;
+
+.card-booking {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 27.143em;
+  padding: 2.929em 2.071em 2.143em;
+  background-color: $color-third-bg;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  box-shadow: $shadow-card;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 0 1.429em;
+  }
+
+  &__number {
+    margin: 0;
+    @include font-h1;
+  }
+
+  &__text-before {
+    color: $color-font-a100;
+    font: bold 1rem/ 1.21 $main-font-family;
+  }
+
+  &__text-after {
+    color: $color-primary-bg;
+    font: bold 0.857rem/1.25 $main-font-family;
+    text-transform: uppercase;
+  }
+
+  &__price-block {
+    display: flex;
+    gap: 0.25em;
+  }
+
+  &__price {
+    color: $color-font-a50;
+    font: bold 1rem/1.28 $main-font-family;
+  }
+
+  &__price-text {
+    color: $color-font-a50;
+    font: 0.857em/1.5 $main-font-family;
+  }
+
+  &__date-dropdown {
+    margin-bottom: 1.429em;
+  }
+
+  &__title-component {
+    margin-bottom: 0.429em;
+  }
+
+  &__dropdown {
+    margin-bottom: 1.429em;
+  }
+
+  &__price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.143em;
+    margin: 0 0 2em;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__price-list-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-calc {
+    display: flex;
+    gap: 0.286em;
+  }
+
+  &__fee {
+    display: flex;
+    gap: 0.357em;
+    flex-wrap: wrap;
+    max-width: 17.214em;
+  }
+
+  &__fee-text {
+    max-width: 15.286em;
+  }
+
+  &__hint {
+    width: 20px;
+    height: 20px;
+    color: $color-font-a25;
+    text-align: center;
+    border: 1px solid $color-font-a25;
+    border-radius: 50%;
+  }
+
+  &__additional-fee {
+    display: flex;
+    gap: 0.357em;
+    flex-wrap: wrap;
+  }
+
+  &__additional-fee-text {
+    max-width: 15.286em;
+  }
+
+  &__total-value-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+  }
+
+  &__total-value-text {
+    @include font-h2;
+  }
+
+  &__differentiation {
+    flex-grow: 2;
+    margin-bottom: 0.286em;
+    border-bottom: 1px dotted $color-font-a25;
+  }
+
+  &__total-value {
+    @include font-h2;
+  }
+}
