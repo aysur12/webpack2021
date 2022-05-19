@@ -1,0 +1,27 @@
+mixin slider
+
+  .slider
+    .slider__wrapper
+      .slider__items
+        .slider__item
+          img.slider__img(
+          src=require("../../components/slider/images/room-888-1.jpg")
+          alt= "1 фото номера"
+          )
+        .slider__item
+          img.slider__img(
+          src=require("../../components/slider/images/room-888-2.jpg")
+          alt= "2 фото номера"
+          )
+        .slider__item
+          img.slider__img(
+          src=require("../../components/slider/images/room-888-3.jpg")
+          alt= "3 фото номера"
+          )
+        .slider__item
+          img.slider__img(
+          src=require("../../components/slider/images/room-888-4.jpg")
+          alt= "4 фото номера"
+          )
+    a.slider__control.slider__control_prev(href="#" role="button" data-slide="prev")
+    a.slider__control.slider__control_next(href="#" role="button" data-slide="next")

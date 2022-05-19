@@ -1,3 +1,4 @@
+include ../../components/slider/slider
 include ../../components/rate/rate
 
 mixin card-room(params = {})
@@ -13,7 +14,8 @@ mixin card-room(params = {})
     } = params;
 
   .card-room
-    .card-room__img
+    .card-room__slider
+      +slider
     section.card-room__info
       .card-room__header
         .card-room__number
