@@ -11,7 +11,7 @@
 
   &:focus,
   &:hover {
-    @include font-body;
+    color: $color-font-a75;
   }
 
   &__input {

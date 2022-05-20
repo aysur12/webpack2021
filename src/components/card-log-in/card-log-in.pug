@@ -21,13 +21,13 @@ mixin card-log-in(params = {})
             name: "password",
             placeholder: "Пароль",
           })
-    .card-log-in__submit
-        +button({
-          type: "submit",
-          text: "Войти",
-          withArrow: true,
-          longWithArrow: true,
-        })
+      .card-log-in__submit
+          +button({
+            type: "submit",
+            text: "Войти",
+            withArrow: true,
+            longWithArrow: true,
+          })
     section.card-log-in__block-create-acc
         p.card-log-in__create-acc-text= createAccText
         .card-log-in__create-acc-button
