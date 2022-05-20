@@ -49,11 +49,33 @@ block content
       .cards__grid-wrap-right
         .cards__calendar
           +calendar({blockIsDiv: true})
-        .cards__card-room
-          +card-room({
-            textNumber: "888",
-            textNumberAfter: "люкс",
-            priceValue: "9 990₽",
-            ratingValue: 5,
-            reviewsValue: "145"
-          })
+        .cards__card-rooms
+          -
+            const cardRooms = require('../cards/cards-rooms.json');
+            const {rooms} = cardRooms;
+          each val, index in rooms
+            -
+              const currentRoomName = `room${index + 1}`;
+              const currentRoom = rooms[index][currentRoomName];
+              const {
+                textNumber,
+                textNumberAfter,
+                priceValue,
+                ratingValue,
+                reviewsValue,
+                roomsImages,
+              } = currentRoom;
+            .cards__card-room
+              +card-room({
+                textNumber: textNumber,
+                textNumberAfter: textNumberAfter,
+                priceValue: priceValue,
+                ratingValue: ratingValue,
+                reviewsValue: reviewsValue,
+                roomsImages: [
+                  {src: roomsImages[0].src, alt: roomsImages[0].alt},
+                  {src: roomsImages[1].src, alt: roomsImages[1].alt},
+                  {src: roomsImages[2].src, alt: roomsImages[2].alt},
+                  {src: roomsImages[3].src, alt: roomsImages[3].alt},
+                ]
+              })

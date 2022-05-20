@@ -1,0 +1,58 @@
+{
+  "rooms": [
+    {
+      "room1": {
+        "textNumber": "888",
+        "textNumberAfter": "люкс",
+        "priceValue": "9 990₽",
+        "ratingValue": 5,
+        "reviewsValue": "145",
+        "roomsImages": [
+          {
+            "src": "./assets/images/room-888-1.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "./assets/images/room-888-2.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "./assets/images/room-888-3.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "./assets/images/room-888-4.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room2": {
+        "textNumber": "840",
+        "priceValue": "9 990₽",
+        "ratingValue": 4,
+        "reviewsValue": "65",
+        "roomsImages": [
+          {
+            "src": "../../assets/images/room-888-1.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "./assets/images/room-888-1.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "./assets/images/room-888-3.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "./assets/images/room-888-4.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    }
+  ]
+}
