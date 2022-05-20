@@ -49,7 +49,7 @@ block content
       .cards__grid-wrap-right
         .cards__calendar
           +calendar({blockIsDiv: true})
-        .cards__card-rooms
+        .cards__card-room-blocks
           -
             const cardRooms = require('../cards/cards-rooms.json');
             const {rooms} = cardRooms;
@@ -73,9 +73,9 @@ block content
                 ratingValue: ratingValue,
                 reviewsValue: reviewsValue,
                 roomsImages: [
-                  {src: roomsImages[0].src, alt: roomsImages[0].alt},
-                  {src: roomsImages[1].src, alt: roomsImages[1].alt},
-                  {src: roomsImages[2].src, alt: roomsImages[2].alt},
-                  {src: roomsImages[3].src, alt: roomsImages[3].alt},
+                  {src: require(`../../assets/images/${roomsImages[0].src}`), alt: roomsImages[0].alt},
+                  {src: require(`../../assets/images/${roomsImages[1].src}`), alt: roomsImages[1].alt},
+                  {src: require(`../../assets/images/${roomsImages[2].src}`), alt: roomsImages[2].alt},
+                  {src: require(`../../assets/images/${roomsImages[3].src}`), alt: roomsImages[3].alt},
                 ]
               })

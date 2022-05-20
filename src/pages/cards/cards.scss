@@ -36,6 +36,12 @@
   }
 
   &__calendar {
-    margin-bottom: 2.857em;
+    margin-bottom: 2.786em;
+  }
+
+  &__card-room-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 2.821em;
   }
 }

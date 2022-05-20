@@ -9,19 +9,19 @@
         "reviewsValue": "145",
         "roomsImages": [
           {
-            "src": "./assets/images/room-888-1.jpg",
+            "src": "room-888-1.jpg",
             "alt": "1 фото номера"
           },
           {
-            "src": "./assets/images/room-888-2.jpg",
+            "src": "room-888-2.jpg",
             "alt": "2 фото номера"
           },
           {
-            "src": "./assets/images/room-888-3.jpg",
+            "src": "room-888-3.jpg",
             "alt": "3 фото номера"
           },
           {
-            "src": "./assets/images/room-888-4.jpg",
+            "src": "room-888-4.jpg",
             "alt": "4 фото номера"
           }
         ]
@@ -36,19 +36,19 @@
         "reviewsValue": "65",
         "roomsImages": [
           {
-            "src": "../../assets/images/room-888-1.jpg",
+            "src": "room-888-2.jpg",
             "alt": "1 фото номера"
           },
           {
-            "src": "./assets/images/room-888-1.jpg",
+            "src": "room-888-1.jpg",
             "alt": "2 фото номера"
           },
           {
-            "src": "./assets/images/room-888-3.jpg",
+            "src": "room-888-3.jpg",
             "alt": "3 фото номера"
           },
           {
-            "src": "./assets/images/room-888-4.jpg",
+            "src": "room-888-4.jpg",
             "alt": "4 фото номера"
           }
         ]

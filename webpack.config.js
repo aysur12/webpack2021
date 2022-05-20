@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
@@ -53,11 +52,6 @@ const config = {
         minify: false,
       }),
     ),
-    new CopyPlugin({
-      patterns: [
-        { from: './src/assets/images', to: './dist/assets/images' },
-      ],
-    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -91,7 +85,7 @@ const config = {
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(ttf|svg|woff|woff2)$/,
+        test: /\.(ttf|svg|woff|woff2)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[name][ext]',
