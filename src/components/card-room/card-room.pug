@@ -5,11 +5,12 @@ mixin card-room(params = {})
   -
     const {
       textNumber= "",
-      textNumberBefore= "",
+      textNumberBefore= "№ ",
       textNumberAfter= "",
       priceValue= "",
-      priceText= "",
+      priceText= "в сутки",
       reviewsValue= "",
+      ratingValue,
       reviewsText= "Oтзывов"
     } = params;
 
@@ -27,7 +28,7 @@ mixin card-room(params = {})
           span.card-room__price-text= priceText
       .card-room__rating-box
         .card-room__rating
-          +rate({rating: 5,})
+          +rate({rating: ratingValue})
         .card-room__reviews
           span.card-room__reviews-value= reviewsValue
           span.card-room__reviews-text= reviewsText

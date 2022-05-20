@@ -1,7 +1,6 @@
 import Slider from './Slider';
+import 'material-icons/iconfont/material-icons.scss';
 import './slider.scss';
-// import ItcSimpleSlider from './ItcSimpleSlider';
-// import './simple-adaptive-slider.css';
 
 document.addEventListener('DOMContentLoaded', () => {
   // инициализация 1 слайдера с нужными настройками
