@@ -21,14 +21,14 @@ $primary-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $secondary-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $shadow-gradient: linear-gradient(
   90deg,
-  rgba(0, 0, 0, 0.5) 0%,
-  rgba(0, 0, 0, 0) 99.99%,
-  rgba(255, 255, 255, 0) 100%
+  rgba(0, 0, 0, 50%) 0%,
+  rgba(0, 0, 0, 0%) 99.99%,
+  rgba(255, 255, 255, 0%) 100%
 );
 
 $main-font-family: montserrat, arial, sans-serif;
 
 $shadow-avatar: 0 10px 20px rgba(31, 32, 65, 10%);
 $shadow-header-footer: 0 10px 20px rgba(31, 32, 65, 5%);
-$shadow-card: 0px 0px 25px rgb(0 0 0 / 20%);
-$shadow-calendar: 0px 10px 20px rgba(31, 32, 65, 5%);
+$shadow-card: 0 0 25px rgba(0 0 0 / 20%);
+$shadow-calendar: 0 10px 20px rgba(31, 32, 65, 5%);

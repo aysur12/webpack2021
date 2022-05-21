@@ -16,5 +16,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'func-names': 'off',
     'import/no-unresolved': 'off',
+    'no-underscore-dangle': 'off',
+    'no-empty': ['error', { allowEmptyCatch: true }],
   },
 };

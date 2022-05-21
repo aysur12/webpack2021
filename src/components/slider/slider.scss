@@ -2,10 +2,10 @@
 
 .slider {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
   border-radius: 4px 4px 0 0;
 
   &__wrapper {
@@ -20,9 +20,9 @@
   }
 
   &__item {
+    position: relative;
     flex: 0 0 100%;
     max-width: 100%;
-    position: relative;
   }
 
   &__img {
@@ -33,41 +33,41 @@
   &__control {
     position: absolute;
     top: 50%;
-    width: 3em;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 3em;
+    height: 100%;
     color: #fff;
-    background: $shadow-gradient;
     text-decoration: none;
-    user-select: none;
+    background: $shadow-gradient;
     transform: translateY(-50%);
-    transition: opacity 0.3s ease;
     opacity: 0;
+    transition: opacity 0.3s ease;
+    user-select: none;
 
     &_prev {
       left: 0;
     }
 
     &_next {
-      transform: translateY(-50%) scaleX(-1);
       right: 0;
+      transform: translateY(-50%) scaleX(-1);
     }
 
     &::before {
-      content: '\e5cb';
       display: inline-block;
       width: 20px;
       height: 20px;
       font: 1.714rem 'Material Icons', sans-serif;
+      content: '\e5cb';
     }
   }
 
   &:hover &__control {
     opacity: 1;
   }
-  
+
   &__indicators {
     position: absolute;
     right: 11px;
@@ -79,7 +79,7 @@
     list-style: none;
     user-select: none;
   }
-  
+
   &__indicator {
     width: 8px;
     height: 8px;
@@ -87,8 +87,8 @@
     background-color: transparent;
     border: 1px solid $color-third-bg;
     border-radius: 50%;
-    filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
     cursor: pointer;
+    filter: drop-shadow(0 5px 5px rgba(31, 32, 65, 30%));
 
     &_active {
       background-color: #fff;

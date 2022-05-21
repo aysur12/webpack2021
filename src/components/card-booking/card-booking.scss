@@ -7,14 +7,14 @@
   max-width: 27.143em;
   padding: 2.929em 2.071em 2.143em;
   background-color: $color-third-bg;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(0, 0, 0, 12%);
   border-radius: 4px;
   box-shadow: $shadow-card;
 
   &__header {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
     margin: 0 0 1.429em;
   }
 
@@ -82,8 +82,8 @@
 
   &__fee {
     display: flex;
-    gap: 0.357em;
     flex-wrap: wrap;
+    gap: 0.357em;
     max-width: 17.214em;
   }
 
@@ -102,8 +102,8 @@
 
   &__additional-fee {
     display: flex;
-    gap: 0.357em;
     flex-wrap: wrap;
+    gap: 0.357em;
   }
 
   &__additional-fee-text {

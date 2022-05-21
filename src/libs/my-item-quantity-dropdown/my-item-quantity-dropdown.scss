@@ -2,7 +2,6 @@
 @use '../../styles/main.scss' as *;
 
 .iqdropdown {
-
   &-item-controls {
     display: flex;
     align-items: center;
@@ -18,7 +17,7 @@
   background-color: $color-third-bg;
   border: 1px solid $color-font-a25;
   border-radius: 50%;
-  
+
   &::after {
     color: $color-font-a50;
     font-size: 1.286em;
@@ -53,9 +52,8 @@
 
 .counter {
   padding-bottom: 0.357em;
-  text-transform: uppercase;
   color: $color-font-a100;
   font: bold 0.857rem/1.25 $main-font-family;
+  text-transform: uppercase;
   border: none;
 }
-

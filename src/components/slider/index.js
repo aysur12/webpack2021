@@ -9,7 +9,6 @@ const sliderOpts = {
   autoplay: false,
   interval: 5000,
   swipe: true,
-}
+};
 
 sliders.forEach((slider) => new Slider(slider, sliderOpts));
-

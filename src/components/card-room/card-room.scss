@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 19.429em;
   background-color: $color-third-bg;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(0, 0, 0, 12%);
   border-radius: 4px;
   box-shadow: $shadow-card;
 
@@ -16,8 +16,8 @@
 
   &__header {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
     margin: 0 0 0.571em;
     padding-bottom: 10px;
     border-bottom: 1px solid $color-font-a10;
@@ -56,8 +56,8 @@
 
   &__rating-box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__reviews {

@@ -1,8 +1,8 @@
 // import CardBooking from './CardBooking';
-import '../../components/date-dropdown';
-import '../../components/title-component';
-import '../../components/dropdown';
-import '../../components/button';
+import '../date-dropdown';
+import '../title-component';
+import '../dropdown';
+import '../button';
 import './card-booking.scss';
 
 // const cardsBooking = document.querySelectorAll('.js-card-booking');

@@ -7,7 +7,7 @@
   max-width: 27.143em;
   padding: 2.786em 2.071em 2.071em;
   background-color: $color-third-bg;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(0, 0, 0, 12%);
   border-radius: 4px;
   box-shadow: $shadow-card;
 
@@ -45,8 +45,8 @@
   }
 
   &__fieldset-title {
-    padding: 0;
     margin-bottom: 0.357em;
+    padding: 0;
   }
 
   &__login-details {
@@ -65,8 +65,8 @@
 
   &__block-entry {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__block-entry-text {

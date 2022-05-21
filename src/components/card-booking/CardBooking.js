@@ -6,24 +6,22 @@ const daysValue = '.js-card-booking__days-value';
 class CardBooking {
   constructor(card) {
     this.card = card;
-    this.days= document.querySelectorAll(`${selectedDays}`);
-    this.valueDays= card.querySelector(`${daysValue}`);
+    this.days = document.querySelectorAll(`${selectedDays}`);
+    this.valueDays = card.querySelector(`${daysValue}`);
     this.init();
   }
-  
+
   init() {
     this.showDays();
   }
 
   showDays() {
-    const {days} = this;
-    const totalNumberDays= days.length;
-    const {valueDays} = this;
-    
-    valueDays.innerHTML = totalNumberDays
-    console.log(totalNumberDays)
+    const { days } = this;
+    const totalNumberDays = days.length;
+    const { valueDays } = this;
+
+    valueDays.innerHTML = totalNumberDays;
   }
-  
 }
 
 export default CardBooking;

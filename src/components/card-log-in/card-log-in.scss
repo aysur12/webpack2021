@@ -7,7 +7,7 @@
   max-width: 27.143em;
   padding: 2.929em 2.071em 2.143em;
   background-color: $color-third-bg;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(0, 0, 0, 12%);
   border-radius: 4px;
   box-shadow: $shadow-card;
 
@@ -15,9 +15,9 @@
     margin: 0 0 0.875em;
     @include font-h1;
   }
-  
+
   &__form {
-    margin: 0 0 0;
+    margin: 0;
   }
 
   &__login-details {
@@ -35,8 +35,8 @@
 
   &__block-create-acc {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__create-acc-text {
