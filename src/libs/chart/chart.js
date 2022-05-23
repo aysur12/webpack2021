@@ -11,15 +11,15 @@ const greenGradient = ctx.createLinearGradient(0, 0, 122, 122);
 greenGradient.addColorStop(0, 'rgba(111, 207, 151, 1)');
 greenGradient.addColorStop(1, 'rgba(102, 210, 234, 1)');
 
-const violetGradient = ctx.createLinearGradient(0, 0, 122, 122);
-violetGradient.addColorStop(0, 'rgba(188, 156, 255, 1)');
-violetGradient.addColorStop(1, 'rgba(139, 164, 249, 1)');
+const purpleGradient = ctx.createLinearGradient(0, 0, 122, 122);
+purpleGradient.addColorStop(0, 'rgba(188, 156, 255, 1)');
+purpleGradient.addColorStop(1, 'rgba(139, 164, 249, 1)');
 
 const blackGradient = ctx.createLinearGradient(0, 0, 120, 120);
 blackGradient.addColorStop(0, 'rgba(144, 144, 144, 1)');
 blackGradient.addColorStop(1, 'rgba(61, 73, 117, 1)');
 
-const dataPoints = [65, 65, 130, 0];
+const dataPoints = [260, 260, 520, 0];
 
 const dataChart = {
   labels: [
@@ -32,7 +32,7 @@ const dataChart = {
     label: 'My First Dataset',
     data: dataPoints,
     backgroundColor: [
-      violetGradient,
+      purpleGradient,
       greenGradient,
       orangeGradient,
       blackGradient,
@@ -40,20 +40,18 @@ const dataChart = {
   }],
 };
 
-const dataChartValue = dataPoints.reduce((sum, elem) => sum + elem, 0);
-
 const counter = {
   id: 'counter',
   beforeDraw(chart, args, options) {
-    const { ctx, chartArea: { top, right, bottom, left, width, height } } = chart;
+    const { ctx, chartArea: { width } } = chart;
     ctx.save();
     ctx.font = `${options.fontWeight} ${options.fontSizeValue}px ${options.fontFamily}`;
     ctx.textAlign = 'center';
     ctx.fillStyle = options.fontColor;
-    ctx.fillText(`${dataChartValue}`, width / 2, 58)
+    ctx.fillText(`${dataPoints[0]}`, width / 2, 58)
   },
   afterDraw(chart, args, options) {
-    const { ctx, chartArea: { width, height } } = chart;
+    const { ctx, chartArea: { width } } = chart;
     ctx.save();
     ctx.font = `${options.fontWeight} ${options.fontSizeText}px ${options.fontFamily}`;
     ctx.textAlign = 'center';
@@ -69,6 +67,9 @@ const config = {
     cutout: 54,
     radius: 62,
     plugins: {
+      tooltip: {
+        enabled: false,
+      },
       legend: {
         display: false,
       },

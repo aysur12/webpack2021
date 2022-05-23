@@ -7,7 +7,7 @@ import '../../components/arrow';
 import '../../components/calendar';
 import '../../components/card-room';
 
-import '../../components/donut-chart';
+import '../../components/chart';
 
 import '../../index';
 import './cards.scss';

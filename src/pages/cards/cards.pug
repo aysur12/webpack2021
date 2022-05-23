@@ -9,7 +9,7 @@ include ../../components/arrow/arrow
 include ../../components/calendar/calendar
 include ../../components/card-room/card-room
 
-include ../../components/donut-chart/donut-chart
+include ../../components/chart/chart
 
 block variables
   title Cards 
@@ -81,5 +81,5 @@ block content
                   {src: require(`../../assets/images/${roomsImages[3].src}`), alt: roomsImages[3].alt},
                 ]
               })
-        .cards__donut-chart
-          +donut-chart
+    .cards__donut-chart
+      +chart

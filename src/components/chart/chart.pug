@@ -1,0 +1,17 @@
+include ../../components/donut-chart/donut-chart
+include ../../components/donut-chart-legend/donut-chart-legend
+
+mixin chart
+
+  .chart
+    .chart__diagram
+      +donut-chart
+    .chart__legend
+      +donut-chart-legend({
+        legendItems: [
+          {label: "Великолепно"},
+          {label: "Хорошо"},
+          {label: "Удовлетворительно"},
+          {label: "Разочарован"},
+        ]
+      })

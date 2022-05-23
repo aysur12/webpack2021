@@ -1,0 +1,14 @@
+mixin donut-chart-legend(params = {})
+  -
+    const {
+      legendItems = [],
+    } = params;
+
+  .donut-chart-legend
+    ul.donut-chart-legend__list
+      each color, index in ["orange", "green", "purple", "gray"]
+        li.donut-chart-legend__item
+          .donut-chart-legend__item-preview(
+            class= `donut-chart-legend__item-preview_${color}`
+          )
+          p.donut-chart-legend__item-label= legendItems[index].label
