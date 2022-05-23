@@ -2,6 +2,7 @@
 
 .slider {
   position: relative;
+  display: grid;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -9,7 +10,7 @@
   border-radius: 4px 4px 0 0;
 
   &__wrapper {
-    position: relative;
+    grid-area: 1/-1;
     overflow: hidden;
     background-color: #eee;
   }
@@ -20,7 +21,6 @@
   }
 
   &__item {
-    position: relative;
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -30,9 +30,20 @@
     object-fit: cover;
   }
 
+  &__control-group {
+    z-index: 1;
+    display: flex;
+    grid-area: 1/-1;
+    justify-content: space-between;
+    opacity: 0;
+    transition-duration: 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   &__control {
-    position: absolute;
-    top: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,18 +52,11 @@
     color: #fff;
     text-decoration: none;
     background: $shadow-gradient;
-    transform: translateY(-50%);
-    opacity: 0;
     transition: opacity 0.3s ease;
     user-select: none;
 
-    &_prev {
-      left: 0;
-    }
-
     &_next {
-      right: 0;
-      transform: translateY(-50%) scaleX(-1);
+      transform: scaleX(-1);
     }
 
     &::before {
@@ -64,18 +68,15 @@
     }
   }
 
-  &:hover &__control {
-    opacity: 1;
-  }
-
   &__indicators {
-    position: absolute;
-    right: 11px;
-    bottom: 15px;
+    z-index: 2;
     display: flex;
+    grid-area: 1/-1;
+    align-self: end;
     justify-content: center;
+    justify-self: end;
     margin: 0;
-    padding: 0;
+    padding: 0 0.929em 1.071em 0;
     list-style: none;
     user-select: none;
   }

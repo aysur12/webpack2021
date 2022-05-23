@@ -19,7 +19,7 @@
     align-items: flex-end;
     justify-content: space-between;
     margin: 0 0 0.571em;
-    padding-bottom: 10px;
+    padding-bottom: 0.786em;
     border-bottom: 1px solid $color-font-a10;
   }
 
@@ -41,7 +41,7 @@
 
   &__price-block {
     display: flex;
-    gap: 0.25em;
+    gap: 0.357em;
   }
 
   &__price {
@@ -62,7 +62,7 @@
 
   &__reviews {
     display: flex;
-    gap: 0.286em;
+    gap: 0.429em;
   }
 
   &__reviews-text {

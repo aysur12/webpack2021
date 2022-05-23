@@ -12,5 +12,6 @@ mixin slider(params = {})
           - const {src, alt} = roomsImage;
           .slider__item
             img.slider__img(src= src alt= alt)
-    a.slider__control.slider__control_prev(href="#" role="button" data-slide="prev")
-    a.slider__control.slider__control_next(href="#" role="button" data-slide="next")
+    .slider__control-group
+      a.slider__control.slider__control_prev(href="#" role="button" data-slide="prev")
+      a.slider__control.slider__control_next(href="#" role="button" data-slide="next")

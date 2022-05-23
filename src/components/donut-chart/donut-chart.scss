@@ -1,0 +1,15 @@
+@use '../../styles/main' as *;
+
+.donut-chart {
+  position: relative;
+  width: 100%;
+  max-width: 122px;
+  max-height: 122px;
+
+  // &__total-value-block {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
+}
