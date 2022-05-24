@@ -6,8 +6,5 @@ import '../../components/card-log-in';
 import '../../components/arrow';
 import '../../components/calendar';
 import '../../components/card-room';
-
-import '../../components/chart';
-
 import '../../index';
 import './cards.scss';

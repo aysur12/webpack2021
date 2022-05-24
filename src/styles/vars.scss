@@ -26,9 +26,18 @@ $shadow-gradient: linear-gradient(
   rgba(255, 255, 255, 0%) 100%
 );
 
+$magnificentlyReviewGradient: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+$goodReviewGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$satisfactorilyReviewGradient: linear-gradient(
+  180deg,
+  #bc9cff 0%,
+  #8ba4f9 100%
+);
+$badReviewGradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+
 $main-font-family: montserrat, arial, sans-serif;
 
 $shadow-avatar: 0 10px 20px rgba(31, 32, 65, 10%);
 $shadow-header-footer: 0 10px 20px rgba(31, 32, 65, 5%);
-$shadow-card: 0 0 25px rgba(0 0 0 / 20%);
+$shadow-card: 0 0 25px rgba(0, 0, 0, 20%);
 $shadow-calendar: 0 10px 20px rgba(31, 32, 65, 5%);

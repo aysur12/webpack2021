@@ -1,0 +1,23 @@
+extends ../../layouts/main-layout/main-layout
+
+include ../../components/slider/slider
+
+block variables
+  title Landing page
+
+block content
+  main.landing-page
+    .landing-page__slider
+      -
+        const roomsPictures = require('./rooms-images.json');
+
+      +slider({
+        roomsImages:[
+          {src: require(`./images/${roomsPictures.room1.src}`), alt: roomsPictures.room1.alt},
+          {src: require(`./images/${roomsPictures.room2.src}`), alt: roomsPictures.room2.alt},
+          {src: require(`./images/${roomsPictures.room3.src}`), alt: roomsPictures.room3.alt},
+        ]
+      })
+    .landing-page__wrapper
+
+

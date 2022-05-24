@@ -1,5 +1,48 @@
 @use '../../styles/main' as *;
 
 .donut-chart-legend {
-  
+  width: 100%;
+  max-width: 11.5em;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item-preview {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    &_orange {
+      background: $magnificentlyReviewGradient;
+    }
+
+    &_green {
+      background: $goodReviewGradient;
+    }
+
+    &_purple {
+      background: $satisfactorilyReviewGradient;
+    }
+
+    &_gray {
+      background: $badReviewGradient;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__item-label {
+    @include font-body;
+
+    margin: 0;
+  }
 }

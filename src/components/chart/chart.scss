@@ -1,0 +1,17 @@
+@use '../../styles/main' as *;
+
+.chart {
+  width: 100%;
+  max-width: 22.214em;
+
+  &__title {
+    margin: 0 0 1.158em;
+    @include font-h2;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}

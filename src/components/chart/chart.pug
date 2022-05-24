@@ -1,17 +1,23 @@
 include ../../components/donut-chart/donut-chart
 include ../../components/donut-chart-legend/donut-chart-legend
 
-mixin chart
+mixin chart(params = {})
+  -
+    const {
+      chartTitle= "",
+    } = params;
 
   .chart
-    .chart__diagram
-      +donut-chart
-    .chart__legend
-      +donut-chart-legend({
-        legendItems: [
-          {label: "Великолепно"},
-          {label: "Хорошо"},
-          {label: "Удовлетворительно"},
-          {label: "Разочарован"},
-        ]
-      })
+    h2.chart__title= chartTitle
+    .chart__info
+      .chart__diagram
+        +donut-chart
+      .chart__legend
+        +donut-chart-legend({
+          legendItems: [
+            {label: "Великолепно"},
+            {label: "Хорошо"},
+            {label: "Удовлетворительно"},
+            {label: "Разочарован"},
+          ]
+        })

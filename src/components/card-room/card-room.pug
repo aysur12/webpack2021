@@ -17,7 +17,10 @@ mixin card-room(params = {})
 
   .card-room
     .card-room__slider
-      +slider({roomsImages})
+      +slider({
+        forCardRoom: true,
+        roomsImages
+      })
     section.card-room__info
       .card-room__header
         .card-room__number

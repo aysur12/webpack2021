@@ -2,13 +2,22 @@ import Slider from './Slider';
 import 'material-icons/iconfont/material-icons.scss';
 import './slider.scss';
 
-const sliders = document.querySelectorAll('.slider');
-const sliderOpts = {
+const cardSliders = document.querySelectorAll('.js-slider_for-card');
+const sliderCardOpts = {
   loop: true,
   indicators: true,
   autoplay: false,
-  interval: 5000,
   swipe: true,
 };
 
-sliders.forEach((slider) => new Slider(slider, sliderOpts));
+cardSliders.forEach((slider) => new Slider(slider, sliderCardOpts));
+const sliderPreviewOpts = {
+  loop: true,
+  indicators: false,
+  autoplay: true,
+  interval: 5000,
+  swipe: false,
+}
+
+const previewSliders = document.querySelectorAll('.js-slider_for-preview');
+previewSliders.forEach((slider) => new Slider(slider, sliderPreviewOpts));

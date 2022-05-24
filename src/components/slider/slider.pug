@@ -1,17 +1,22 @@
 mixin slider(params = {})
   -
     const {
+      forCardRoom= false,
       roomsImages= [],
     } = params;
 
+    const cardRoomSlider= forCardRoom 
+      ? "slider_for-card js-slider_for-card" 
+      : "js-slider_for-preview";
 
-  .slider
+  .slider(class= `${cardRoomSlider}`)
     .slider__wrapper
       .slider__items
         each roomsImage in roomsImages
           - const {src, alt} = roomsImage;
           .slider__item
             img.slider__img(src= src alt= alt)
-    .slider__control-group
-      a.slider__control.slider__control_prev(href="#" role="button" data-slide="prev")
-      a.slider__control.slider__control_next(href="#" role="button" data-slide="next")
+    if forCardRoom
+      .slider__control-group
+        a.slider__control.slider__control_prev(href="#" role="button" data-slide="prev")
+        a.slider__control.slider__control_next(href="#" role="button" data-slide="next")
