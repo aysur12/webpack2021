@@ -17,7 +17,7 @@ const sliderPreviewOpts = {
   autoplay: true,
   interval: 5000,
   swipe: false,
-}
+};
 
 const previewSliders = document.querySelectorAll('.js-slider_for-preview');
 previewSliders.forEach((slider) => new Slider(slider, sliderPreviewOpts));

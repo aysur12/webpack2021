@@ -10,14 +10,14 @@
   }
 
   &__wrapper {
-    grid-area: 1/-1;
+    z-index: 1;
     display: grid;
     grid:
-      'card . .' 
+      'card . .'
       '. . info'
       /33% 1fr 25%;
+    grid-area: 1/-1;
     row-gap: 298px;
-    z-index: 1;
     width: 100%;
     max-width: 83.286em;
     margin: 0 auto;
