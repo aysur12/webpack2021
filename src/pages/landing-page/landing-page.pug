@@ -1,9 +1,11 @@
 extends ../../layouts/main-layout/main-layout
 
 include ../../components/slider/slider
+include ../../components/card-search/card-search
 
 block variables
   title Landing page
+  - const textInfo = "Лучшие номера для вашей работы, отдыха и просто вдохновения"
 
 block content
   main.landing-page
@@ -19,5 +21,11 @@ block content
         ]
       })
     .landing-page__wrapper
+      .landing-page__card-search
+        +card-search({
+          textTitle: "Найдём номера под ваши пожелания",
+        })
+      .landing-page__text-block
+        p.landing-page__text-info= textInfo
 
 

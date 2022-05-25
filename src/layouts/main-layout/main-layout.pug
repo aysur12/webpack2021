@@ -17,66 +17,67 @@ html(lang="ru")
     meta(name="keywords", content= keywords)
     title #{ title }
   body
-    block header
-      +page-header({
-        loggedIn: false,
-        navMenuItems: [
-          { navItemName: "О нас", href: "/mock-address/change-me"},
-          { navItemName: "Услуги", withDropdown: true},
-          { navItemName: "Вакансии", href: "/mock-address/change-me"},
-          { navItemName: "Новости", href: "/mock-address/change-me"},
-          { navItemName: "Соглашения", withDropdown: true},
-        ]
-      })
-    .page-content
-      block content
-    block footer
-      +page-footer({
-        shortDesc: "Бронирование номеров в лучшем отеле 2019 года по версии\
-                    ассоциации «Отельные взгляды»",
-        subsTitle: "Подписка",
-        subsText: "Получайте специальные предложения и новости сервиса",
-        footerNavMenuItems: [
-          { title: "Навигация",
-            links: [
-              { navItemName: "О нас", href: "/mock-address/change-me"},
-              { navItemName: "Новости", href: "/mock-address/change-me"},
-              { navItemName: "Служба поддержки", href: "/mock-address/change-me"},
-              { navItemName: "Услуги", href: "/mock-address/change-me"},
-            ]
-          },
-          { title: "О нас",
-            links: [
-              { navItemName: "О сервисе", href: "/mock-address/change-me"},
-              { navItemName: "Наша команда", href: "/mock-address/change-me"},
-              { navItemName: "Вакансии", href: "/mock-address/change-me"},
-              { navItemName: "Инвесторы", href: "/mock-address/change-me"},
-            ]
-          },
-          { title: "Служба поддержки",
-            links: [
-              { navItemName: "Соглашения", href: "/mock-address/change-me"},
-              { navItemName: "Сообщества", href: "/mock-address/change-me"},
-              { navItemName: "Связь с нами", href: "/mock-address/change-me"},
-            ]
-          },
-        ],
-        copyrightText: "Copyright © 2018 Toxin отель. Все права защищены.",
-        footerSocialLinks: [
-          {
-            name: "twitter",
-            href: "/mock-address/change-me",
-            imgSrc: require("../../components/social-links/images/twitter-icon.svg"),
-          },
-          {
-            name: "facebook",
-            href: "/mock-address/change-me",
-            imgSrc: require("../../components/social-links/images/facebook-icon.svg"),
-          },
-          {
-            name: "instagram",
-            href: "/mock-address/change-me",
-            imgSrc: require("../../components/social-links/images/intagram-icon.svg"),
-          },
-        ]
-      })
+    .page__container
+      .page__header
+        +page-header({
+          loggedIn: false,
+          navMenuItems: [
+            { navItemName: "О нас", href: "/mock-address/change-me"},
+            { navItemName: "Услуги", withDropdown: true},
+            { navItemName: "Вакансии", href: "/mock-address/change-me"},
+            { navItemName: "Новости", href: "/mock-address/change-me"},
+            { navItemName: "Соглашения", withDropdown: true},
+          ]
+        })
+      .page__main
+        block content
+      .page__footer
+        +page-footer({
+          shortDesc: "Бронирование номеров в лучшем отеле 2019 года по версии\
+                      ассоциации «Отельные взгляды»",
+          subsTitle: "Подписка",
+          subsText: "Получайте специальные предложения и новости сервиса",
+          footerNavMenuItems: [
+            { title: "Навигация",
+              links: [
+                { navItemName: "О нас", href: "/mock-address/change-me"},
+                { navItemName: "Новости", href: "/mock-address/change-me"},
+                { navItemName: "Служба поддержки", href: "/mock-address/change-me"},
+                { navItemName: "Услуги", href: "/mock-address/change-me"},
+              ]
+            },
+            { title: "О нас",
+              links: [
+                { navItemName: "О сервисе", href: "/mock-address/change-me"},
+                { navItemName: "Наша команда", href: "/mock-address/change-me"},
+                { navItemName: "Вакансии", href: "/mock-address/change-me"},
+                { navItemName: "Инвесторы", href: "/mock-address/change-me"},
+              ]
+            },
+            { title: "Служба поддержки",
+              links: [
+                { navItemName: "Соглашения", href: "/mock-address/change-me"},
+                { navItemName: "Сообщества", href: "/mock-address/change-me"},
+                { navItemName: "Связь с нами", href: "/mock-address/change-me"},
+              ]
+            },
+          ],
+          copyrightText: "Copyright © 2018 Toxin отель. Все права защищены.",
+          footerSocialLinks: [
+            {
+              name: "twitter",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/twitter-icon.svg"),
+            },
+            {
+              name: "facebook",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/facebook-icon.svg"),
+            },
+            {
+              name: "instagram",
+              href: "/mock-address/change-me",
+              imgSrc: require("../../components/social-links/images/intagram-icon.svg"),
+            },
+          ]
+        })
