@@ -1,0 +1,9 @@
+import '../../layouts/main-layout';
+import '../../components/filter-date-dropdown';
+import '../../components/dropdown';
+import '../../components/range-slider';
+import '../../components/checkbox';
+import '../../components/checkbox-list';
+import '../../components/card-room';
+import '../../components/pagination';
+import './search-room.scss';

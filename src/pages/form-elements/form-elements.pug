@@ -99,7 +99,8 @@ block content
             +title-component("dropdown")
           .form-elements__desc-state
             +desc-state("default")
-        .form-elements__dropdown
+        .form-elements__dropdown(
+          class= "form-elements__dropdown_with-separate-value_default")
           +dropdown({
             hasCommonValue: false,
             items: [
@@ -237,17 +238,17 @@ block content
           +title-component("rich checkbox buttons")
         .form-elements__rich-checkbox-group
           +checkbox({
+            title: "Широкий коридор",
             text: "Ширина коридоров в номере не менее 91 см.",
             checked: false,
             rich: true,
-            title: "Широкий коридор",
             textBoxSizeSmall: true,
           })
           +checkbox({
+            title: "Помощник для инвалидов",
             text: "На 1 этаже вас встретит специалист  и проводит до номера.",
             checked: false,
             rich: true,
-            title: "Помощник для инвалидов"
           })
       .form-elements__grid-wrap-right
         .form-elements__range-slider

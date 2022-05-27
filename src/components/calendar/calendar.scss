@@ -30,6 +30,10 @@
     border-radius: 4px;
     outline: none;
 
+    &::placeholder {
+      text-transform: none;
+    }
+
     &:focus {
       border-color: $color-font-a50;
     }

@@ -1,0 +1,329 @@
+{
+  "rooms": [
+    {
+      "room1": {
+        "textNumber": "888",
+        "textNumberAfter": "люкс",
+        "priceValue": "9 990₽",
+        "ratingValue": "5",
+        "reviewsValue": "145",
+        "roomsImages": [
+          {
+            "src": "room-1.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-2.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-3.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-4.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room2": {
+        "textNumber": "840",
+        "priceValue": "9 990₽",
+        "ratingValue": "4",
+        "reviewsValue": "65",
+        "roomsImages": [
+          {
+            "src": "room-2.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-1.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-3.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-4.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room3": {
+        "textNumber": "980",
+        "textNumberAfter": "люкс",
+        "priceValue": "8 500₽",
+        "ratingValue": "3",
+        "reviewsValue": "35",
+        "roomsImages": [
+          {
+            "src": "room-3.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-1.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-2.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-4.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room4": {
+        "textNumber": "856",
+        "priceValue": "7 300₽",
+        "ratingValue": "5",
+        "reviewsValue": "19",
+        "roomsImages": [
+          {
+            "src": "room-4.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-3.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-2.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-1.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room5": {
+        "textNumber": "740",
+        "priceValue": "6 000₽",
+        "ratingValue": "4",
+        "reviewsValue": "44",
+        "roomsImages": [
+          {
+            "src": "room-5.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-4.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-3.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-2.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room6": {
+        "textNumber": "982",
+        "priceValue": "5 800₽",
+        "ratingValue": "3",
+        "reviewsValue": "56",
+        "roomsImages": [
+          {
+            "src": "room-6.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-5.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-4.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-3.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room7": {
+        "textNumber": "678",
+        "priceValue": "5 500₽",
+        "ratingValue": "5",
+        "reviewsValue": "45",
+        "roomsImages": [
+          {
+            "src": "room-7.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-6.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-5.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-4.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room8": {
+        "textNumber": "450",
+        "priceValue": "5 300₽",
+        "ratingValue": "4",
+        "reviewsValue": "39",
+        "roomsImages": [
+          {
+            "src": "room-8.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-7.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-6.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-5.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room9": {
+        "textNumber": "350",
+        "priceValue": "5 000₽",
+        "ratingValue": "3",
+        "reviewsValue": "77",
+        "roomsImages": [
+          {
+            "src": "room-9.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-8.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-7.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-6.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room10": {
+        "textNumber": "666",
+        "priceValue": "5 000₽",
+        "ratingValue": "5",
+        "reviewsValue": "25",
+        "roomsImages": [
+          {
+            "src": "room-10.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-9.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-8.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-7.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room11": {
+        "textNumber": "444",
+        "priceValue": "5 000₽",
+        "ratingValue": "3",
+        "reviewsValue": "15",
+        "roomsImages": [
+          {
+            "src": "room-11.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-10.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-9.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-8.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    },
+
+    {
+      "room12": {
+        "textNumber": "352",
+        "priceValue": "5 000₽",
+        "ratingValue": "3",
+        "reviewsValue": "55",
+        "roomsImages": [
+          {
+            "src": "room-12.jpg",
+            "alt": "1 фото номера"
+          },
+          {
+            "src": "room-11.jpg",
+            "alt": "2 фото номера"
+          },
+          {
+            "src": "room-10.jpg",
+            "alt": "3 фото номера"
+          },
+          {
+            "src": "room-9.jpg",
+            "alt": "4 фото номера"
+          }
+        ]
+      }
+    }
+  ]
+}

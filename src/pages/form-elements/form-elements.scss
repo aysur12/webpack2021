@@ -69,15 +69,19 @@
     margin-bottom: 1.714em;
 
     &_with-value-open {
-      margin-bottom: 7em;
+      margin-bottom: 257px;
     }
 
     &_empty-value-open {
-      margin-bottom: 7em;
+      margin-bottom: 257px;
     }
 
     &_with-separate-value {
-      margin-bottom: 2.929em;
+      margin-bottom: 160px;
+
+      &_default {
+        margin-bottom: 22px;
+      }
     }
   }
 
@@ -94,7 +98,7 @@
   }
 
   &__checkbox-list {
-    margin-bottom: 7.143em;
+    margin-bottom: 100px;
 
     &_closed {
       margin-bottom: 1.429em;

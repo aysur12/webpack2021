@@ -1,7 +1,9 @@
 @use '../../styles/main' as *;
 
 .dropdown {
+  position: relative;
   width: 100%;
+  max-width: 22.857em;
   border: 1px solid $color-font-a25;
   border-radius: 0.286em;
 
@@ -50,11 +52,18 @@
   }
 
   &__menu {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
-    padding: 0.429em 0.429em 0.357em 1em;
-    border-top: 1px solid $color-font-a25;
+    gap: 0.643em;
+    width: 100%;
+    padding: 0.5em 0.429em 0.357em 0.929em;
+    background-color: $color-third-bg;
+    border: 1px solid $color-font-a25;
+    border-radius: 4px;
   }
 
   &__menu-option {

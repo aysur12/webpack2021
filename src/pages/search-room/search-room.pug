@@ -1,0 +1,134 @@
+extends ../../layouts/main-layout/main-layout
+
+include ../../components/filter-date-dropdown/filter-date-dropdown
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/checkbox/checkbox
+include ../../components/checkbox-list/checkbox-list
+include ../../components/card-room/card-room
+include ../../components/pagination/pagination
+
+block variables
+  title Search room
+
+block content
+  main.search-room
+    .search-room__wrapper
+      aside.search-room__sidebar
+        .search-room__dropdowns-block
+          .search-room__filter-date-dropdown-block
+            .search-room__title-component
+              +title-component("даты пребывания в отеле")
+            .search-room__filter-date-dropdown
+              +filter-date-dropdown({placeholder: "Выберите даты"})
+          .search-room__guests-dropdown-block
+            .search-room__title-component
+              +title-component("гости")
+            .search-room__guests-dropdown
+              +dropdown({
+                hasCommonValue: true,
+                items: [
+                  { text: 'Взрослые', count: 2 },
+                  { text: 'Дети', count: 1 },
+                  { text: 'Младенцы', count: 1 },
+                ],
+              })
+        .search-room__range-slider
+          +range-slider({
+            titleText: "диапазон цены",
+            hasDesc: true,
+            textDesc: "Стоимость за сутки пребывания в номере",
+          })
+        .search-room__checkbox-group
+          .search-room__title-component.search-room__title-component_for-checkbox
+            +title-component("правила дома")
+          .search-room__checkbox-items
+            +checkbox({
+              text: "Можно курить",
+              checked: false,
+            })
+            +checkbox({
+              text: "Можно с питомцами",
+              checked: true,
+            })
+            +checkbox({
+              text: "Можно пригласить гостей (до 10 человек)",
+              checked: true,
+            })
+        .search-room__rich-checkbox-group    
+          .search-room__title-component.search-room__title-component_for-checkbox
+            +title-component("доступность")
+          .search-room__rich-checkbox-list
+            +checkbox({
+              title: "Широкий коридор",
+              text: "Ширина коридоров в номере не менее 91 см.",
+              checked: false,
+              rich: true,
+              textBoxSizeSmall: true,
+            })
+            +checkbox({
+              title: "Помощник для инвалидов",
+              text: "На 1 этаже вас встретит специалист  и проводит до номера.",
+              checked: false,
+              rich: true,
+            })
+        .search-room__comfort-block
+          .search-room__dropdown-comfort-group
+            .search-room__title-component
+              +title-component("удобства номера")
+            .search-room__dropdown-comfort
+              +dropdown({
+                hasCommonValue: false,
+                items: [
+                  { text: 'Cпальни', count: 2 },
+                  { text: 'Кровати', count: 2 },
+                  { text: 'Ванные комнаты', count: 0 },
+                ],
+              })
+          .search-room__checkbox-list
+            +checkbox-list({
+              open: false,
+              title: "дополнительные удобства",
+              listItems: [
+                { text: "Завтрак", checked: false},
+                { text: "Письменный стол", checked: true},
+                { text: "Стул для кормления", checked: true},
+                { text: "Кроватка", checked: true},
+                { text: "Телевизор", checked: false},
+                { text: "Шампунь", checked: false},
+              ]
+            })
+      section.search-room__room-cards
+        h1.search-room__title Номера, которые мы для вас подобрали
+        .search-room__room-list
+          -
+            const cardSearchRooms = require('../search-room/card-search-room.json');
+            const {rooms} = cardSearchRooms;
+
+          each val, index in rooms
+            -
+              const currentRoomName = `room${index + 1}`;
+              const currentRoom = rooms[index][currentRoomName];
+              const {
+                textNumber,
+                textNumberAfter,
+                priceValue,
+                ratingValue,
+                reviewsValue,
+                roomsImages,
+              } = currentRoom;
+            .search-room__card-room
+              +card-room({
+                textNumber: textNumber,
+                textNumberAfter: textNumberAfter,
+                priceValue: priceValue,
+                ratingValue: ratingValue,
+                reviewsValue: reviewsValue,
+                roomsImages: [
+                  {src: require(`../../assets/images/${roomsImages[0].src}`), alt: roomsImages[0].alt},
+                  {src: require(`../../assets/images/${roomsImages[1].src}`), alt: roomsImages[1].alt},
+                  {src: require(`../../assets/images/${roomsImages[2].src}`), alt: roomsImages[2].alt},
+                  {src: require(`../../assets/images/${roomsImages[3].src}`), alt: roomsImages[3].alt},
+                ]
+              })
+

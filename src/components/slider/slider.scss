@@ -7,14 +7,14 @@
   margin-right: auto;
   margin-left: auto;
 
-  &_for-card {
-    border-radius: 4px 4px 0 0;
-  }
-
   &__wrapper {
     grid-area: 1/-1;
     overflow: hidden;
     background-color: #eee;
+
+    &_for-card {
+      border-radius: 4px 4px 0 0;
+    }
   }
 
   &__items {

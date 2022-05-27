@@ -23,10 +23,10 @@ mixin card-room(params = {})
       })
     section.card-room__info
       .card-room__header
-        .card-room__number
-          span.card-room__text-before= textNumberBefore
-          =textNumber
-          span.card-room__text-after= textNumberAfter
+        .card-room__number-block
+          .card-room__text-before= textNumberBefore
+          .card-room__number= textNumber
+          .card-room__text-after= textNumberAfter
         .card-room__price-block
           span.card-room__price= priceValue
           span.card-room__price-text= priceText
@@ -34,8 +34,8 @@ mixin card-room(params = {})
         .card-room__rating
           +rate({rating: ratingValue})
         .card-room__reviews
-          span.card-room__reviews-value= reviewsValue
-          span.card-room__reviews-text= reviewsText
+          .card-room__reviews-value= reviewsValue
+          .card-room__reviews-text= reviewsText
 
     
     

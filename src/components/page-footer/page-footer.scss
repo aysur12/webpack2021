@@ -15,11 +15,11 @@
     display: grid;
     grid:
       'desc nav subs'
-      / 22.41% 1fr 22.41%;
-    gap: 40px;
-    max-width: 1160px;
+      / 22.5% 48.5% 22.5%;
+    justify-content: space-between;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 7.143em 0;
+    padding: 7.143em 1.429em;
   }
 
   &__desc {
@@ -40,7 +40,7 @@
   &__navigation-list {
     display: flex;
     grid-area: nav;
-    gap: 2.857em;
+    justify-content: space-between;
     max-width: 40em;
   }
 

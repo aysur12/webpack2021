@@ -18,14 +18,25 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 0 0.571em;
     padding-bottom: 0.786em;
     border-bottom: 1px solid $color-font-a10;
   }
 
-  &__number {
+  &__number-block {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    flex-wrap: wrap;
     margin: 0;
     @include font-h2;
+  }
+
+  &__number {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 16.643em;
   }
 
   &__text-before {
@@ -41,6 +52,7 @@
 
   &__price-block {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.357em;
   }
 
@@ -58,14 +70,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__reviews {
     display: flex;
-    gap: 0.429em;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.286em;
+    color: $color-font-a50;
+    font: 1rem/1.28 $main-font-family;
+  }
+
+  &__reviews-value {
+    font-weight: bold;
   }
 
   &__reviews-text {
-    letter-spacing: 0.4;
+    padding-right: 4px;
   }
 }

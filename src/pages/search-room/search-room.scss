@@ -1,0 +1,78 @@
+@use '../../styles/main' as *;
+
+.search-room {
+  width: 100%;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 290px 834px;
+    gap: 2.571em;
+    width: 100%;
+    max-width: 86.143em;
+    margin: 0 auto;
+    padding: 1.286em 0.786em 5em;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.143em;
+    width: 100%;
+    max-width: 20.714em;
+    padding: 0.857em;
+    
+  }
+
+  &__dropdowns-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.571em;
+  }
+
+  &__title-component {
+    margin-bottom: 5px;
+
+    &_for-checkbox {
+      margin-bottom: 1.2em;
+    }
+  }
+
+  &__checkbox-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__rich-checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.786em;
+  }
+
+  &__comfort-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.214em;
+  }
+
+  &__room-cards {
+    max-width: 60.429em;
+    padding: 0.857em 0;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 0.5em;
+    @include font-h1;
+  }
+
+  &__room-list {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 19.286em);
+    column-gap: 12px;
+    row-gap: 20px;
+    padding: 21px 12px;
+  }
+
+}
