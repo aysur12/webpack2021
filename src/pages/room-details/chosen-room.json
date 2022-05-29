@@ -1,0 +1,14 @@
+{
+  "img1": {
+    "src": "chosen-room1-1.jpg",
+    "alt": "1 фото номера"
+  },
+  "img2": {
+    "src": "chosen-room1-2.jpg",
+    "alt": "2 фото номера"
+  },
+  "img3": {
+    "src": "chosen-room1-3.jpg",
+    "alt": "3 фото номера"
+  }
+}

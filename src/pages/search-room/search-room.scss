@@ -2,6 +2,7 @@
 
 .search-room {
   width: 100%;
+  border-bottom: 1px solid $color-font-a25;
 
   &__wrapper {
     display: grid;
@@ -10,7 +11,7 @@
     width: 100%;
     max-width: 86.143em;
     margin: 0 auto;
-    padding: 1.286em 0.786em 5em;
+    padding: 1.286em 0.786em 4.5em;
   }
 
   &__sidebar {
@@ -66,13 +67,23 @@
     @include font-h1;
   }
 
+  &__room-list-block {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__room-list {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(3, 19.286em);
-    column-gap: 12px;
-    row-gap: 20px;
+    grid-template-columns: repeat(3, 19.429em);
+    column-gap: 0.714em;
+    row-gap: 1.214em;
+    margin-bottom: 1.357em;
     padding: 21px 12px;
+  }
+
+  &__pagination {
+    margin: 0 auto;
   }
 
 }

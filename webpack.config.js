@@ -39,7 +39,7 @@ const config = {
   devServer: {
     static: './dist',
     port: 8080,
-    open: '/landing-page.html',
+    open: '/search-room.html',
     hot: false,
   },
   plugins: [

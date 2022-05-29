@@ -1,0 +1,34 @@
+extends ../../layouts/main-layout/main-layout
+
+include ../../components/benefit/benefit
+include ../../components/chart/chart
+include ../../components/testimonial/testimonial
+include ../../components/bullet/bullet
+include ../../components/card-booking/card-booking
+
+block variables
+  title Room details
+
+block content
+  main.room-details
+    section.room-details__preview-images-block
+      -
+        const chosenRoomImages = require('./chosen-room.json');
+      
+      .room-details__preview-image-item
+        img.room-details__preview-image(
+          src= require(`../../assets/images/${chosenRoomImages.img1.src}`)
+          alt= `${chosenRoomImages.img1.alt}`
+        )
+      .room-details__small-image-items
+        .room-details__preview-image-item
+          img.room-details__preview-image(
+            src= require(`../../assets/images/${chosenRoomImages.img2.src}`)
+            alt= `${chosenRoomImages.img2.alt}`
+          )
+        .room-details__preview-image-item
+          img.room-details__preview-image(
+            src= require(`../../assets/images/${chosenRoomImages.img3.src}`)
+            alt= `${chosenRoomImages.img3.alt}`
+          )
+    .room-details__wrapper

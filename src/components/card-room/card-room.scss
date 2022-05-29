@@ -6,9 +6,9 @@
   width: 100%;
   max-width: 19.429em;
   background-color: $color-third-bg;
-  border: 1px solid rgba(0, 0, 0, 12%);
+  border: 1px solid $color-third-bg;
   border-radius: 4px;
-  box-shadow: $shadow-card;
+  box-shadow: $shadow-header-footer;
 
   &__info {
     padding: 20px 17px 19px 20px;
@@ -19,7 +19,7 @@
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 0 0.571em;
+    margin: 0 0 0.643em;
     padding-bottom: 0.786em;
     border-bottom: 1px solid $color-font-a10;
   }
@@ -46,8 +46,9 @@
 
   &__text-after {
     color: $color-primary-bg;
-    font: bold 0.857rem/1.25 $main-font-family;
+    font: bold 0.857rem $main-font-family;
     text-transform: uppercase;
+    padding-left: 5px;
   }
 
   &__price-block {

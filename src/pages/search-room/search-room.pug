@@ -100,35 +100,42 @@ block content
             })
       section.search-room__room-cards
         h1.search-room__title Номера, которые мы для вас подобрали
-        .search-room__room-list
-          -
-            const cardSearchRooms = require('../search-room/card-search-room.json');
-            const {rooms} = cardSearchRooms;
-
-          each val, index in rooms
+        .search-room__room-list-block
+          .search-room__room-list
             -
-              const currentRoomName = `room${index + 1}`;
-              const currentRoom = rooms[index][currentRoomName];
-              const {
-                textNumber,
-                textNumberAfter,
-                priceValue,
-                ratingValue,
-                reviewsValue,
-                roomsImages,
-              } = currentRoom;
-            .search-room__card-room
-              +card-room({
-                textNumber: textNumber,
-                textNumberAfter: textNumberAfter,
-                priceValue: priceValue,
-                ratingValue: ratingValue,
-                reviewsValue: reviewsValue,
-                roomsImages: [
-                  {src: require(`../../assets/images/${roomsImages[0].src}`), alt: roomsImages[0].alt},
-                  {src: require(`../../assets/images/${roomsImages[1].src}`), alt: roomsImages[1].alt},
-                  {src: require(`../../assets/images/${roomsImages[2].src}`), alt: roomsImages[2].alt},
-                  {src: require(`../../assets/images/${roomsImages[3].src}`), alt: roomsImages[3].alt},
-                ]
-              })
+              const cardSearchRooms = require('../search-room/card-search-room.json');
+              const {rooms} = cardSearchRooms;
+
+            each val, index in rooms
+              -
+                const currentRoomName = `room${index + 1}`;
+                const currentRoom = rooms[index][currentRoomName];
+                const {
+                  textNumber,
+                  textNumberAfter,
+                  priceValue,
+                  ratingValue,
+                  reviewsValue,
+                  roomsImages,
+                } = currentRoom;
+              .search-room__card-room
+                +card-room({
+                  textNumber: textNumber,
+                  textNumberAfter: textNumberAfter,
+                  priceValue: priceValue,
+                  ratingValue: ratingValue,
+                  reviewsValue: reviewsValue,
+                  roomsImages: [
+                    {src: require(`../../assets/images/${roomsImages[0].src}`), alt: roomsImages[0].alt},
+                    {src: require(`../../assets/images/${roomsImages[1].src}`), alt: roomsImages[1].alt},
+                    {src: require(`../../assets/images/${roomsImages[2].src}`), alt: roomsImages[2].alt},
+                    {src: require(`../../assets/images/${roomsImages[3].src}`), alt: roomsImages[3].alt},
+                  ]
+                })
+          .search-room__pagination
+            +pagination({
+              currentPage: 1, 
+              totalVisibleItems: 12,
+              totalPages: 15
+            })
 
