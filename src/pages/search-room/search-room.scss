@@ -6,18 +6,15 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 290px 834px;
+    grid-template-columns: 290px 1fr;
     gap: 2.571em;
     width: 100%;
-    max-width: 86.143em;
+    max-width: 86.286em;
     margin: 0 auto;
     padding: 1.286em 0.786em 4.5em;
   }
 
   &__sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 2.143em;
     width: 100%;
     max-width: 20.714em;
     padding: 0.857em;
@@ -28,6 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.571em;
+    margin-bottom: 2.143em;
   }
 
   &__title-component {
@@ -36,6 +34,15 @@
     &_for-checkbox {
       margin-bottom: 1.2em;
     }
+  }
+
+  &__range-slider {
+    margin-bottom: 2.071em;
+  }
+
+  &__checkbox-group,
+  &__rich-checkbox-group {
+    margin-bottom: 2.143em;
   }
 
   &__checkbox-items {
@@ -57,7 +64,6 @@
   }
 
   &__room-cards {
-    max-width: 60.429em;
     padding: 0.857em 0;
   }
 
@@ -75,7 +81,7 @@
   &__room-list {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(3, 19.429em);
+    grid-template-columns: repeat(auto-fill, minmax(19.429em, 1fr));
     column-gap: 0.714em;
     row-gap: 1.214em;
     margin-bottom: 1.357em;
@@ -85,5 +91,4 @@
   &__pagination {
     margin: 0 auto;
   }
-
 }

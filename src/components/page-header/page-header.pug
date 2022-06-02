@@ -9,6 +9,8 @@ mixin page-header(params = {})
       userName= "",
       hrefUserPanel= "",
       navMenuItems,
+      hrefEntryBtn= "",
+      hrefCreateBtn= "",
     } = params;
 
     const navWithLogged = loggedIn
@@ -28,14 +30,14 @@ mixin page-header(params = {})
         else
           .page-header__button
             +button({
-              href: "/mock-address/change-me",
+              href: hrefEntryBtn,
               text: "войти",
               withBorder: true,
               forLogin: true,
             })
           .page-header__button
             +button({
-              href: "/mock-address/change-me",
+              href: hrefCreateBtn,
               text: "зарегистрироваться",
               forRegistration: true,
             })

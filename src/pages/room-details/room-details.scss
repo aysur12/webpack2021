@@ -11,12 +11,6 @@
     width: 100%;
   }
 
-  &__wrapper {
-    width: 100%;
-    max-width: 82.857em;
-    margin: 0 auto;
-  }
-
   &__small-image-items {
     display: flex;
     flex-direction: column;
@@ -28,4 +22,106 @@
     object-fit: cover;
   }
 
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    max-width: 85.714em;
+    margin: 0 auto;
+    padding: 4.857em 0 5.143em;
+  }
+
+  &__info {
+    max-width: 53.643em;
+    padding: 0 1.429em;
+  }
+
+  &__short-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 48em;
+    margin-bottom: 1em;
+  }
+
+  &__benefits-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  &__title {
+    margin: 0;
+    @include font-h2;
+
+    &_for-bullet {
+      margin: 0 0 1em 1.053em;
+    }
+
+    &_for-cancel {
+      margin-bottom: 1.053em;
+    }
+  }
+
+  &__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.429em;
+  }
+
+  &__testimonials-block {
+    margin-bottom: 2.286em;
+  }
+
+  &__testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.571em;
+  }
+
+  &__testimonials-value {
+    color: $color-font-a50;
+    font: 1rem $main-font-family;
+  }
+
+  &__testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.643em;
+  }
+
+  &__rules {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 50.214em;
+  }
+
+  &__bullet-block {
+    max-width: 20.857em;
+  }
+
+  &__bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.714em;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__cancel-block {
+    max-width: 24.429em;
+  }
+
+  &__cancel-text {
+    @include font-body;
+  }
+
+  &__card-booking {
+    width: 28.571em;
+    padding-right: 1.429em;
+  }
 }

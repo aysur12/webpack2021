@@ -7,7 +7,7 @@ mixin card-search(params = {})
   -
     const {
       textTitle= "",
-
+      hrefSearchBtn= "",
     } = params;
 
   .card-search
@@ -35,4 +35,5 @@ mixin card-search(params = {})
         text: "подобрать номер",
         withArrow: true,
         longWithArrow: true,
+        href: hrefSearchBtn
       })

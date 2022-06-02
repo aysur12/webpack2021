@@ -21,12 +21,15 @@ block content
         .cards__card-search
           +card-search({
             textTitle: "Найдём номера под ваши пожелания",
+            hrefSearchBtn: "/mock-address/change-me",
           })
         .cards__card-registration
           +card-registration({
             textTitle: "Регистрация аккаунта",
-            blockEntryText: "Уже есть аккаунт на Toxin"
-            })
+            blockEntryText: "Уже есть аккаунт на Toxin",
+            textSubmitButton: "Перейти к оплате",
+            hrefEntryBtn: "/mock-address/change-me",
+          })
       .cards__grid-wrap-center
         .cards__card-booking
           +card-booking({
@@ -45,6 +48,7 @@ block content
           +card-log-in({
             textTitle: "Войти",
             createAccText: "Нет аккаунта на Toxin?",
+            hrefCreateBtn: "/mock-address/change-me",
           })
       .cards__grid-wrap-right
         .cards__calendar

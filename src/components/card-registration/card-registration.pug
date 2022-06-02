@@ -9,6 +9,8 @@ mixin card-registration(params = {})
     const {
       textTitle= "",
       blockEntryText= "",
+      textSubmitButton= "",
+      hrefEntryBtn= "",
     } = params;
 
   .card-registration
@@ -72,7 +74,7 @@ mixin card-registration(params = {})
       .card-registration__submit
         +button({
           type: "submit",
-          text: "Перейти к оплате",
+          text: textSubmitButton,
           withArrow: true,
           longWithArrow: true,
         })
@@ -81,7 +83,7 @@ mixin card-registration(params = {})
         .card-registration__block-entry-button
           +button({
             type: "button",
-            href: "/mock-address/change-me",
+            href: hrefEntryBtn,
             text: "Войти",
             withBorder: true,
           })

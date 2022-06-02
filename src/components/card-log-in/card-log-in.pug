@@ -3,6 +3,7 @@ mixin card-log-in(params = {})
     const {
       textTitle= "",
       createAccText= "",
+      hrefCreateBtn= "",
     } =params;
 
   .card-log-in
@@ -33,7 +34,7 @@ mixin card-log-in(params = {})
         .card-log-in__create-acc-button
           +button({
             type: "button",
-            href: "/mock-address/change-me",
+            href: hrefCreateBtn,
             text: "Создать",
             withBorder: true,
           })

@@ -11,7 +11,7 @@ doctype html
 html(lang="ru")
   head 
     meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(http-equiv="X-UA-Compatible", content="IE-Edge")
     meta(name="description", content= description)
     meta(name="keywords", content= keywords)
@@ -27,7 +27,9 @@ html(lang="ru")
             { navItemName: "Вакансии", href: "/mock-address/change-me"},
             { navItemName: "Новости", href: "/mock-address/change-me"},
             { navItemName: "Соглашения", withDropdown: true},
-          ]
+          ],
+          hrefEntryBtn: "./sign-in.html",
+          hrefCreateBtn: "./registration.html"
         })
       .page__main
         block content

@@ -4,6 +4,10 @@
   position: relative;
   display: block;
 
+  &_subscribe {
+    max-width: 19.071em;
+  }
+
   &__input {
     width: 100%;
     max-width: 22.857em;

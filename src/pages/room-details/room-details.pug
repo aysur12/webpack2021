@@ -32,3 +32,86 @@ block content
             alt= `${chosenRoomImages.img3.alt}`
           )
     .room-details__wrapper
+      .room-details__info
+        .room-details__short-info
+          section.room-details__benefits-block
+            h2.room-details__title Сведения о номере
+            .room-details__benefits
+              +benefit({
+                benefitIcon: "insert_emoticon",
+                title: "Комфорт",
+                text: "Шумопоглощающие стены"
+              })
+              +benefit({
+                benefitIcon: "location_city",
+                title: "Удобство",
+                text: "Окно в каждой из спален"
+              })
+              +benefit({
+                benefitIcon: "whatshot",
+                title: "Уют",
+                text: "Номер оснащён камином"
+              })
+          section.room-details__chart
+            +chart({chartTitle: "Впечатления от номера"})
+        .room-details__testimonials-block
+          .room-details__testimonials-header
+            h2.room-details__title Отзывы посетителей номера
+            .room-details__testimonials-value 2 отзыва
+          section.room-details__testimonials
+            section.room-details__testimonial
+              +testimonial({
+                avatar: require("../../assets/images/murad.jpg"),
+                altImg: "Мурад Сарафанов",
+                fullName: "Мурад Сарафанов",
+                writingTime: "5 дней назад",
+                desc: "Великолепный матрас на кровати в основной спальне!\
+                      А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.\
+                      Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                likeBtnCount: 12,
+                likeBtnActive: true,
+              })
+            section.room-details__testimonial
+              +testimonial({
+                avatar: require("../../assets/images/patricia.jpg"),
+                altImg: "Патрисия Стёклышкова",
+                fullName: "Патрисия Стёклышкова",
+                writingTime: "Неделю назад",
+                desc: "Обслуживание на высоте! Всё аккуратно, чисто.\
+                      Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент",
+                likeBtnCount: 2,
+                likeBtnActive: false,
+              })
+        .room-details__rules
+          section.room-details__bullet-block
+            h2.room-details__title.room-details__title_for-bullet Правила
+            ul.room-details__bullet-list
+              li.room-details__bullet-item
+                +bullet({text:"Нельзя с питомцами"})
+              li.room-details__bullet-item
+                +bullet({text:"Без вечеринок и мероприятий"})
+              li.room-details__bullet-item
+                +bullet({
+                  text:"Время прибытия — после 13:00, а выезд до 12:00",
+                  isUpPositionIcon: true,
+                })
+          section.room-details__cancel-block
+            h2.room-details__title.room-details__title_for-cancel Отмена
+            .room-details__cancel-text
+              | Бесплатная отмена в течение 48 ч. 
+              | После этого при отмене не позднее чем за 5 дн. до прибытия 
+              | вы получите полный возврат за вычетом сбора за услуги.
+      article.room-details__card-booking
+        +card-booking({
+          textNumberBefore: "№ ",
+          textNumber: "888 ",
+          textNumberAfter: "люкс",
+          priceValue: "9 990₽",
+          priceText: "в сутки",
+          feeText: "Сбор за услуги: скидка",
+          hintFeeText: "Подсказка 1",
+          additionalFeeText: "Сбор за дополнительные услуги",
+          hintAdditionalFeeText: "Подсказка 2",
+          totalValueText: "Итого",
+        })
+
