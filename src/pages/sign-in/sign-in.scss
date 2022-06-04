@@ -6,7 +6,7 @@
 
   &__bg-image-block {
     grid-area: 1/-1;
-    max-height: 48.786em;
+    max-height: 50.143em;
   }
 
   &__bg-image {
@@ -17,7 +17,22 @@
 
   &__card-log-in {
     grid-area: 1/-1;
-    width: 27.143em;
-    margin: 12.286em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2.5em 0;
+  }
+
+  &__card-log-in-wrapper {
+    flex-basis: 26.5%;
+    max-height: 25.429em;
+
+    @media screen and (max-width: 1440px) {
+      flex-basis: auto;
+      width: 100%;
+      max-width: 27.143em;
+      margin: 0 auto;
+    }
   }
 }

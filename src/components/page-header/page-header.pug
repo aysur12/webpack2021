@@ -21,25 +21,31 @@ mixin page-header(params = {})
     .page-header__container
       .page-header__logo
         +logo({typeLogo: "logoWithText"})
-      .page-header__nav-group
-        .page-header__nav-menu(class = `${navWithLogged}`)
-          +nav-menu({navMenuItems})
-        if loggedIn
-          .page-header__user-panel
-            a.page-header__user-link(href= hrefUserPanel, title= userName)= userName
-        else
-          .page-header__button
-            +button({
-              href: hrefEntryBtn,
-              text: "войти",
-              withBorder: true,
-              forLogin: true,
-            })
-          .page-header__button
-            +button({
-              href: hrefCreateBtn,
-              text: "зарегистрироваться",
-              forRegistration: true,
-            })
+      .page-header__menu
+        input.page-header__hamburger-checkbox#page-header__hamburger-checkbox(
+          type= "checkbox"
+        )
+        label.page-header__hamburger(for= "page-header__hamburger-checkbox")
+          span.page-header__hamburger-icon
+        .page-header__nav-group
+          .page-header__nav-menu(class = `${navWithLogged}`)
+            +nav-menu({navMenuItems})
+          if loggedIn
+            .page-header__user-panel
+              a.page-header__user-link(href= hrefUserPanel, title= userName)= userName
+          else
+            .page-header__button
+              +button({
+                href: hrefEntryBtn,
+                text: "войти",
+                withBorder: true,
+                forLogin: true,
+              })
+            .page-header__button
+              +button({
+                href: hrefCreateBtn,
+                text: "зарегистрироваться",
+                forRegistration: true,
+              })
 
 

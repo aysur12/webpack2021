@@ -8,13 +8,14 @@ block variables
 block content
   main.sign-in
     .sign-in__bg-image-block
-      img.registration__bg-image(
+      img.sign-in__bg-image(
         src=require("../../assets/images/bg-room-1.jpg"),
         alt="Фото комнаты",
       )
     section.sign-in__card-log-in
-      +card-log-in({
-        textTitle: "Войти",
-        createAccText: "Нет аккаунта на Toxin?",
-        hrefCreateBtn: "./registration.html"
-      })
+      .sign-in__card-log-in-wrapper
+        +card-log-in({
+          textTitle: "Войти",
+          createAccText: "Нет аккаунта на Toxin?",
+          hrefCreateBtn: "./registration.html"
+        })

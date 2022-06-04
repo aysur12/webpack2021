@@ -7,6 +7,10 @@
   border-bottom: 1px solid $body-bg-color;
   box-shadow: $shadow-header-footer;
 
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
   &__container {
     border-bottom: 1px solid $body-bg-color;
   }

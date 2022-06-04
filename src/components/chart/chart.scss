@@ -1,18 +1,27 @@
 @use '../../styles/main' as *;
 
 .chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.643em;
   width: 100%;
-  max-width: 22.214em;
+  max-width: 22.357em;
 
   &__title {
-    margin: 0 0 1.158em;
+    margin: 0;
     @include font-h2;
   }
 
   &__info {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
-    width: 22.214em;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+    @media screen and (max-width: 767px) {
+      gap: 2.5em;
+    }
   }
 }

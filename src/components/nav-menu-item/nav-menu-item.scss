@@ -3,6 +3,10 @@
 .nav-menu-item {
   @include font-link;
 
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+
   &__details {
     &:focus,
     &:hover {

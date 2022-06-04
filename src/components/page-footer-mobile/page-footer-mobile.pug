@@ -6,9 +6,12 @@ mixin page-footer-mobile(params = {})
     const {
       copyrightText = "",
       footerSocialLinks,
+      forUIkit = false,
     } = params;
 
-  footer.page-footer-mobile
+    const forUIkitFooterMobile = forUIkit ? "page-footer-mobile_for-UI-kit" : "";
+
+  footer.page-footer-mobile(class= `${forUIkitFooterMobile}`)
     .page-footer-mobile__container
       .page-footer-mobile__logo
         +logo({typeLogo: "logoWithText"})

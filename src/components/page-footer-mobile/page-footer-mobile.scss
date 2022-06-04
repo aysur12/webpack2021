@@ -1,13 +1,26 @@
 @use '../../styles/main' as *;
 
 .page-footer-mobile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
   max-width: 768px;
   margin: 0 auto;
   background-color: $color-third-bg;
   box-shadow: $shadow-header-footer;
+  padding: 8.571em 1.5em;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5em 1.5em;
+  }
+
+  &_for-UI-kit {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__container {
     display: flex;
@@ -15,7 +28,6 @@
     align-items: center;
     justify-content: center;
     max-width: 26.571em;
-    padding: 8.571em 0;
   }
 
   &__copyrights {
@@ -26,6 +38,7 @@
   &__copyright-text {
     margin: 0;
     padding: 1.429em 0 1.786em;
+    text-align: center;
   }
 
   &__social-links {

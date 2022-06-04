@@ -15,10 +15,66 @@
     padding: 1.071em 1.429em;
   }
 
+  &__hamburger-checkbox {
+    display: none;
+
+    &:checked ~ .page-header__nav-group {
+      @media screen and (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+        max-height: 100%;
+        padding: 1em 1.429em;
+        transition: all 0.5s;
+      }
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: 25.714em;
+        z-index: 10000;
+      }
+    }
+
+    &:checked ~ .page-header__hamburger .page-header__hamburger-icon::before {
+      content: '\e5cd';
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 991px) {
+      display: block;
+    }
+  }
+
+  &__hamburger-icon {
+    display: inline-block;
+    color: $color-primary-bg;
+    font: 3.5rem 'Material Icons', sans-serif;
+
+    &::before {
+      content: '\e5d2';
+    }
+  }
+
   &__nav-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.429em;
     align-items: center;
+
+    @media screen and (max-width: 991px) {
+      position: absolute;
+      right: 0;
+      left: 0;
+      max-height: 0;
+      margin-top: 0.714em;
+      overflow: hidden;
+      background-color: $color-third-bg;
+      text-align: center;
+    }
   }
 
   &__nav-menu {
