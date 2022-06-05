@@ -1,0 +1,901 @@
+
+<title>Search room</title><!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="description">
+    <meta name="keywords">
+    <title></title>
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/favicon-48x48.png"><link rel="manifest" href="assets/favicons/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="my-webpack-project"><link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="assets/favicons/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="assets/favicons/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="my-webpack-project"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-640x1136.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-750x1334.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-828x1792.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1125x2436.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1242x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1242x2688.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1536x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1668x2224.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1668x2388.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-2048x2732.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1620x2160.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-1136x640.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-1334x750.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-1792x828.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2436x1125.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2208x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2688x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2048x1536.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2224x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2388x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2732x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2160x1620.png"><link rel="icon" type="image/png" sizes="228x228" href="assets/favicons/coast-228x228.png"><meta name="msapplication-TileColor" content="#fff"><meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png"><meta name="msapplication-config" content="assets/favicons/browserconfig.xml"><link rel="yandex-tableau-widget" href="assets/favicons/yandex-browser-manifest.json"><link href="css/537.css" rel="stylesheet"><link href="css/764.css" rel="stylesheet"><link href="css/963.css" rel="stylesheet"><link href="css/search-room.css" rel="stylesheet"></head>
+  <body>
+    <div class="page__container">
+      <div class="page__header">
+        <header class="page-header"> 
+          <div class="page-header__container">
+            <div class="page-header__logo">
+              <div class="logo"><a class="logo__link" href="./start-page.html"> <img class="logo__img-logo-toxin" src="assets/images/logo-toxin.svg" alt="Логотип Toxin" width="106" height="40"></a>
+              </div>
+            </div>
+            <div class="page-header__menu">
+              <input class="page-header__hamburger-checkbox" id="page-header__hamburger-checkbox" type="checkbox">
+              <label class="page-header__hamburger" for="page-header__hamburger-checkbox"><span class="page-header__hamburger-icon"></span></label>
+              <div class="page-header__nav-group">
+                <div class="page-header__nav-menu">
+                  <nav class="nav-menu">
+                    <ul class="nav-menu__list">
+                      <li class="nav-menu__item">
+                        <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="О нас">О нас</a></div>
+                      </li>
+                      <li class="nav-menu__item">
+                        <div class="nav-menu-item">
+                          <details class="nav-menu-item__details" title="Услуги">
+                            <summary class="nav-menu-item__summary"><span class="nav-menu-item__title">Услуги</span><span class="nav-menu-item__arrow"></span></summary>
+                            <div class="nav-menu-item__dropdown"></div>
+                          </details>
+                        </div>
+                      </li>
+                      <li class="nav-menu__item">
+                        <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Вакансии">Вакансии</a></div>
+                      </li>
+                      <li class="nav-menu__item">
+                        <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Новости">Новости</a></div>
+                      </li>
+                      <li class="nav-menu__item">
+                        <div class="nav-menu-item">
+                          <details class="nav-menu-item__details" title="Соглашения">
+                            <summary class="nav-menu-item__summary"><span class="nav-menu-item__title">Соглашения</span><span class="nav-menu-item__arrow"></span></summary>
+                            <div class="nav-menu-item__dropdown"></div>
+                          </details>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="page-header__button">
+                  <a class="btn btn_with-border btn_login" href="./sign-in.html"><span class="btn__text">войти</span>
+                  </a>
+                </div>
+                <div class="page-header__button">
+                  <a class="btn btn_registration" href="./registration.html"><span class="btn__text">зарегистрироваться</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="page__main">
+        <main class="search-room">
+          <div class="search-room__wrapper">
+            <aside class="search-room__sidebar">
+              <div class="search-room__dropdowns-block">
+                <div class="search-room__filter-date-dropdown-block">
+                  <div class="search-room__title-component">
+                    <h3 class="title-component">даты пребывания в отеле</h3>
+                  </div>
+                  <div class="search-room__filter-date-dropdown">
+                    <div class="filter-date-dropdown">
+                      <div class="calendar">
+                        <label class="calendar__label">
+                          <input class="calendar__input js-calendar__input" readonly placeholder="Выберите даты">
+                          <div class="calendar__button"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-room__guests-dropdown-block">
+                  <div class="search-room__title-component">
+                    <h3 class="title-component">гости</h3>
+                  </div>
+                  <div class="search-room__guests-dropdown">
+                    <details class="dropdown dropdown_with-common-value js-dropdown_with-common-value">
+                      <summary class="dropdown__summary">
+                        <p class="dropdown__text iqdropdown-selection dropdown__text_with-common-value"></p><span class="dropdown__arrow">expand_more</span>
+                      </summary>
+                      <div class="dropdown__menu iqdropdown-menu">
+                        <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-1" data-defaultcount="2">
+                          <div class="dropdown__item-title">
+                            <p class="dropdown__item iqdropdown-item">Взрослые</p>
+                          </div>
+                        </div>
+                        <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-2" data-defaultcount="1">
+                          <div class="dropdown__item-title">
+                            <p class="dropdown__item iqdropdown-item">Дети</p>
+                          </div>
+                        </div>
+                        <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-3" data-defaultcount="1">
+                          <div class="dropdown__item-title">
+                            <p class="dropdown__item iqdropdown-item">Младенцы</p>
+                          </div>
+                        </div>
+                        <div class="dropdown__buttons">
+                          <button class="dropdown__button js-iqdropdown-button_clean dropdown__button_hide">Очистить</button>
+                          <button class="dropdown__button js-iqdropdown-button_apply">Применить</button>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+              </div>
+              <div class="search-room__range-slider">
+                <div class="range-slider js-range-slider">
+                  <div class="range-slider__title-and-value-group">
+                    <div class="range-slider__title">
+                      <h3 class="title-component">диапазон цены</h3>
+                    </div>
+                    <div class="range-slider__value"></div>
+                  </div>
+                  <div class="range-slider__container js-range-slider__container"> </div>
+                  <p class="range-slider__desc">Стоимость за сутки пребывания в номере</p>
+                </div>
+              </div>
+              <div class="search-room__checkbox-group">
+                <div class="search-room__title-component search-room__title-component_for-checkbox">
+                  <h3 class="title-component">правила дома</h3>
+                </div>
+                <div class="search-room__checkbox-items">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="checkbox">
+                    <p class="checkbox__text">Можно курить</p>
+                  </label>
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="checkbox" checked>
+                    <p class="checkbox__text">Можно с питомцами</p>
+                  </label>
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="checkbox" checked>
+                    <p class="checkbox__text">Можно пригласить гостей (до 10 человек)</p>
+                  </label>
+                </div>
+              </div>
+              <div class="search-room__rich-checkbox-group">   
+                <div class="search-room__title-component search-room__title-component_for-checkbox">
+                  <h3 class="title-component">доступность</h3>
+                </div>
+                <div class="search-room__rich-checkbox-list">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="checkbox">
+                    <div class="checkbox__text-group"> 
+                      <h4 class="checkbox__title">Широкий коридор</h4>
+                      <p class="checkbox__text_rich checkbox__text_box-small">Ширина коридоров в номере не менее 91 см.</p>
+                    </div>
+                  </label>
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="checkbox">
+                    <div class="checkbox__text-group"> 
+                      <h4 class="checkbox__title">Помощник для инвалидов</h4>
+                      <p class="checkbox__text_rich">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="search-room__comfort-block">
+                <div class="search-room__dropdown-comfort-group">
+                  <div class="search-room__title-component">
+                    <h3 class="title-component">удобства номера</h3>
+                  </div>
+                  <div class="search-room__dropdown-comfort">
+                    <details class="dropdown dropdown_with-separate-value js-dropdown_with-separate-value">
+                      <summary class="dropdown__summary">
+                        <p class="dropdown__text iqdropdown-selection dropdown__text_with-separate-value"></p><span class="dropdown__arrow">expand_more</span>
+                      </summary>
+                      <div class="dropdown__menu iqdropdown-menu">
+                        <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-1" data-defaultcount="2">
+                          <div class="dropdown__item-title">
+                            <p class="dropdown__item iqdropdown-item">Cпальни</p>
+                          </div>
+                        </div>
+                        <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-2" data-defaultcount="2">
+                          <div class="dropdown__item-title">
+                            <p class="dropdown__item iqdropdown-item">Кровати</p>
+                          </div>
+                        </div>
+                        <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-3" data-defaultcount="0">
+                          <div class="dropdown__item-title">
+                            <p class="dropdown__item iqdropdown-item">Ванные комнаты</p>
+                          </div>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+                <div class="search-room__checkbox-list">
+                  <details class="checkbox-list">
+                    <summary class="checkbox-list__field"><span class="checkbox-list__title">дополнительные удобства</span><span class="checkbox-list__arrow"> </span></summary>
+                    <ul class="checkbox-list__checkbox-group">
+                      <li class="checkbox-list__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="checkbox">
+                          <p class="checkbox__text">Завтрак</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-list__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="checkbox" checked>
+                          <p class="checkbox__text">Письменный стол</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-list__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="checkbox" checked>
+                          <p class="checkbox__text">Стул для кормления</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-list__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="checkbox" checked>
+                          <p class="checkbox__text">Кроватка</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-list__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="checkbox">
+                          <p class="checkbox__text">Телевизор</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-list__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" name="checkbox">
+                          <p class="checkbox__text">Шампунь</p>
+                        </label>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+              </div>
+            </aside>
+            <section class="search-room__room-cards">
+              <h1 class="search-room__title">Номера, которые мы для вас подобрали</h1>
+              <div class="search-room__room-list-block">
+                <div class="search-room__room-list">
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-1.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-2.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">888</div>
+                            <div class="card-room__text-after">люкс</div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">9 990₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">145</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-2.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-1.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">840</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">9 990₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">65</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-1.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-2.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">980</div>
+                            <div class="card-room__text-after">люкс</div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">8 500₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">35</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-2.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-1.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">856</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">7 300₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">19</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-5.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-2.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">740</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">6 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">44</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-6.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-5.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">982</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">5 800₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">56</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-7.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-6.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-5.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">678</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">5 500₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">45</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-8.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-7.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-6.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-5.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">450</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">5 300₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">39</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-9.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-8.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-7.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-6.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">350</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">77</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-10.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-9.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-8.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-7.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">666</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">25</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-11.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-10.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-9.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-8.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">444</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">15</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="search-room__card-room">
+                    <div class="card-room">
+                      <div class="card-room__slider">
+                        <div class="slider slider_for-card js-slider_for-card">
+                          <div class="slider__wrapper slider__wrapper_for-card ">
+                            <div class="slider__items">
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-12.jpg" alt="1 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-11.jpg" alt="2 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-10.jpg" alt="3 фото номера"></div>
+                              <div class="slider__item"><img class="slider__img" src="assets/images/room-9.jpg" alt="4 фото номера"></div>
+                            </div>
+                          </div>
+                          <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                        </div>
+                      </div>
+                      <section class="card-room__info">
+                        <div class="card-room__header">
+                          <div class="card-room__number-block">
+                            <div class="card-room__text-before">№ </div>
+                            <div class="card-room__number">352</div>
+                            <div class="card-room__text-after"></div>
+                          </div>
+                          <div class="card-room__price-block"><span class="card-room__price">5 000₽</span><span class="card-room__price-text">в сутки</span></div>
+                        </div>
+                        <div class="card-room__rating-box">
+                          <div class="card-room__rating">
+                            <div class="rate">
+                              <ul class="rate__list js-rate__list">
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item rate__item_active"></li>
+                                <li class="rate__item js-rate__item"></li>
+                                <li class="rate__item js-rate__item"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="card-room__reviews">
+                            <div class="card-room__reviews-value">55</div>
+                            <div class="card-room__reviews-text">Oтзывов</div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-room__pagination">
+                  <div class="pagination">
+                    <div class="pagination__list">
+                      <button class="btn btn_selected-page" type="button"><span class="btn__text">1</span>
+                      </button>
+                      <button class="btn btn_page" type="button"><span class="btn__text">2</span>
+                      </button>
+                      <button class="btn btn_page" type="button"><span class="btn__text">3</span>
+                      </button><span class="pagination__ellipse">...</span>
+                      <button class="btn btn_page" type="button"><span class="btn__text">15</span>
+                      </button>
+                      <button class="btn btn_turned-next-page" type="button"><span class="btn__text"></span><span class="arrow">arrow_forward</span>
+                      </button>
+                    </div>
+                    <p class="pagination__text">1 - 12 из 100+ вариантов аренды</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+      <div class="page__footer">
+        <footer class="page-footer">
+          <div class="page-footer__container">
+            <div class="page-footer__content">
+              <section class="page-footer__desc">
+                <div class="page-footer__logo">
+                  <div class="logo"><a class="logo__link" href="./start-page.html"> <img class="logo__img-logo-toxin" src="assets/images/logo-toxin.svg" alt="Логотип Toxin" width="106" height="40"></a>
+                  </div>
+                </div>
+                <p class="page-footer__text page-footer__text_desc">Бронирование номеров в лучшем отеле 2019 года по версии                      ассоциации «Отельные взгляды»</p>
+              </section>
+              <section class="page-footer__navigation-list">
+                <div class="nav-menu__group">
+                  <h3 class="nav-menu__title">Навигация</h3>
+                  <ul class="nav-menu__list nav-menu__list_footer">
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="О нас">О нас</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Новости">Новости</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Служба поддержки">Служба поддержки</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Услуги">Услуги</a></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav-menu__group">
+                  <h3 class="nav-menu__title">О нас</h3>
+                  <ul class="nav-menu__list nav-menu__list_footer">
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="О сервисе">О сервисе</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Наша команда">Наша команда</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Вакансии">Вакансии</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Инвесторы">Инвесторы</a></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav-menu__group">
+                  <h3 class="nav-menu__title">Служба поддержки</h3>
+                  <ul class="nav-menu__list nav-menu__list_footer">
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Соглашения">Соглашения</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Сообщества">Сообщества</a></div>
+                    </li>
+                    <li class="nav-menu__item">
+                      <div class="nav-menu-item"><a class="nav-menu-item__link" href="/mock-address/change-me" title="Связь с нами">Связь с нами</a></div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="page-footer__subs">
+                <h3 class="page-footer__subs-title">Подписка</h3>
+                <p class="page-footer__text page-footer__text_subs">Получайте специальные предложения и новости сервиса</p>
+                <div class="page-footer__subs-input">
+                  <label class="text-field text-field_subscribe">
+                    <input class="text-field__input   text-field__input_subscribe" type="email" name="email" placeholder="Email" required value="">
+                    <button class="text-field__btn" type="submit"><span class="arrow arrow_with-gradient">arrow_forward</span>
+                    </button>
+                  </label>
+                </div>
+              </section>
+            </div>
+          </div>
+          <section class="page-footer__copyrights">
+            <p class="page-footer__copyright-text">Copyright © 2018 Toxin отель. Все права защищены.</p>
+            <div class="page-footer__social-links"><a class="social-link social-link_twitter" href="/mock-address/change-me" target: _blank rel: noopener noreferrer><img class="social-link__img" src="assets/images/twitter-icon.svg" alt="twitter"></a><a class="social-link social-link_facebook" href="/mock-address/change-me" target: _blank rel: noopener noreferrer><img class="social-link__img" src="assets/images/facebook-icon.svg" alt="facebook"></a><a class="social-link social-link_instagram" href="/mock-address/change-me" target: _blank rel: noopener noreferrer><img class="social-link__img" src="assets/images/intagram-icon.svg" alt="instagram"></a>
+            </div>
+          </section>
+        </footer>
+        <footer class="page-footer-mobile">
+          <div class="page-footer-mobile__container">
+            <div class="page-footer-mobile__logo">
+              <div class="logo"><a class="logo__link" href="./start-page.html"> <img class="logo__img-logo-toxin" src="assets/images/logo-toxin.svg" alt="Логотип Toxin" width="106" height="40"></a>
+              </div>
+            </div>
+            <section class="page-footer-mobile__copyrights">
+              <p class="page-footer-mobile__copyright-text">Copyright © 2018 Toxin отель. Все права защищены.</p>
+              <div class="page-footer-mobile__social-links"><a class="social-link social-link_twitter" href="/mock-address/change-me" target: _blank rel: noopener noreferrer><img class="social-link__img" src="assets/images/twitter-icon.svg" alt="twitter"></a><a class="social-link social-link_facebook" href="/mock-address/change-me" target: _blank rel: noopener noreferrer><img class="social-link__img" src="assets/images/facebook-icon.svg" alt="facebook"></a><a class="social-link social-link_instagram" href="/mock-address/change-me" target: _blank rel: noopener noreferrer><img class="social-link__img" src="assets/images/intagram-icon.svg" alt="instagram"></a>
+              </div>
+            </section>
+          </div>
+        </footer>
+      </div>
+    </div>
+  <script defer src="js/831.js"></script><script defer src="js/482.js"></script><script defer src="js/357.js"></script><script defer src="js/568.js"></script><script defer src="js/search-room.js"></script></body>
+</html>

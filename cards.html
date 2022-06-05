@@ -1,0 +1,384 @@
+
+<title>Cards </title><!DOCTYPE html>
+<html lang="ru">
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="description" content="Сайт на шаблонизаторе Pug">
+    <meta name="keywords" content="">
+    <title></title>
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/favicon-48x48.png"><link rel="manifest" href="assets/favicons/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="my-webpack-project"><link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="assets/favicons/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="assets/favicons/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="my-webpack-project"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-640x1136.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-750x1334.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-828x1792.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1125x2436.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1242x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1242x2688.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1536x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1668x2224.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1668x2388.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-2048x2732.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/favicons/apple-touch-startup-image-1620x2160.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-1136x640.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-1334x750.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-1792x828.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2436x1125.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2208x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2688x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2048x1536.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2224x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2388x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2732x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="assets/favicons/apple-touch-startup-image-2160x1620.png"><link rel="icon" type="image/png" sizes="228x228" href="assets/favicons/coast-228x228.png"><meta name="msapplication-TileColor" content="#fff"><meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png"><meta name="msapplication-config" content="assets/favicons/browserconfig.xml"><link rel="yandex-tableau-widget" href="assets/favicons/yandex-browser-manifest.json"><link href="css/764.css" rel="stylesheet"><link href="css/cards.css" rel="stylesheet"></head>
+  <body>
+    <main class="cards">
+      <div class="cards__logo"> 
+        <div class="logo"><a class="logo__link" href="./start-page.html"> <img class="logo__img-logo-ui-kit" src="assets/images/logo-ui-kit.svg" alt="Логотип Toxin" width="48" height="48"></a>
+        </div>
+      </div>
+      <div class="cards__grid"> 
+        <div class="cards__grid-wrap-left">
+          <div class="cards__card-search">
+            <div class="card-search">
+              <h1 class="card-search__header">Найдём номера под ваши пожелания</h1>
+              <section class="card-search__date-dropdown">
+                <div class="date-dropdown js-date-dropdown">
+                  <div class="date-dropdown__input-group"> 
+                    <div class="date-dropdown__title">
+                      <h3 class="title-component">Прибытие</h3>
+                    </div>
+                    <label class="date-dropdown__label">
+                      <input class="date-dropdown__input date-dropdown__input_start js-date-dropdown__input_start" readonly placeholder="дд.мм.гггг">
+                      <div class="date-dropdown__button"> </div>
+                    </label>
+                  </div>
+                  <div class="date-dropdown__input-group">  
+                    <div class="date-dropdown__title">
+                      <h3 class="title-component">Выезд</h3>
+                    </div>
+                    <label class="date-dropdown__label">
+                      <input class="date-dropdown__input date-dropdown__input_end js-date-dropdown__input_end" readonly placeholder="дд.мм.гггг">
+                      <div class="date-dropdown__button"></div>
+                    </label>
+                  </div>
+                </div>
+              </section>
+              <section class="card-search__title-component">
+                <h3 class="title-component">Гости</h3>
+              </section>
+              <section class="card-search__dropdown">
+                <details class="dropdown dropdown_with-common-value js-dropdown_with-common-value">
+                  <summary class="dropdown__summary">
+                    <p class="dropdown__text iqdropdown-selection dropdown__text_with-common-value"></p><span class="dropdown__arrow">expand_more</span>
+                  </summary>
+                  <div class="dropdown__menu iqdropdown-menu">
+                    <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-1" data-defaultcount="0">
+                      <div class="dropdown__item-title">
+                        <p class="dropdown__item iqdropdown-item">Взрослые</p>
+                      </div>
+                    </div>
+                    <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-2" data-defaultcount="0">
+                      <div class="dropdown__item-title">
+                        <p class="dropdown__item iqdropdown-item">Дети</p>
+                      </div>
+                    </div>
+                    <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-3" data-defaultcount="0">
+                      <div class="dropdown__item-title">
+                        <p class="dropdown__item iqdropdown-item">Младенцы</p>
+                      </div>
+                    </div>
+                    <div class="dropdown__buttons">
+                      <button class="dropdown__button js-iqdropdown-button_clean dropdown__button_hide">Очистить</button>
+                      <button class="dropdown__button js-iqdropdown-button_apply">Применить</button>
+                    </div>
+                  </div>
+                </details>
+              </section>
+              <section class="card-search__button">
+                <a class="btn btn_with-arrow btn_long-with-arrow" href="/mock-address/change-me"><span class="btn__text">подобрать номер</span>
+                  <div class="btn__arrow"><span class="arrow">arrow_forward</span>
+                  </div>
+                </a>
+              </section>
+            </div>
+          </div>
+          <div class="cards__card-registration">
+            <div class="card-registration">
+              <h1 class="card-registration__header">Регистрация аккаунта</h1>
+              <form class="card-registration__form">
+                <fieldset class="card-registration__user-info">
+                  <section class="card-registration__name-registration">
+                    <label class="text-field">
+                      <input class="text-field__input   " type="text" name="userName" placeholder="Имя" required value="">
+                    </label>
+                  </section>
+                  <section class="card-registration__surname-registration">
+                    <label class="text-field">
+                      <input class="text-field__input   " type="text" name="userSurname" placeholder="Фамилия" required value="">
+                    </label>
+                  </section>
+                  <section class="card-registration__gender-selection">
+                    <div class="form-elements__radio">
+                      <label class="radio">
+                        <input class="radio__input" type="radio" name="radio" checked>Мужчина
+                      </label>
+                    </div>
+                    <div class="form-elements__radio">
+                      <label class="radio">
+                        <input class="radio__input" type="radio" name="radio">Женщина
+                      </label>
+                    </div>
+                  </section>
+                </fieldset>
+                <fieldset class="card-registration__birth-date">
+                  <legend class="card-registration__fieldset-title">
+                    <h3 class="title-component">дата рождения</h3>
+                  </legend>
+                  <section class="card-registration__birth-date-form">
+                    <label class="text-field">
+                      <input class="text-field__input  text-field__input_masked js-text-field__input_masked " type="text" name="dateOfBirth" placeholder="ДД.ММ.ГГГГ" required value="">
+                    </label>
+                  </section>
+                </fieldset>
+                <fieldset class="card-registration__authorization">
+                  <legend class="card-registration__fieldset-title">
+                    <h3 class="title-component">данные для входа в сервис</h3>
+                  </legend>
+                  <section class="card-registration__login-details">
+                    <div class="card-registration__email">
+                      <label class="text-field">
+                        <input class="text-field__input   " type="email" name="email" placeholder="Email" required value="">
+                      </label>
+                    </div>
+                    <div class="card-registration__password">
+                      <label class="text-field">
+                        <input class="text-field__input   " type="password" name="password" placeholder="Пароль" required value="">
+                      </label>
+                    </div>
+                    <div class="card-registration__toggle">
+                      <label class="toggle">
+                        <input class="toggle__input" type="checkbox" name="toggle">Получать спецпредложения
+                      </label>
+                    </div>
+                  </section>
+                </fieldset>
+                <div class="card-registration__submit">
+                  <button class="btn btn_with-arrow btn_long-with-arrow" type="submit"><span class="btn__text">Перейти к оплате</span>
+                    <div class="btn__arrow"><span class="arrow">arrow_forward</span>
+                    </div>
+                  </button>
+                </div>
+                <section class="card-registration__block-entry">
+                  <p class="card-registration__block-entry-text">Уже есть аккаунт на Toxin</p>
+                  <div class="card-registration__block-entry-button">
+                    <a class="btn btn_with-border" href="/mock-address/change-me"><span class="btn__text">Войти</span>
+                    </a>
+                  </div>
+                </section>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="cards__grid-wrap-center">
+          <div class="cards__card-booking">
+            <div class="card-booking js-card-booking">
+              <section class="card-booking__header">
+                <h1 class="card-booking__number"><span class="card-booking__text-before">№ </span>888 <span class="card-booking__text-after">люкс</span>
+                </h1>
+                <div class="card-booking__price-block"><span class="card-booking__price">9 990₽</span><span class="card-booking__price-text">в сутки</span></div>
+              </section>
+              <section class="card-booking__date-dropdown">
+                <div class="date-dropdown js-date-dropdown">
+                  <div class="date-dropdown__input-group"> 
+                    <div class="date-dropdown__title">
+                      <h3 class="title-component">Прибытие</h3>
+                    </div>
+                    <label class="date-dropdown__label">
+                      <input class="date-dropdown__input date-dropdown__input_start js-date-dropdown__input_start" readonly placeholder="дд.мм.гггг">
+                      <div class="date-dropdown__button"> </div>
+                    </label>
+                  </div>
+                  <div class="date-dropdown__input-group">  
+                    <div class="date-dropdown__title">
+                      <h3 class="title-component">Выезд</h3>
+                    </div>
+                    <label class="date-dropdown__label">
+                      <input class="date-dropdown__input date-dropdown__input_end js-date-dropdown__input_end" readonly placeholder="дд.мм.гггг">
+                      <div class="date-dropdown__button"></div>
+                    </label>
+                  </div>
+                </div>
+              </section>
+              <section class="card-booking__title-component">
+                <h3 class="title-component">Гости</h3>
+              </section>
+              <section class="card-booking__dropdown">
+                <details class="dropdown dropdown_with-common-value js-dropdown_with-common-value">
+                  <summary class="dropdown__summary">
+                    <p class="dropdown__text iqdropdown-selection dropdown__text_with-common-value"></p><span class="dropdown__arrow">expand_more</span>
+                  </summary>
+                  <div class="dropdown__menu iqdropdown-menu">
+                    <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-1" data-defaultcount="3">
+                      <div class="dropdown__item-title">
+                        <p class="dropdown__item iqdropdown-item">Взрослые</p>
+                      </div>
+                    </div>
+                    <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-2" data-defaultcount="0">
+                      <div class="dropdown__item-title">
+                        <p class="dropdown__item iqdropdown-item">Дети</p>
+                      </div>
+                    </div>
+                    <div class="dropdown__menu-option iqdropdown-menu-option" data-id="item-3" data-defaultcount="0">
+                      <div class="dropdown__item-title">
+                        <p class="dropdown__item iqdropdown-item">Младенцы</p>
+                      </div>
+                    </div>
+                    <div class="dropdown__buttons">
+                      <button class="dropdown__button js-iqdropdown-button_clean dropdown__button_hide">Очистить</button>
+                      <button class="dropdown__button js-iqdropdown-button_apply">Применить</button>
+                    </div>
+                  </div>
+                </details>
+              </section>
+              <ul class="card-booking__price-list">
+                <li class="card-booking__price-list-item">
+                  <div class="card-booking__price-calc"><span class="card-booking__price-value">9 990₽</span><span class="card-booking__operator">x</span><span class="card-booking__days-value js-card-booking__days-value">4</span><span class="card-booking__days-text">суток</span></div>
+                  <div class="card-booking__price-calc-value">39 960₽</div>
+                </li>
+                <li class="card-booking__price-list-item">
+                  <div class="card-booking__fee"><span class="card-booking__fee-text">Сбор за услуги: скидка</span><span class="card-booking__discount">2 179₽</span>
+                    <div class="card-booking__hint" title="Подсказка 1">i</div>
+                  </div>
+                  <div class="card-booking__fee-value">0₽</div>
+                </li>
+                <li class="card-booking__price-list-item">
+                  <div class="card-booking__additional-fee"><span class="card-booking__additional-fee-text">Сбор за дополнительные услуги</span>
+                    <div class="card-booking__hint" title="Подсказка 2">i</div>
+                  </div>
+                  <div class="card-booking__additional-fee-value">300₽</div>
+                </li>
+              </ul>
+              <section class="card-booking__total-value-block"><span class="card-booking__total-value-text">Итого</span>
+                <div class="card-booking__differentiation"></div><span class="card-booking__total-value">38 081₽</span>
+              </section>
+              <div class="card-booking__submit">
+                <button class="btn btn_with-arrow btn_long-with-arrow" type="submit"><span class="btn__text">Забронировать</span>
+                  <div class="btn__arrow"><span class="arrow">arrow_forward</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cards__card-log-in">
+            <div class="card-log-in">
+              <h1 class="card-log-in__header">Войти</h1>
+              <form class="card-log-in__form">
+                <fieldset class="card-log-in__login-details">
+                  <div class="card-log-in__email">
+                    <label class="text-field">
+                      <input class="text-field__input   " type="email" name="email" placeholder="Email" required value="">
+                    </label>
+                  </div>
+                  <div class="card-log-in__password">
+                    <label class="text-field">
+                      <input class="text-field__input   " type="password" name="password" placeholder="Пароль" required value="">
+                    </label>
+                  </div>
+                </fieldset>
+                <div class="card-log-in__submit">
+                  <button class="btn btn_with-arrow btn_long-with-arrow" type="submit"><span class="btn__text">Войти</span>
+                    <div class="btn__arrow"><span class="arrow">arrow_forward</span>
+                    </div>
+                  </button>
+                </div>
+              </form>
+              <section class="card-log-in__block-create-acc">
+                <p class="card-log-in__create-acc-text">Нет аккаунта на Toxin?</p>
+                <div class="card-log-in__create-acc-button">
+                  <a class="btn btn_with-border" href="/mock-address/change-me"><span class="btn__text">Создать</span>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="cards__grid-wrap-right">
+          <div class="cards__calendar">
+            <div class="calendar">
+              <div class="calendar__wrap js-calendar__wrap"></div>
+            </div>
+          </div>
+          <div class="cards__card-room-blocks">
+            <div class="cards__card-room">
+              <div class="card-room">
+                <div class="card-room__slider">
+                  <div class="slider slider_for-card js-slider_for-card">
+                    <div class="slider__wrapper slider__wrapper_for-card ">
+                      <div class="slider__items">
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-1.jpg" alt="1 фото номера"></div>
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-2.jpg" alt="2 фото номера"></div>
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="3 фото номера"></div>
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="4 фото номера"></div>
+                      </div>
+                    </div>
+                    <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                  </div>
+                </div>
+                <section class="card-room__info">
+                  <div class="card-room__header">
+                    <div class="card-room__number-block">
+                      <div class="card-room__text-before">№ </div>
+                      <div class="card-room__number">888</div>
+                      <div class="card-room__text-after">люкс</div>
+                    </div>
+                    <div class="card-room__price-block"><span class="card-room__price">9 990₽</span><span class="card-room__price-text">в сутки</span></div>
+                  </div>
+                  <div class="card-room__rating-box">
+                    <div class="card-room__rating">
+                      <div class="rate">
+                        <ul class="rate__list js-rate__list">
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-room__reviews">
+                      <div class="card-room__reviews-value">145</div>
+                      <div class="card-room__reviews-text">Oтзывов</div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="cards__card-room">
+              <div class="card-room">
+                <div class="card-room__slider">
+                  <div class="slider slider_for-card js-slider_for-card">
+                    <div class="slider__wrapper slider__wrapper_for-card ">
+                      <div class="slider__items">
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-2.jpg" alt="1 фото номера"></div>
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-1.jpg" alt="2 фото номера"></div>
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-3.jpg" alt="3 фото номера"></div>
+                        <div class="slider__item"><img class="slider__img" src="assets/images/room-4.jpg" alt="4 фото номера"></div>
+                      </div>
+                    </div>
+                    <div class="slider__control-group"><a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a><a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a></div>
+                  </div>
+                </div>
+                <section class="card-room__info">
+                  <div class="card-room__header">
+                    <div class="card-room__number-block">
+                      <div class="card-room__text-before">№ </div>
+                      <div class="card-room__number">840</div>
+                      <div class="card-room__text-after"></div>
+                    </div>
+                    <div class="card-room__price-block"><span class="card-room__price">9 990₽</span><span class="card-room__price-text">в сутки</span></div>
+                  </div>
+                  <div class="card-room__rating-box">
+                    <div class="card-room__rating">
+                      <div class="rate">
+                        <ul class="rate__list js-rate__list">
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item rate__item_active"></li>
+                          <li class="rate__item js-rate__item"></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-room__reviews">
+                      <div class="card-room__reviews-value">65</div>
+                      <div class="card-room__reviews-text">Oтзывов</div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  <script defer src="js/831.js"></script><script defer src="js/482.js"></script><script defer src="js/568.js"></script><script defer src="js/cards.js"></script></body>
+</html>
