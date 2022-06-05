@@ -30,7 +30,7 @@
 
   &__item {
     background: $primary-gradient;
-    border: 2px solid $color-secondary-bg;
+    border: 2px solid $color-font-a50;
     border-radius: 5px;
   }
 
@@ -38,7 +38,7 @@
     display: inline-block;
     width: 100%;
     padding: 0.5em;
-    color: $color-font-a75;
+    color: $color-third-bg;
     font: 2rem $main-font-family;
     text-decoration: none;
   }
