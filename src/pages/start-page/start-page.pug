@@ -4,5 +4,39 @@ include ../../components/logo/logo
 
 block variables
   title Start page
+  -
+    const uiKitPages = [
+      {text: "Colors & Type", href: "./colors-and-type.html"},
+      {text: "Form Elements", href: "./form-elements.html"},
+      {text: "Cards", href: "./cards.html"},
+      {text: "Headers & Footers", href: "./headers-and-footers.html"},
+    ];
+
+    const toxinPages = [
+      {text: "Landing page", href: "./landing-page.html"},
+      {text: "Search room", href: "./search-room.html"},
+      {text: "Room details", href: "./room-details.html"},
+      {text: "Registration", href: "./registration.html"},
+      {text: "Sign in", href: "./sign-in.html"},
+    ]
+
+
 
 block content
+  main.start-page
+    .start-page__wrapper
+      .start-page__logo
+        +logo({typeLogo: "logoWithText"})
+      section.start-page__pages
+        ul.start-page__list
+          each uiKitPage in uiKitPages
+            - const { href, text } = uiKitPage;
+            li.start-page__item
+              a.start-page__link(href= href)= text
+        ul.start-page__list
+          each page in toxinPages
+            - const { href, text } = page;
+            li.start-page__item
+              a.start-page__link(href= href)= text
+
+
