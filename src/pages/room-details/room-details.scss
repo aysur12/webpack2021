@@ -27,8 +27,8 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap-reverse;
+    justify-content: space-between;
     width: 100%;
     max-width: 85.714em;
     margin: 0 auto;
@@ -52,9 +52,9 @@
 
   &__short-info {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5em;
+    justify-content: space-between;
     max-width: 48.143em;
     margin-bottom: 1em;
 
@@ -105,10 +105,10 @@
 
   &__testimonials-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     flex-wrap: wrap;
     gap: 1em;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: 1.571em;
   }
 
@@ -125,9 +125,9 @@
 
   &__rules {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1em;
+    justify-content: space-between;
     max-width: 50.214em;
   }
 

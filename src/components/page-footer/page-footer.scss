@@ -27,12 +27,12 @@
 
     @media screen and (max-width: 1000px) {
       grid:
-      'desc'
-      'nav' 
-      'subs'
-      / 1fr;
-      justify-items: center;
+        'desc'
+        'nav'
+        'subs'
+        / 1fr;
       gap: 30px;
+      justify-items: center;
       padding: 1.429em;
     }
   }

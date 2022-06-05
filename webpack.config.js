@@ -39,7 +39,7 @@ const config = {
   devServer: {
     static: './dist',
     port: 8080,
-    open: '/registration.html',
+    open: '/sign-in.html',
     hot: false,
   },
   plugins: [

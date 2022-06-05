@@ -1,14 +1,13 @@
 @use '../../styles/main' as *;
 
 .nav-menu {
-
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.429em;
+    align-content: center;
     align-items: center;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style-type: none;

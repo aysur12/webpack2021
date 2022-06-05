@@ -12,13 +12,19 @@
     max-width: 86.286em;
     margin: 0 auto;
     padding: 1.286em 0.786em 4.5em;
+
+    @media screen and (max-width: 550px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 1em;
+    }
   }
 
   &__sidebar {
     width: 100%;
     max-width: 20.714em;
     padding: 0.857em;
-    
   }
 
   &__dropdowns-block {
@@ -71,21 +77,29 @@
     margin: 0;
     padding: 0 0.5em;
     @include font-h1;
+
+    @media screen and (max-width: 550px) {
+      text-align: center;
+    }
   }
 
   &__room-list-block {
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 925px) {
+      align-items: center;
+    }
   }
 
   &__room-list {
-    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(19.429em, 1fr));
-    column-gap: 0.714em;
-    row-gap: 1.214em;
+    box-sizing: border-box;
     margin-bottom: 1.357em;
     padding: 21px 12px;
+    column-gap: 0.714em;
+    row-gap: 1.214em;
   }
 
   &__pagination {

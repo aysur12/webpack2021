@@ -4,9 +4,9 @@
   display: none;
   max-width: 768px;
   margin: 0 auto;
+  padding: 8.571em 1.5em;
   background-color: $color-third-bg;
   box-shadow: $shadow-header-footer;
-  padding: 8.571em 1.5em;
 
   @media screen and (max-width: 768px) {
     display: flex;

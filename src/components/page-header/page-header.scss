@@ -28,10 +28,10 @@
       }
 
       @media screen and (max-width: 600px) {
+        z-index: 10000;
         flex-direction: column;
         flex-wrap: nowrap;
         max-height: 25.714em;
-        z-index: 10000;
       }
     }
 
@@ -72,8 +72,8 @@
       max-height: 0;
       margin-top: 0.714em;
       overflow: hidden;
-      background-color: $color-third-bg;
       text-align: center;
+      background-color: $color-third-bg;
     }
   }
 

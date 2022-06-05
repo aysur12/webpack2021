@@ -5,4 +5,3 @@ import '../../components/bullet';
 import '../../components/card-booking';
 import './room-details.scss';
 import '../../components/chart';
-
