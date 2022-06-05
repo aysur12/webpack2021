@@ -41,5 +41,9 @@
     color: $color-third-bg;
     font: 2rem $main-font-family;
     text-decoration: none;
+
+    &:hover {
+      color: $color-font-a75;
+    }
   }
 }

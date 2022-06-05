@@ -10,7 +10,7 @@
     "dev": "webpack --mode=development",
     "watch": "webpack --watch",
     "start": "webpack serve",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "eslint": "eslint .",
     "eslint:fix": "eslint --fix --ext .js,.jsx .",
     "style": "stylelint src/**/*.scss",

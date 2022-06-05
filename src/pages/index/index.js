@@ -1,2 +1,2 @@
 import '../../components/logo';
-import './start-page.scss';
+import './index.scss';
