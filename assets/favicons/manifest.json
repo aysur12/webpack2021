@@ -1,7 +1,7 @@
 {
   "name": "my-webpack-project",
   "short_name": "my-webpack-project",
-  "description": "My webpack project",
+  "description": "Сайт Toxin hotel",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
