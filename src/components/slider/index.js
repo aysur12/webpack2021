@@ -1,4 +1,4 @@
-import Slider from './Slider';
+import Slider from '../../libs/slider/Slider';
 import './slider.scss';
 
 const cardSliders = document.querySelectorAll('.js-slider_for-card');
@@ -10,6 +10,7 @@ const sliderCardOpts = {
 };
 
 cardSliders.forEach((slider) => new Slider(slider, sliderCardOpts));
+
 const sliderPreviewOpts = {
   loop: true,
   indicators: false,
@@ -17,6 +18,6 @@ const sliderPreviewOpts = {
   interval: 5000,
   swipe: false,
 };
-
 const previewSliders = document.querySelectorAll('.js-slider_for-preview');
+
 previewSliders.forEach((slider) => new Slider(slider, sliderPreviewOpts));

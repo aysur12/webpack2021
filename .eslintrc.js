@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: ['fsd'],
   env: {
     browser: true,
     es2021: true,
@@ -6,9 +7,11 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'plugin:fsd/all',
   ],
+  parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 13,
+    ecmaVersion: 2015,
     sourceType: 'module',
   },
   rules: {
