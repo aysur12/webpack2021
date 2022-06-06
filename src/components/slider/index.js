@@ -1,5 +1,4 @@
 import Slider from './Slider';
-import 'material-icons/iconfont/material-icons.scss';
 import './slider.scss';
 
 const cardSliders = document.querySelectorAll('.js-slider_for-card');

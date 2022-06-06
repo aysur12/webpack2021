@@ -1,5 +1,5 @@
 import '../logo';
 import '../nav-menu';
-import '../text-field';
 import '../social-links';
+import '../text-field';
 import './page-footer.scss';

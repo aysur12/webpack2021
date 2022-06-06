@@ -1,3 +1,4 @@
+import 'material-icons/iconfont/material-icons.scss';
 import '../../components/logo';
 import '../../components/card-search';
 import '../../components/card-registration';

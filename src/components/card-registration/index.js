@@ -1,6 +1,6 @@
-import '../text-field';
+import '../button';
 import '../radio';
+import '../text-field';
 import '../title-component';
 import '../toggle';
-import '../button';
 import './card-registration.scss';

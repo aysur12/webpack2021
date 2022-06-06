@@ -39,7 +39,7 @@ const config = {
   devServer: {
     static: './dist',
     port: 8080,
-    open: '/index.html',
+    open: '/sign-in.html',
     hot: false,
   },
   plugins: [
@@ -105,7 +105,7 @@ const config = {
 module.exports = () => {
   if (isProduction) {
     config.mode = 'production';
-    config.plugins.push(new MiniCssExtractPlugin({ filename: filename('css') }));
+    config.plugins.push(new MiniCssExtractPlugin({ filename: filename('css'), ignoreOrder: true }));
   } else {
     config.mode = 'development';
   }
