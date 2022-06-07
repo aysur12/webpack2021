@@ -27,13 +27,16 @@ block content
     .start-page__wrapper
       .start-page__logo
         +logo({typeLogo: "logoWithText"})
+      h1.start-page__title Стартовая страница проекта
       section.start-page__pages
         ul.start-page__list
+          h2.start-page__list-title UI-kit
           each uiKitPage in uiKitPages
             - const { href, text } = uiKitPage;
             li.start-page__item
               a.start-page__link(href= href)= text
-        ul.start-page__list
+        ul.start-page__list 
+          h2.start-page__list-title Toxin
           each page in toxinPages
             - const { href, text } = page;
             li.start-page__item

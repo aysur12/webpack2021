@@ -11,21 +11,47 @@
     padding: 4em;
   }
 
+  &__title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
   &__pages {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
     justify-content: space-between;
     width: 100%;
+
+    @media screen and (max-width: 654px) {
+      justify-content: center;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style-type: none;
+  }
+
+  &__list-title {
+    margin: 0;
+    padding: 0;
+    color: $color-font-a75;
+    font: 2rem $main-font-family;
+    text-align: center;
   }
 
   &__item {
