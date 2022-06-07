@@ -10,7 +10,7 @@ ___
 
 ## Описание проекта
 
-В проекте выполнен Ui Kit, который состоит из 4 отдельных страниц:
+В дополнение к проекту создан Ui-kit, который состоит из 4 отдельных страниц:
   + Colors & Types
   + Headers & Footers
   + Form & Elements
@@ -25,7 +25,8 @@ ___
 ___
 В работе использовались: 
   + компонентная архитектура;
-  + методология БЭМ;
+  + методология [БЭМ](https://ru.bem.info/methodology/quick-start/);
+
 Для соблюдения компонентного подхода применялись следующие инструменты разработки:
   + [Webpack 5](https://webpack.js.org/);
   + шаблонизатор [Pug (Jade)](https://pugjs.org/api/getting-started.html);
@@ -48,38 +49,38 @@ ___
 Для упорядочивания стилей в файлах `.scss` применялся линтер [Stylelint](https://stylelint.io/) со следующим конфигом [stylelint-config-rational-order](https://github.com/constverum/stylelint-config-rational-order)
 ___
 
-Для соответствия макетов сайта и дизайна использовалось расширение [PerfectPixel by WellDoneCode](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru)
+Для соответствия макетов сайта и дизайна использовалось расширение [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru)
 ___
 __Версия Node.js__ - 13.14.0
 __Версия npm__ - 16.14.4
 ___
 ## Развертывание
-  ##### Клонирование репозитория
+##### Клонирование репозитория
 ```
 git clone https://github.com/aysur12/webpack2021.git
 cd webpack2021
 ```
-  ##### Устновка зависимостей
+##### Устновка зависимостей
 ```
 npm i
 ```
-  ##### Запуск производственной сборки проекта
+##### Запуск производственной сборки проекта
 ```
 npm run build
 ```
-  ##### Запуск в режиме dev-server
+##### Запуск в режиме dev-server
 ```
 npm start
 ```
-  ##### Запуск ESlint
+##### Запуск ESlint
 ```
 npm run eslint
 ```
-  ##### Запуск Stylelint
+##### Запуск Stylelint
 ```
 npm run style
 ```
-  ##### Публикация на GitHub Pages
+##### Публикация на GitHub Pages
 ```
 npm run deploy
 ```
