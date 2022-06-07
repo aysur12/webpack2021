@@ -80,3 +80,7 @@ npm run eslint
 ```
 npm run style
 ```
+##### Публикация на GitHub Pages
+```
+npm run deploy
+```
