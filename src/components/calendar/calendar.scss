@@ -9,9 +9,14 @@
     max-width: 22.857em;
   }
 
-  &__label {
+  &__input-block {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__label {
+    flex-basis: 83.46%;
+    max-width: 19em;
 
     &:focus,
     &:hover {
@@ -20,8 +25,6 @@
   }
 
   &__input {
-    flex-basis: 83.46%;
-    max-width: 19em;
     padding: 0.643em 0.857em 0.5em;
     color: $color-font-a75;
     font: 1rem/1.71 $main-font-family;

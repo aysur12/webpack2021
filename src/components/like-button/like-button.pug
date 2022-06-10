@@ -9,8 +9,8 @@ mixin like-button(params = {})
 
   button.like-button(class= `${likeButtonActive} js-like-button`)
     if isActive
-      .like-button__icon favorite
+      span.like-button__icon favorite
     else
-      .like-button__icon favorite_border
-    .like-button__count= count  
+      span.like-button__icon favorite_border
+    span.like-button__count= count  
 

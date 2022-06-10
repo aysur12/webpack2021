@@ -10,8 +10,9 @@ mixin checkbox(params = {})
 
     const boxSmall = textBoxSizeSmall ? "checkbox__text_box-small" : "";
 
-  label.checkbox
-    input.checkbox__input(type= "checkbox" name="checkbox" checked= checked)
+  .checkbox
+    label.checkbox__label
+      input.checkbox__input(type= "checkbox" name="checkbox" checked= checked)
     if rich 
       .checkbox__text-group 
         h4.checkbox__title= title

@@ -12,26 +12,25 @@ block variables
 
 block content
   main.room-details
-    section.room-details__preview-images-block
+    .room-details__preview-images-block
       -
         const chosenRoomImages = require('./chosen-room.json');
       
-      .room-details__preview-image-item
+      .room-details__preview-image-item.room-details__preview-image-item_size_big
         img.room-details__preview-image(
           src= require(`../../assets/images/${chosenRoomImages.img1.src}`)
           alt= `${chosenRoomImages.img1.alt}`
         )
-      .room-details__small-image-items
-        .room-details__preview-image-item
-          img.room-details__preview-image(
-            src= require(`../../assets/images/${chosenRoomImages.img2.src}`)
-            alt= `${chosenRoomImages.img2.alt}`
-          )
-        .room-details__preview-image-item
-          img.room-details__preview-image(
-            src= require(`../../assets/images/${chosenRoomImages.img3.src}`)
-            alt= `${chosenRoomImages.img3.alt}`
-          )
+      .room-details__preview-image-item.room-details__preview-image-item_size_small_1
+        img.room-details__preview-image(
+          src= require(`../../assets/images/${chosenRoomImages.img2.src}`)
+          alt= `${chosenRoomImages.img2.alt}`
+        )
+      .room-details__preview-image-item.room-details__preview-image-item_size_small_2
+        img.room-details__preview-image(
+          src= require(`../../assets/images/${chosenRoomImages.img3.src}`)
+          alt= `${chosenRoomImages.img3.alt}`
+        )
     .room-details__wrapper
       .room-details__info
         .room-details__short-info
@@ -59,8 +58,8 @@ block content
           .room-details__testimonials-header
             h2.room-details__title Отзывы посетителей номера
             .room-details__testimonials-value 2 отзыва
-          section.room-details__testimonials
-            section.room-details__testimonial
+          .room-details__testimonials
+            .room-details__testimonial
               +testimonial({
                 avatar: require("../../assets/images/murad.jpg"),
                 altImg: "Мурад Сарафанов",
@@ -72,7 +71,7 @@ block content
                 likeBtnCount: 12,
                 likeBtnActive: true,
               })
-            section.room-details__testimonial
+            .room-details__testimonial
               +testimonial({
                 avatar: require("../../assets/images/patricia.jpg"),
                 altImg: "Патрисия Стёклышкова",

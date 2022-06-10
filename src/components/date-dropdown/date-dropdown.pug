@@ -18,17 +18,19 @@ mixin date-dropdown(params = {})
     .date-dropdown__input-group 
       .date-dropdown__title
         +title-component(titleLeftDropdown)
-      label.date-dropdown__label
-        input.date-dropdown__input.date-dropdown__input_start(
-          class= "js-date-dropdown__input_start" 
-          )&attributes(inputAttributes)
+      .date-dropdown__input-block
+        label.date-dropdown__label
+          input.date-dropdown__input.date-dropdown__input_start(
+            class= "js-date-dropdown__input_start" 
+            )&attributes(inputAttributes)
         .date-dropdown__button  
     .date-dropdown__input-group   
       .date-dropdown__title
         +title-component(titleRightDropdown)
-      label.date-dropdown__label
-        input.date-dropdown__input.date-dropdown__input_end(
-          class= "js-date-dropdown__input_end"
-          )&attributes(inputAttributes)
+      .date-dropdown__input-block
+        label.date-dropdown__label
+          input.date-dropdown__input.date-dropdown__input_end(
+            class= "js-date-dropdown__input_end"
+            )&attributes(inputAttributes)
         .date-dropdown__button
   

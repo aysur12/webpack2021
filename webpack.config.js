@@ -3,7 +3,8 @@ const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebpackFavicons = require('webpack-favicons');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -39,7 +40,7 @@ const config = {
   devServer: {
     static: './dist',
     port: 8080,
-    open: '/index.html',
+    open: '/search-room.html',
     hot: false,
   },
   plugins: [
@@ -57,13 +58,22 @@ const config = {
       jQuery: 'jquery',
       'window.jquery': 'jquery'
     }),
-    new FaviconsWebpackPlugin({
-      logo: './src/assets/favicons/favicon-toxin.png',
-      prefix: './assets/favicons/',
+    new WebpackFavicons({
+      src: './src/assets/favicons/favicon-toxin.png',
+      path: 'assets/images',
+      background: '#000',
+      theme_color: '#000',
       icons: {
-        appleStartup: false,
+        favicons: true
       }
-    }),
+    })
+    // new FaviconsWebpackPlugin({
+    //   logo: './src/assets/favicons/favicon-toxin.png',
+    //   prefix: './assets/favicons/',
+    //   icons: {
+    //     appleStartup: false,
+    //   }
+    // }),
   ],
   module: {
     rules: [

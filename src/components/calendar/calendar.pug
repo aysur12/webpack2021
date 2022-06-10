@@ -15,6 +15,7 @@ mixin calendar(params = {})
     if blockIsDiv
       .calendar__wrap(class= "js-calendar__wrap")
     else
-      label.calendar__label
-        input.calendar__input(class= "js-calendar__input")&attributes(inputAttributes)
+      .calendar__input-block
+        label.calendar__label
+          input.calendar__input(class= "js-calendar__input")&attributes(inputAttributes)
         .calendar__button

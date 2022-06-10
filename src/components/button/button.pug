@@ -32,23 +32,23 @@ mixin button(params = {})
       }
     }
     const btnModifiers = {
-      "btn_with-arrow" : withArrow,
-      "btn_hovered" : isHovered,
-      "btn_with-border" : withBorder,
-      "btn_border-less" : borderLess,
-      "btn_border-less-hovered" : borderLessHovered,
-      "btn_long-with-arrow" : longWithArrow,
-      "btn_page" : isForPage,
-      "btn_selected-page" : isSelectedPage,
-      "btn_turned-next-page" : isTurnNextPage,
-      "btn_login" : forLogin,
-      "btn_registration" : forRegistration,
+      "button_with-arrow" : withArrow,
+      "button_hovered" : isHovered,
+      "button_with-border" : withBorder,
+      "button_border-less" : borderLess,
+      "button_border-less-hovered" : borderLessHovered,
+      "button_long-with-arrow" : longWithArrow,
+      "button_page" : isForPage,
+      "button_selected-page" : isSelectedPage,
+      "button_turned-next-page" : isTurnNextPage,
+      "button_login" : forLogin,
+      "button_registration" : forRegistration,
     }
 
-  #{tagBtn}.btn(class= btnModifiers)&attributes(buttonAttributes[tagBtn])
-    span.btn__text= text
+  #{tagBtn}.button(class= btnModifiers)&attributes(buttonAttributes[tagBtn])
+    span.button__text= text
     if withArrow
-      .btn__arrow
+      span.button__arrow
         +arrow({withGradient: false})
     if isTurnNextPage
       +arrow({withGradient: false})

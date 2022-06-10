@@ -54,12 +54,6 @@
     text-align: center;
   }
 
-  &__item {
-    background: $primary-gradient;
-    border: 2px solid $color-font-a50;
-    border-radius: 5px;
-  }
-
   &__link {
     display: inline-block;
     width: 100%;
@@ -67,6 +61,9 @@
     color: $color-third-bg;
     font: 2rem $main-font-family;
     text-decoration: none;
+    background: $primary-gradient;
+    border: 2px solid $color-font-a50;
+    border-radius: 5px;
 
     &:hover {
       color: $color-font-a75;

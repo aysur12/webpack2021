@@ -16,7 +16,7 @@ mixin dropdown(params = {})
 
   details.dropdown(class = `${dropdownWithCommonValue}` open= open)
     summary.dropdown__summary
-      p.dropdown__text.iqdropdown-selection(class= `${textWithCommonValue}`)
+      p.dropdown__text(class= `${textWithCommonValue} iqdropdown-selection`)
       span.dropdown__arrow expand_more
     .dropdown__menu(class= "iqdropdown-menu")
       each item, index in items

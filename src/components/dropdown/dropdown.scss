@@ -25,16 +25,15 @@
   }
 
   &__text {
-    display: inline-block;
     margin: 0;
     padding: 0.643em 0.929em 0.571em;
+    text-overflow: ellipsis;
     overflow: hidden;
     font: 1rem/1.71 $main-font-family;
     white-space: nowrap;
-    text-overflow: ellipsis;
 
     &_with-separate-value {
-      flex-basis: 65%;
+      flex-basis: 61%;
     }
   }
 

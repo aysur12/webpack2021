@@ -53,6 +53,11 @@
   &__card-search {
     grid-area: card;
     width: 100%;
+
+    @media screen and (max-width: 730px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__text-block {

@@ -28,7 +28,7 @@ mixin card-booking(params = {})
     } = params;
 
   .card-booking.js-card-booking
-    section.card-booking__header
+    .card-booking__header
       h1.card-booking__number
         span.card-booking__text-before= textNumberBefore
         =textNumber
@@ -44,7 +44,7 @@ mixin card-booking(params = {})
         })
     section.card-booking__title-component
       +title-component("Гости")
-    section.card-booking__dropdown
+    .card-booking__dropdown
       +dropdown({
         hasCommonValue: true,
         items: [
@@ -72,7 +72,7 @@ mixin card-booking(params = {})
           span.card-booking__additional-fee-text= additionalFeeText
           .card-booking__hint(title = `${hintAdditionalFeeText}`)= hintIcon
         .card-booking__additional-fee-value= additionalFeeValue
-    section.card-booking__total-value-block
+    .card-booking__total-value-block
       span.card-booking__total-value-text= totalValueText
       .card-booking__differentiation
       span.card-booking__total-value= totalValue

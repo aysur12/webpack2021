@@ -12,7 +12,7 @@
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.071em 1.429em;
+    padding: 0.929em 1.429em;
   }
 
   &__hamburger-checkbox {
@@ -74,14 +74,6 @@
       overflow: hidden;
       text-align: center;
       background-color: $color-third-bg;
-    }
-  }
-
-  &__nav-menu {
-    padding-top: 3px;
-
-    &_with-logged {
-      padding-top: 0;
     }
   }
 

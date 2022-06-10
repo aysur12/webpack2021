@@ -12,15 +12,15 @@ mixin card-search(params = {})
 
   .card-search
     h1.card-search__header= textTitle
-    section.card-search__date-dropdown
+    .card-search__date-dropdown
       +date-dropdown({
         placeholder: "дд.мм.гггг", 
         titleLeftDropdown: "Прибытие",
         titleRightDropdown: "Выезд",
         })
-    section.card-search__title-component
+    .card-search__title-component
       +title-component("Гости")
-    section.card-search__dropdown
+    .card-search__dropdown
       +dropdown({
         hasCommonValue: true,
         items: [
@@ -29,7 +29,7 @@ mixin card-search(params = {})
           { text: 'Младенцы', count: 0 },
         ],
       })
-    section.card-search__button
+    .card-search__button
       +button({
         type: "button",
         text: "подобрать номер",
