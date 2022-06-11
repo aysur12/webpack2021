@@ -40,7 +40,7 @@ const config = {
   devServer: {
     static: './dist',
     port: 8080,
-    open: '/search-room.html',
+    open: '/index.html',
     hot: false,
   },
   plugins: [
