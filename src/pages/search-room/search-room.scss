@@ -11,7 +11,7 @@
     width: 100%;
     max-width: 86.286em;
     margin: 0 auto;
-    padding: 1.286em 0.786em 4.643em;
+    padding: 1.286em 0.786em 4.429em;
 
     @media screen and (max-width: 550px) {
       display: flex;
@@ -97,9 +97,9 @@
     grid-template-columns: repeat(auto-fill, minmax(19.429em, 1fr));
     box-sizing: border-box;
     margin-bottom: 1.357em;
-    padding: 21px 12px;
+    padding: 1.571em 0.857em;
     column-gap: 0.714em;
-    row-gap: 1.214em;
+    row-gap: 1.5em;
   }
 
   &__pagination {
