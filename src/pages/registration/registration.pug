@@ -1,0 +1,22 @@
+extends ../../layouts/main-layout/main-layout
+
+include ../../components/card-registration/card-registration
+
+block variables
+  -
+    const title = "Registration";
+
+block content
+  main.registration
+    .registration__bg-image-block
+      img.registration__bg-image(
+        src=require("../../assets/images/bg-room-1.jpg"),
+        alt="Фото комнаты",
+      )
+    section.registration__card-registration
+      +card-registration({
+        textTitle: "Регистрация аккаунта",
+        blockEntryText: "Уже есть аккаунт на Toxin",
+        textSubmitButton: "Зарегистрироваться",
+        hrefEntryBtn: "./sign-in.html"
+      })
